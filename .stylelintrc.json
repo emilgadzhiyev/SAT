@@ -6,8 +6,6 @@
   "rules": {
     "order/order": [
       "declarations",
-      "custom-properties"
-    ],
-    "no-empty-source": null
+      "custom-properties"]
   }
 }
