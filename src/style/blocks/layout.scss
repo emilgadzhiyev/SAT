@@ -1,0 +1,37 @@
+.layout {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  &__left {
+    flex-direction: column;
+    flex: 0 1 20%;
+    display: flex;
+
+    aside {
+      background-color: gray;
+      flex: 1;
+    }
+
+    footer {
+      background-color: purple;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    nav {
+      background-color: blue;
+    }
+
+    main {
+      overflow-wrap: break-word;
+      flex: 1;
+      overflow-y: auto;
+    }
+  }
+}
