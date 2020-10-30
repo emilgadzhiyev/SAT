@@ -1,11 +1,17 @@
 {
   "name": "SAT",
   "version": "1.0.0",
-  "description": "SAT - Admin Template",
+  "description": "SAT — Admin Template",
   "main": "index.js",
   "scripts": {
-    "start-dev": "parcel serve index.html",
-    "build": "parcel build index.html --no-content-hash -d build"
+    "dev": "parcel serve index.html --open",
+    "build": "parcel build index.html --no-content-hash -d build",
+    "lint:style": "stylelint **/*.scss --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:style"
+    }
   },
   "repository": {
     "type": "git",
@@ -18,12 +24,16 @@
     "url": "https://github.com/emilgadzhiyev/SAT/issues"
   },
   "homepage": "https://github.com/emilgadzhiyev/SAT#readme",
-  "devDependencies": {
-    "parcel": "^1.12.4",
-    "sass": "^1.27.1"
-  },
   "dependencies": {
     "fontsource-ibm-plex-sans": "^3.0.9",
-    "reset-css": "^5.0.1"
+    "reset-css": "^5.0.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0"
+  },
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "parcel": "^1.12.4",
+    "sass": "^1.27.1",
+    "stylelint": "^13.7.2"
   }
 }
