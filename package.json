@@ -23,6 +23,7 @@
     "sass": "^1.27.1"
   },
   "dependencies": {
+    "fontsource-ibm-plex-sans": "^3.0.9",
     "reset-css": "^5.0.1"
   }
 }
