@@ -1,2 +1,8 @@
 @import "./global";
-@import "blocks/layout";
+@import "./reset.scss";
+@import "./features/button.scss";
+@import "./features/checkbox.scss";
+@import "./features/grid.scss";
+@import "./features/input.scss";
+@import "./features/layout.scss";
+@import "./features/typography.scss";

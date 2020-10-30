@@ -25,8 +25,8 @@
   },
   "homepage": "https://github.com/emilgadzhiyev/SAT#readme",
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "fontsource-ibm-plex-sans": "^3.0.9",
-    "reset-css": "^5.0.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0"
   },
