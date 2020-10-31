@@ -3,14 +3,17 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+
   &__left {
     flex-direction: column;
     flex: 0 1 20%;
     display: flex;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+
     aside {
       flex: 1;
     }
+
     footer {
       border-top: 1px solid rgba(0, 0, 0, 0.23);
       display: flex;
@@ -18,16 +21,19 @@
       text-align: center;
     }
   }
+
   &__right {
     display: flex;
     flex-direction: column;
     flex: 1;
+
     nav {
       border-bottom: 1px solid rgba(0, 0, 0, 0.23);
       display: flex;
       align-items: center;
       height: 2rem;
     }
+
     main {
       overflow-wrap: break-word;
       flex: 1;
