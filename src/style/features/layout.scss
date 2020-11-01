@@ -20,24 +20,30 @@
     &__top-left {
         display: flex;
         border-bottom: 1px solid #3896c1;
+        padding: 0.2rem;
     }
 
     &__top-right {
         display: flex;
+        padding: 0.2rem;
         border-bottom: 1px solid #3896c1;
     }
 
     &__content-right {
-        display: flex;
+        overflow: auto;
+        padding: 0.2rem;
+        background-color: bisque;
     }
 
     &__content-left {
         display: flex;
         flex-grow: 1;
+        overflow: auto;
         border-bottom: 1px solid #3896c1;
     }
 
     &__bottom-left {
         display: flex;
+        padding: 0.2rem;
     }
 }
