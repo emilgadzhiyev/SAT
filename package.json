@@ -5,13 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel serve index.html --open",
-    "build": "parcel build index.html --no-content-hash -d build",
-    "lint:style": "stylelint **/*.scss --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint:style"
-    }
+    "build": "parcel build index.html --no-content-hash -d build"
   },
   "repository": {
     "type": "git",
