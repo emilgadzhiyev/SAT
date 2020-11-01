@@ -1,0 +1,43 @@
+.layout {
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 20%;
+        border-right: 1px solid #3896c1;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    &__top-left {
+        display: flex;
+        border-bottom: 1px solid #3896c1;
+    }
+
+    &__top-right {
+        display: flex;
+        border-bottom: 1px solid #3896c1;
+    }
+
+    &__content-right {
+        display: flex;
+    }
+
+    &__content-left {
+        display: flex;
+        flex-grow: 1;
+        border-bottom: 1px solid #3896c1;
+    }
+
+    &__bottom-left {
+        display: flex;
+    }
+}

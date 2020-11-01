@@ -1,0 +1,30 @@
+{
+  "name": "SAT",
+  "version": "1.0.0",
+  "description": "SAT — Admin Template",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel serve index.html --open",
+    "build": "parcel build index.html --no-content-hash -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilgadzhiyev/SAT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilgadzhiyev/SAT/issues"
+  },
+  "homepage": "https://github.com/emilgadzhiyev/SAT#readme",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "sass": "^1.28.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "fontsource-ibm-plex-sans": "^3.0.9",
+    "material-design-icons-iconfont": "^6.1.0"
+  }
+}
