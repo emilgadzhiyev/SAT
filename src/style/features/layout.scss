@@ -1,43 +1,62 @@
 .layout {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
   display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 
   &__left {
-    flex-direction: column;
-    flex: 0 1 20%;
     display: flex;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-
-    aside {
-      flex: 1;
-    }
-
-    footer {
-      border-top: 1px solid rgba(0, 0, 0, 0.23);
-      display: flex;
-      align-items: center;
-      text-align: center;
-    }
+    flex-direction: column;
+    width: 20%;
+    border-right: 1px solid #3896c1;
   }
 
   &__right {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    width: 80%;
+  }
 
-    nav {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.23);
-      display: flex;
-      align-items: center;
-      height: 2rem;
-    }
+  &__logo {
+    border-bottom: 1px solid #3896c1;
+    width: 100%;
+    padding: 2%;
+    display: block;
+  }
 
-    main {
-      overflow-wrap: break-word;
-      flex: 1;
-      overflow-y: auto;
+  &__footer {
+    padding: 2%;
+    border-top: 1px solid #3896c1;
+  }
+
+  &__nav {
+    border-bottom: 1px solid #3896c1;
+    display: grid;
+    grid-template-columns: min-content auto auto min-content min-content;
+  }
+
+  &__tree {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    overflow: auto;
+    padding: 2%;
+  }
+
+  &__content {
+    overflow: auto;
+  }
+
+  &__footer {
+    display: flex;
+
+    span {
+      word-break: break-word;
     }
+  }
+
+  &__users-menu {
+    margin-left: auto;
+    display: flex;
   }
 }
