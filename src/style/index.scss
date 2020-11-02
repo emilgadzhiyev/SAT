@@ -1,5 +1,5 @@
-@import "./global.scss";
 @import "./reset.scss";
+@import "./global.scss";
 @import "./features/icons.scss";
 @import "./features/layout.scss";
 @import "./features/logo.scss";
@@ -7,6 +7,6 @@
 @import "./features/navbar.scss";
 @import "./features/breadcrumbs.scss";
 @import "./features/hamburger.scss";
-@import "./features/logout.scss";
-@import "./features/settings.scss";
-@import "./features/snn.scss";
+@import "./features/user-bar.scss";
+@import "./features/copyright.scss";
+
