@@ -2,6 +2,9 @@
     display: flex;
     width: 100%;
     &__item {
-        display: flex;
+        flex:0 1 100%;
+        &_auto{
+            flex: 0 0 auto;
+        }
     }
 }
