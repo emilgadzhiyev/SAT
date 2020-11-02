@@ -1,3 +1,5 @@
+@import "../variables";
+
 .layout {
     display: flex;
     overflow: hidden;
@@ -5,10 +7,25 @@
     height: 100vh;
 
     &__left {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.05), 0 10px 10px rgba(0,0,0,0.05);
+        z-index:1;
         display: flex;
         flex-direction: column;
-        flex: 0 1 20%;
-        border-right: 1px solid #3896c1;
+        flex: 0 1 15%;
+    }
+
+    &__top-left {
+        padding:$unit $unit*3;
+    }
+
+    &__content-left {
+        display: flex;
+        flex-grow: 1;
+        overflow: auto;
+    }
+
+    &__bottom-left {
+        padding:$unit $unit*2;
     }
 
     &__right {
@@ -17,33 +34,17 @@
         flex: 1;
     }
 
-    &__top-left {
-        display: flex;
-        border-bottom: 1px solid #3896c1;
-        padding: 0.2rem;
-    }
-
     &__top-right {
-        display: flex;
-        padding: 0.2rem;
-        border-bottom: 1px solid #3896c1;
+
+        border-bottom:1px solid $color-gray-6;
+        padding: $unit*2 $unit*3;
     }
 
     &__content-right {
+        padding:$unit*3;
+        background: $color-gray-7;
         overflow: auto;
-        padding: 0.2rem;
-        background-color: bisque;
     }
 
-    &__content-left {
-        display: flex;
-        flex-grow: 1;
-        overflow: auto;
-        border-bottom: 1px solid #3896c1;
-    }
 
-    &__bottom-left {
-        display: flex;
-        padding: 0.2rem;
-    }
 }

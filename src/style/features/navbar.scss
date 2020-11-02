@@ -1,8 +1,14 @@
+@import "../variables";
+
 .navbar {
+
     display: flex;
     width: 100%;
     align-items: center;
     &__item {
+        &:not(:last-child){
+            margin-right:$unit*2;
+        }
         flex: 0 1 100%;
         &_auto {
             flex: 0 0 auto;
