@@ -1,3 +1,23 @@
 $material-design-icons-font-directory-path: "/node_modules/material-design-icons-iconfont/dist/fonts/";
 
 @import "../../../node_modules/material-design-icons-iconfont/src/material-design-icons.scss";
+
+.icon{
+  @extend .material-icons;
+  vertical-align:middle;
+  user-select:none;
+  font-size:18px;
+
+  &_sm{
+    font-size:12px
+  }
+
+  &_lg{
+    font-size:24px
+  }
+
+  &_xl{
+    font-size:32px
+  }
+
+}
