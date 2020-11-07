@@ -7,15 +7,15 @@
     height: 100vh;
 
     &__left {
-        box-shadow: 0 14px 28px rgba(0,0,0,0.05), 0 10px 10px rgba(0,0,0,0.05);
-        z-index:1;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.05), 0 10px 10px rgba(0, 0, 0, 0.05);
+        z-index: 1;
         display: flex;
         flex-direction: column;
         flex: 0 1 15%;
     }
 
     &__top-left {
-        padding:$unit $unit*3;
+        padding: $unit $unit * 3;
     }
 
     &__content-left {
@@ -25,7 +25,7 @@
     }
 
     &__bottom-left {
-        padding:$unit $unit*2;
+        padding: $unit $unit * 2;
     }
 
     &__right {
@@ -35,16 +35,13 @@
     }
 
     &__top-right {
-
-        border-bottom:1px solid $color-gray-6;
-        padding: $unit*2 $unit*3;
+        border-bottom: 1px solid $color-gray-6;
+        padding: $unit * 2;
     }
 
     &__content-right {
-        padding:$unit*3;
+        padding: $unit * 2;
         background: $color-gray-7;
-        overflow: auto;
+        overflow: hidden;
     }
-
-
 }

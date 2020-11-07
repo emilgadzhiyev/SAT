@@ -1,13 +1,17 @@
 @import "../variables";
 
 .navbar {
-
     display: flex;
     width: 100%;
     align-items: center;
+
+    @include media-breakpoint-down("md") {
+        flex-wrap: wrap;
+    }
+
     &__item {
-        &:not(:last-child){
-            margin-right:$unit*2;
+        &:not(:last-child) {
+            margin-right: $unit * 2;
         }
         flex: 0 1 100%;
         &_auto {

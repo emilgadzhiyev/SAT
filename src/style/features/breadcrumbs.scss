@@ -1,11 +1,16 @@
-@import '../variables';
+@import "../variables";
 
 .breadcrumbs {
-    font-size:14px;
+    font-size: 14px;
     display: flex;
-    &__separator{
-        margin:0 $unit;
-        color:$color-gray-6;
+
+    @include media-breakpoint-down("sm") {
+        flex-wrap: wrap;
+    }
+
+    &__separator {
+        margin: 0 $unit;
+        color: $color-gray-6;
     }
 
     &__crumb {

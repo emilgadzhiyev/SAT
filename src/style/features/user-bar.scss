@@ -1,24 +1,22 @@
-@import '../variables';
+@import "../variables";
 
-.user-bar{
-  display:flex;
+.user-bar {
+  display: flex;
 
-  &__username{
-    margin-right:$unit*2;
+  &__username {
+    margin-right: $unit * 2;
   }
-  &__actions{
-    display:flex;
+  &__actions {
+    display: flex;
   }
-  &__action{
-    &:not(:last-child){
-      margin-right:$unit*2;
+  &__action {
+    &:not(:last-child) {
+      margin-right: $unit * 2;
     }
     color: $color-gray-2;
-    cursor:pointer;
-    &:hover{
+    cursor: pointer;
+    &:hover {
       color: $color-brand-primary;
     }
   }
 }
-
-
