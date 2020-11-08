@@ -1,8 +1,17 @@
+@import "../variables";
+
 .card {
     overflow: auto;
+    padding: 12px;
+    background-color: #ffffff;
+    border: 1px solid $color-gray-6;
     &__full {
         width: 100%;
-        background-color: aqua;
-        height: 75vh;
+    }
+    &__quarter {
+        width: 25%;
+    }
+    &__half {
+        width: 50%;
     }
 }

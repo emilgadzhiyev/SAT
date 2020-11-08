@@ -5,7 +5,7 @@
     overflow: hidden;
     width: 100vw;
     height: 100vh;
-    
+
     &__left {
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.05), 0 10px 10px rgba(0, 0, 0, 0.05);
         z-index: 1;
@@ -21,7 +21,7 @@
     &__content-left {
         display: flex;
         flex-grow: 1;
-        overflow: hidden;
+        overflow: auto;
     }
 
     &__bottom-left {
@@ -42,7 +42,7 @@
     &__content-right {
         padding: $unit * 2;
         background: $color-gray-7;
-        overflow: hidden;
-        flex:1;
+        overflow: auto;
+        flex: 1;
     }
 }
