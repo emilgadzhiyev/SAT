@@ -35,4 +35,4 @@ const Tree = (root) => {
     });
 };
 
-Tree(document.querySelector(".tree"));  
+Tree(document.querySelector(".tree"));

@@ -1,5 +1,5 @@
 @import "../variables";
-
+@import "../mixins";
 .layout {
     display: flex;
     overflow: hidden;
@@ -14,18 +14,21 @@
         flex: 0 1 15%;
     }
 
-    &__top-left {
+    &__left-top {
         padding: $unit $unit * 3;
     }
 
-    &__content-left {
+    &__left-content {
         display: flex;
         flex-grow: 1;
-        overflow: auto;
+
+        overflow-y: auto;
+        padding: $unit * 3 $unit * 2;
+        @include scrollbars($unit/2, $color-gray-5, transparent);
     }
 
-    &__bottom-left {
-        padding: $unit $unit * 2;
+    &__left-bottom {
+        padding: $unit $unit;
     }
 
     &__right {
@@ -34,13 +37,13 @@
         flex: 1;
     }
 
-    &__top-right {
+    &__right-top {
         border-bottom: 1px solid $color-gray-6;
-        padding: $unit * 2;
+        padding: $unit * 3;
     }
 
-    &__content-right {
-        padding: $unit * 2;
+    &__right-content {
+        padding: $unit * 3;
         background: $color-gray-7;
         overflow: auto;
         flex: 1;
