@@ -5,9 +5,9 @@
     width: 100%;
     align-items: center;
 
-    @include media-breakpoint-down("md") {
-        flex-wrap: wrap;
-    }
+    // @include media-breakpoint-down("md") {
+    //     flex-wrap: wrap;
+    // }
 
     &__item {
         &:not(:last-child) {

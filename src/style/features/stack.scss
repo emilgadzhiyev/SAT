@@ -3,7 +3,7 @@
 .stack {
   &__item {
     &:not(:last-child) {
-      margin-bottom: $unit * 3;
+      margin-bottom: $unit * 2;
     }
   }
 }

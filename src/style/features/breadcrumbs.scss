@@ -5,9 +5,9 @@
     font-size: 14px;
     display: flex;
 
-    @include media-breakpoint-down("sm") {
-        flex-wrap: wrap;
-    }
+    // @include media-breakpoint-down("sm") {
+    //     flex-wrap: wrap;
+    // }
 
     &__separator {
         margin: 0 $unit;
