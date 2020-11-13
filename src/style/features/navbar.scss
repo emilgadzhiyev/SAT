@@ -17,5 +17,11 @@
         &_auto {
             flex: 0 0 auto;
         }
+        &_scroll-x-show {
+            overflow-x: auto;
+        }
+        // &_scrollYHidden {
+        //     overflow-y: hidden;
+        // }
     }
 }

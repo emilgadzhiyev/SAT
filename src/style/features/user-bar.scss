@@ -5,6 +5,9 @@
 
   &__username {
     margin-right: $unit * 2;
+    @include media-breakpoint-down("sm") {
+      display: none;
+    }
   }
   &__actions {
     display: flex;

@@ -6,7 +6,7 @@
     display: flex;
 
     // @include media-breakpoint-down("sm") {
-    //     flex-wrap: wrap;
+    //     flex-wrap: no-wrap;
     // }
 
     &__separator {
@@ -16,5 +16,6 @@
 
     &__crumb {
         display: flex;
+        white-space: nowrap;
     }
 }
