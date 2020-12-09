@@ -4,8 +4,8 @@
   "description": "SAT — Admin Template",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel serve index.html alerts.html badges.html breadcrumb.html button-group.html cards.html carousel.html collapse.html buttons.html --open",
-    "build": "parcel build index.pug --no-content-hash -d build"
+    "dev": "parcel src/pug/index.pug --open",
+    "build": "parcel build src/pug/index.pug --no-content-hash -d build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/emilgadzhiyev/SAT#readme",
   "devDependencies": {
     "parcel": "^1.12.4",
+    "pug": "^3.0.0",
     "sass": "^1.28.0"
   },
   "dependencies": {

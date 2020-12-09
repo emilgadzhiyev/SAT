@@ -1,6 +1,6 @@
-$material-design-icons-font-directory-path: "/node_modules/material-design-icons-iconfont/dist/fonts/";
 $material-design-icons-class-icons-generate-codepoints: false;
-@import "../../../node_modules/material-design-icons-iconfont/src/material-design-icons.scss";
+$material-design-icons-font-directory-path: '../../node_modules/material-design-icons-iconfont/dist/fonts/';
+@import "~material-design-icons-iconfont/src/material-design-icons.scss";
 
 .icon {
   @extend .material-icons;
