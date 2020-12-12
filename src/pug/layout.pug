@@ -5,7 +5,7 @@ mixin layout
         meta(charset='UTF-8')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         title SAT - Welcome
-        link(rel='stylesheet' href='../style/index.scss')
+        //- link(rel='stylesheet' href='../style/index.scss')
     .layout
         .layout__left
             .layout__left-top
@@ -17,11 +17,19 @@ mixin layout
                         .tree__collapse Layout
                         .tree__subtree.tree
                             .tree__node
-                                a.tree__link(href='') Overview
+                                a.tree__link(href='') Breakpoints
+                            .tree__node
+                                a.tree__link(href='') Containers
                             .tree__node
                                 a.tree__link(href='') Grid
                             .tree__node
-                                a.tree__link(href='') Utilities for layout
+                                a.tree__link(href='') Columns
+                            .tree__node
+                                a.tree__link(href='') Gutters
+                            .tree__node
+                                a.tree__link(href='') Utilities
+                            .tree__node
+                                a.tree__link(href='') Z-index
                     .tree__node
                         .tree__collapse Content
                         .tree__subtree.tree
@@ -30,64 +38,79 @@ mixin layout
                             .tree__node
                                 a.tree__link(href='') Typography
                             .tree__node
-                                a.tree__link(href='') Code
-                            .tree__node
                                 a.tree__link(href='') Images
                             .tree__node
                                 a.tree__link(href='') Tables
                             .tree__node
                                 a.tree__link(href='') Figures
                     .tree__node
+                        .tree__collapse Forms
+                        .tree__subtree.tree
+                            .tree__node
+                                a.tree__link(href='') Overview
+                            .tree__node
+                                a.tree__link(href='') Form control
+                            .tree__node
+                                a.tree__link(href='') Select
+                            .tree__node
+                                a.tree__link(href='') Checks & radios
+                            .tree__node
+                                a.tree__link(href='') Range
+                            .tree__node
+                                a.tree__link(href='') Input group
+                            .tree__node
+                                a.tree__link(href='') Floating labels
+                            .tree__node
+                                a.tree__link(href='') Layout
+                            .tree__node
+                                a.tree__link(href='') Validation
+                    .tree__node
                         .tree__collapse Components
                         .tree__subtree.tree
                             .tree__node
-                                a.tree__link(href='alerts.pug') Alerts
-                            //.tree__node
-                            //    a.tree__link(href='/badges.html') Badge
-                            //.tree__node
-                            //    a.tree__link(href='/breadcrumb.html') Breadcrumb
-                            //.tree__node
-                            //    a.tree__link(href='/buttons.html') Buttons
-                            //.tree__node
-                            //    a.tree__link(href='/button-group.html') Button group
-                            //.tree__node
-                            //    a.tree__link(href='/cards.html') Cards
-                            //.tree__node
-                            //    a.tree__link(href='/carousel.html') Carousel
-                            //.tree__node
-                            //    a.tree__link(href='/collapse.html') Collapse
-                            //.tree__node
-                            //    a.tree__link(href='') Dropdowns
-                            //.tree__node
-                            //    a.tree__link(href='') Forms
-                            //.tree__node
-                            //    a.tree__link(href='') Input group
-                            //.tree__node
-                            //    a.tree__link(href='') Jumbotron
-                            //.tree__node
-                            //    a.tree__link(href='') List group
-                            //.tree__node
-                            //    a.tree__link(href='') Media object
-                            //.tree__node
-                            //    a.tree__link(href='') Modal
-                            //.tree__node
-                            //    a.tree__link(href='') Navs
-                            //.tree__node
-                            //    a.tree__link(href='') Navbar
-                            //.tree__node
-                            //    a.tree__link(href='') Pagination
-                            //.tree__node
-                            //    a.tree__link(href='') Popovers
-                            //.tree__node
-                            //    a.tree__link(href='') Progress
-                            //.tree__node
-                            //    a.tree__link(href='') Scrollspy
-                            //.tree__node
-                            //    a.tree__link(href='') Spinners
-                            //.tree__node
-                            //    a.tree__link(href='') Toasts
-                            //.tree__node
-                            //    a.tree__link(href='') Tooltips
+                                a.tree__link(href='components/accordion.pug') Accordion
+                            .tree__node
+                                a.tree__link(href='components/alerts.pug') Alerts
+                            .tree__node
+                                a.tree__link(href='components/badge.pug') Badge
+                            .tree__node
+                                a.tree__link(href='components/breadcrumb.pug') Breadcrumb
+                            .tree__node
+                                a.tree__link(href='components/button-group.pug') Buttons
+                            .tree__node
+                                a.tree__link(href='components/buttons.pug') Button group
+                            .tree__node
+                                a.tree__link(href='components/card.pug') Card
+                            .tree__node
+                                a.tree__link(href='components/carousel.pug') Carousel
+                            .tree__node
+                                a.tree__link(href='components/close-button.pug') Close button
+                            .tree__node
+                                a.tree__link(href='components/collapse.pug') Collapse
+                            .tree__node
+                                a.tree__link(href='components/dropdowns.pug') Dropdowns
+                            .tree__node
+                                a.tree__link(href='components/list-group.pug') List group
+                            .tree__node
+                                a.tree__link(href='components/modal.pug') Modal
+                            .tree__node
+                                a.tree__link(href='components/navbar.pug') Navs and tabs
+                            .tree__node
+                                a.tree__link(href='components/navs-and-tabs.pug') Navbar
+                            .tree__node
+                                a.tree__link(href='components/pagination.pug') Pagination
+                            .tree__node
+                                a.tree__link(href='components/popovers.pug') Popovers
+                            .tree__node
+                                a.tree__link(href='components/progress.pug') Progress
+                            .tree__node
+                                a.tree__link(href='components/scrollspy.pug') Scrollspy
+                            .tree__node
+                                a.tree__link(href='components/spinners.pug') Spinners
+                            .tree__node
+                                a.tree__link(href='components/toasts.pug') Toasts
+                            .tree__node
+                                a.tree__link(href='components/tooltips.pug') Tooltips
                     .tree__node
                         .tree__collapse 2
                         .tree__subtree.tree
