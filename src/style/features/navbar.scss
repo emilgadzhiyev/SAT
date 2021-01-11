@@ -5,23 +5,23 @@
     width: 100%;
     align-items: center;
 
-    // @include media-breakpoint-down("md") {
-    //     flex-wrap: wrap;
-    // }
+
 
     &__item {
+        display:grid; // Dirty hack todo: figure out why it works
         &:not(:last-child) {
             margin-right: $unit * 2;
         }
-        flex: 0 1 100%;
-        &_auto {
-            flex: 0 0 auto;
+        flex: 0 1 auto;
+
+            &_eager{
+            flex:1 1 auto;
         }
-        &_scroll-x-show {
-            overflow-x: auto;
-        }
-        // &_scrollYHidden {
-        //     overflow-y: hidden;
-        // }
     }
+
 }
+
+.scrollable-area{
+    overflow: auto;
+}
+
