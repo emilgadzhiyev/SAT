@@ -1,11 +1,11 @@
-@import "../variables";
-@import "../mixins";
+@import "../../global/variables.scss";
+@import "../../global/mixins.scss";
+
 .layout {
     display: flex;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
-
     &__left {
         &_hidden {
             display: none;
@@ -16,35 +16,28 @@
         flex-direction: column;
         flex: 0 1 15%;
     }
-
     &__left-top {
         padding: $unit $unit * 3;
     }
-
     &__left-content {
         display: flex;
         flex-grow: 1;
-
         overflow-y: auto;
         padding: $unit * 3 $unit * 2;
         @include scrollbars($unit/2, $color-gray-5, transparent);
     }
-
     &__left-bottom {
         padding: $unit $unit;
     }
-
     &__right {
         display: flex;
         flex-direction: column;
         flex: 1;
     }
-
     &__right-top {
         border-bottom: 1px solid $color-gray-6;
         padding: $unit * 3;
     }
-
     &__right-content {
         padding: $unit * 3;
         background: $color-gray-7;

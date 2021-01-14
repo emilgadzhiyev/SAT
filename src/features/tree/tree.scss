@@ -1,18 +1,14 @@
 .tree {
     $subtree-padding: 16px;
-
     padding-left: $subtree-padding;
-
     &__node {
         min-height: 32px;
     }
-
     &__link {
         min-height: 32px;
         display: flex;
         align-items: center;
     }
-
     &__collapse {
         position: relative;
         display: flex;
@@ -22,7 +18,6 @@
         &:hover {
             background: rgba(0, 0, 0, 0.05);
         }
-
         &:before {
             display: inline-flex;
             align-items: center;
@@ -36,15 +31,12 @@
             transition: transform 0.12s ease-in-out;
         }
     }
-
     &__node > &__subtree {
         display: none;
     }
-
     &__node_open > &__subtree {
         display: block;
     }
-
     &__node_open > &__collapse {
         &:before {
             transform: rotate(90deg);

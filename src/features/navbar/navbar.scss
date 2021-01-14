@@ -1,27 +1,21 @@
-@import "../variables";
-@import "./grid.scss";
+@import "../../global/variables.scss";
+@import "../grid/grid.scss";
+
 .navbar {
     display: flex;
     width: 100%;
     align-items: center;
-
-
-
     &__item {
-        display:grid; // Dirty hack todo: figure out why it works
+        display: grid; // Dirty hack todo: figure out why it works
         &:not(:last-child) {
             margin-right: $unit * 2;
         }
         flex: 0 1 auto;
-
-            &_eager{
-            flex:1 1 auto;
+        &_eager {
+            flex: 1 1 auto;
         }
     }
-
 }
-
-.scrollable-area{
+.scrollable-area {
     overflow: auto;
 }
-

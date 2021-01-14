@@ -1,9 +1,0 @@
-@import "../variables";
-
-.stack {
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: $unit * 2;
-    }
-  }
-}

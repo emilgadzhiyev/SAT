@@ -1,8 +1,7 @@
-@import "../variables";
+@import "../../global/variables.scss";
 
 .menu {
     width: 100%;
-
     &__item {
         min-height: $unit * 6;
         display: flex;

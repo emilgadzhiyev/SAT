@@ -5,7 +5,8 @@ mixin layout
         meta(charset='UTF-8')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         title SAT - Welcome
-        link(rel='stylesheet' href='/../style/index.scss')
+        link(rel='stylesheet' href='/../global/index.scss')
+        link(rel='stylesheet' href='/../features/index.scss')
     .layout
         .layout__left
             .layout__left-top
@@ -157,8 +158,6 @@ mixin layout
                             .user-bar__actions
                                 .user-bar__action.icon settings
                                 .user-bar__action.icon logout
-
             .layout__right-content
                 block
-    script(src='/../js/Tree.js')
-    script(src='/../js/OffCanvasMenu.js')
+    script(src='/../features/index.js')
