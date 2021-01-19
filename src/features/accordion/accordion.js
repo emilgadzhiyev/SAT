@@ -1,1 +1,1 @@
-console.log("Accordion ready!");
+console.log("Accordion ready!")

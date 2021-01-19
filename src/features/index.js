@@ -1,3 +1,3 @@
-import "./accordion/accordion";
-import "./tree/tree";
-import "./menu/offCanvasMenu";
+import "./accordion/accordion"
+import "./tree/tree"
+import "./menu/offCanvasMenu"

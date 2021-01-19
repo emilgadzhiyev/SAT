@@ -3,15 +3,15 @@ $material-design-icons-font-directory-path: "~material-design-icons-iconfont/dis
 @import "~material-design-icons-iconfont/src/material-design-icons.scss";
 
 .icon {
-    @extend .material-icons;
-    vertical-align: middle;
-    user-select: none;
-    font-size: 18px;
-    display: flex;
-    &_sm {
-        font-size: 12px;
-    }
-    &_lg {
-        font-size: 24px;
-    }
+  @extend .material-icons;
+  vertical-align: middle;
+  user-select: none;
+  font-size: 18px;
+  display: flex;
+  &_sm {
+    font-size: 12px;
+  }
+  &_lg {
+    font-size: 24px;
+  }
 }

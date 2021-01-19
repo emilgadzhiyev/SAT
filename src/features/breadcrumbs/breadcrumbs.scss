@@ -1,17 +1,16 @@
-@import "../../core/variables.scss";
+@import "../../variables.scss";
 @import "../grid/grid.scss";
 //@use '../grid/grid.scss';
 
-
 .breadcrumbs {
-    font-size: 14px;
+  font-size: 14px;
+  display: flex;
+  &__separator {
+    margin: 0 $unit;
+    color: $color-gray-6;
+  }
+  &__crumb {
     display: flex;
-    &__separator {
-        margin: 0 $unit;
-        color: $color-gray-6;
-    }
-    &__crumb {
-        display: flex;
-        white-space: nowrap;
-    }
+    white-space: nowrap;
+  }
 }
