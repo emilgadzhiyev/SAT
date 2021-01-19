@@ -4,8 +4,8 @@
   "description": "SAT — Admin Template",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/pug/index.pug --open",
-    "build": "parcel build src/pug/index.pug --no-content-hash -d build"
+    "dev": "parcel src/index.pug --open",
+    "build": "parcel build src/index.pug --no-content-hash -d build"
   },
   "repository": {
     "type": "git",
