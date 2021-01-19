@@ -1,1 +1,2 @@
-import './features/index';
+            import "./features/index"
+import "./index.scss";;;
