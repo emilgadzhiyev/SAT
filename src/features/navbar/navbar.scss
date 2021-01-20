@@ -1,5 +1,6 @@
-@import '../../variables.scss';
-@import '../grid/grid.scss';
+@import "../../variables.scss";
+@import "../../mixins.scss";
+@import "../grid/grid.scss";
 
 .navbar {
   display: flex;
@@ -20,4 +21,5 @@
 }
 .scrollable-area {
   overflow: auto;
+  @include scrollbars($unit/2, $color-gray-5, transparent);
 }

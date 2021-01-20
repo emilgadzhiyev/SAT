@@ -1,22 +1,27 @@
 include ../layout
 
 +layout
-    h1 Accordiona
+    h1 Accordion
     p.introText
         | Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.
     .stack
         .stack__item.row
-            .col-8
-                .card.card_md
-                    p
-                        | Simple accordion:
-                    .accordion
-                        button.accordion__button Section 1
-                        .accordion__panel
-                            | Lorem ipsum...
-                        button.accordion__button Section 2
-                        .accordion__panel
-                            | Lorem ipsum...
-                        button.accordion__button Section 3
-                        .accordion__panel
-                            | Lorem ipsum...
+            .col-4
+                p
+                    | Simple accordion:
+                p
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            .col-2
+                p
+                    | Simple accordion:
+                p
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing softwa
+
+    // For test without .stack and .stack__item
+    .row
+        .col-3
+            p
+                | col-3
+        .col-3
+            p
+                | col-3

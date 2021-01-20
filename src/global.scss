@@ -1,6 +1,12 @@
-@import '../node_modules/@fontsource/ibm-plex-sans/index.css';
-@import '../node_modules/normalize.css/normalize.css';
+@import "../node_modules/@fontsource/ibm-plex-sans/index.css";
+@import "../node_modules/normalize.css/normalize.css";
+@import "./variables.scss";
 
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
 }
