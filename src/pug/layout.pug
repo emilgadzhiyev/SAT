@@ -1,0 +1,160 @@
+mixin layout
+    doctype html
+    html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title SAT - Welcome
+    .layout
+        .layout__left
+            .layout__left-top
+                a.logo(href='/')
+                    img(src='/src/static/images/logo.png' alt='Main logo of project.')
+            .layout__left-content
+                .tree
+                    .tree__node
+                        .tree__collapse Layou
+                        .tree__subtree.tree
+                            .tree__node
+                                a.tree__link(href='/pages/breakpoints.html') Breakpoints
+                            .tree__node
+                                a.tree__link(href='/pages/containers.html') Containers
+                            .tree__node
+                                a.tree__link(href='/pages/grid.html') Grid
+                            .tree__node
+                                a.tree__link(href='/pages/columns.html') Columns
+                            .tree__node
+                                a.tree__link(href='/pages/gutters.html') Gutters
+                            .tree__node
+                                a.tree__link(href='/pages/utilities.html') Utilities
+                            .tree__node
+                                a.tree__link(href='/pages/z-index.html') Z-index
+                    .tree__node
+                        .tree__collapse Content
+                        .tree__subtree.tree
+                            .tree__node
+                                a.tree__link(href='/pages/reboot.html') Reboot
+                            .tree__node
+                                a.tree__link(href='/pages/typography.html') Typography
+                            .tree__node
+                                a.tree__link(href='/pages/images.html') Images
+                            .tree__node
+                                a.tree__link(href='/pages/tables.html') Tables
+                            .tree__node
+                                a.tree__link(href='/pages/figures.html') Figures
+                    .tree__node
+                        .tree__collapse Forms
+                        .tree__subtree.tree
+                            .tree__node
+                                a.tree__link(href='/pages/overview.html') Overview
+                            .tree__node
+                                a.tree__link(href='/pages/form-control.html') Form control
+                            .tree__node
+                                a.tree__link(href='/pages/select.html') Select
+                            .tree__node
+                                a.tree__link(href='/pages/checks-and-radios.html') Checks & radios
+                            .tree__node
+                                a.tree__link(href='/pages/range.html') Range
+                            .tree__node
+                                a.tree__link(href='/pages/input-group.html') Input group
+                            .tree__node
+                                a.tree__link(href='/pages/floating-labels.html') Floating labels
+                            .tree__node
+                                a.tree__link(href='/pages/layout.html') Layout
+                            .tree__node
+                                a.tree__link(href='/pages/validation.html') Validation
+                    .tree__node
+                        .tree__collapse Components
+                        .tree__subtree.tree
+                            .tree__node
+                                a.tree__link(href='/pages/accordion.html') Accordion
+                            .tree__node
+                                a.tree__link(href='/pages/alerts.html') Alerts
+                            .tree__node
+                                a.tree__link(href='/pages/badge.html') Badge
+                            .tree__node
+                                a.tree__link(href='/pages/breadcrumb.html') Breadcrumb
+                            .tree__node
+                                a.tree__link(href='/pages/buttons.html') Buttons
+                            .tree__node
+                                a.tree__link(href='/pages/button-group.html') Button group
+                            .tree__node
+                                a.tree__link(href='/pages/card.html') Card
+                            .tree__node
+                                a.tree__link(href='/pages/carousel.html') Carousel
+                            .tree__node
+                                a.tree__link(href='/pages/close-button.html') Close button
+                            .tree__node
+                                a.tree__link(href='/pages/collapse.html') Collapse
+                            .tree__node
+                                a.tree__link(href='/pages/dropdowns.html') Dropdowns
+                            .tree__node
+                                a.tree__link(href='/pages/list-group.html') List group
+                            .tree__node
+                                a.tree__link(href='/pages/modal.html') Modal
+                            .tree__node
+                                a.tree__link(href='/pages/navs-and-tabs.html') Navs and tabs
+                            .tree__node
+                                a.tree__link(href='/pages/navbar.html') Navbar
+                            .tree__node
+                                a.tree__link(href='/pages/pagination.html') Pagination
+                            .tree__node
+                                a.tree__link(href='/pages/popovers.html') Popovers
+                            .tree__node
+                                a.tree__link(href='/pages/progress.html') Progress
+                            .tree__node
+                                a.tree__link(href='/pages/scrollspy.html') Scrollspy
+                            .tree__node
+                                a.tree__link(href='/pages/spinners.html') Spinners
+                            .tree__node
+                                a.tree__link(href='/pages/toasts.html') Toasts
+                            .tree__node
+                                a.tree__link(href='/pages/tooltips.html') Tooltips
+                    .tree__node
+                        .tree__collapse 2
+                        .tree__subtree.tree
+                            .tree__node
+                                .tree__collapse 2.1
+                                .tree__subtree.tree
+                                    .tree__node
+                                        .tree__node(href='')
+                                            .tree__collapse 2.1.1
+                                            .tree__subtree.tree
+                                                .tree__node
+                                                    a.tree__link(href='') 2.1.1.1
+                                                .tree__node
+                                                    a.tree__link(href='') 2.1.1.2
+                                                .tree__node
+                                                    a.tree__link(href='') 2.1.1.3
+            .layout__left-bottom
+                .copyright
+                    | Versiya: 1.0.0.0 | Yenil&#x259;nm&#x259; tarixi:28.10.2020 15:46:29.26
+        .layout__right
+            .layout__right-top
+                .navbar
+                    .navbar__item
+                        i.icon.icon_lg.hamburger menu
+                    .navbar__item.navbar__item_eager
+                        .scrollable-area
+                            .breadcrumbs
+                                .breadcrumbs__crumb
+                                    a(href='/') &Ncy;&acy;&vcy;&icy;&gcy;&acy;&tscy;&icy;&yacy; 0
+                                .breadcrumbs__separator /
+                                .breadcrumbs__crumb
+                                    a(href='/') &Ncy;&acy;&vcy;&icy;&gcy;&acy;&tscy;&icy;&yacy; 1
+                                .breadcrumbs__separator /
+                                .breadcrumbs__crumb
+                                    a(href='/') &Ncy;&acy;&vcy;&icy;&gcy;&acy;&tscy;&icy;&yacy; 2
+                                .breadcrumbs__separator /
+                                .breadcrumbs__crumb
+                                    a(href='/') &Ncy;&acy;&vcy;&icy;&gcy;&acy;&tscy;&icy;&yacy; 3
+                                .breadcrumbs__separator /
+                                .breadcrumbs__crumb &Ncy;&acy;&vcy;&icy;&gcy;&acy;&tscy;&icy;&yacy; 4
+                    .navbar__item
+                        .user-bar
+                            .user-bar__username Muradov Elman Fuad
+                            .user-bar__actions
+                                .user-bar__action.icon settings
+                                .user-bar__action.icon logout
+            .layout__right-content
+                block
