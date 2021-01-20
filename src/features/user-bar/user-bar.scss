@@ -1,10 +1,10 @@
-@import "../../variables.scss";
+@import '../../variables.scss';
 
 .user-bar {
   display: flex;
   &__username {
     margin-right: $unit * 2;
-    @include media-breakpoint-down("sm") {
+    @include media-breakpoint-down('sm') {
       display: none;
     }
   }

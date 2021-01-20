@@ -1,5 +1,5 @@
-@import "../../variables.scss";
-@import "../grid/grid.scss";
+@import '../../variables.scss';
+@import '../grid/grid.scss';
 
 .navbar {
   display: flex;
@@ -7,7 +7,7 @@
   align-items: center;
   &__item {
     display: grid; // Dirty hack todo: figure out why it works
-    line-height:1.5;// Another dirty hack todo: figure out why it works
+    line-height: 1.5; // Another dirty hack todo: figure out why it works
 
     &:not(:last-child) {
       margin-right: $unit * 2;
