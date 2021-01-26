@@ -2,5 +2,25 @@ include ../layout
 
 +layout
     h1 Utilities for layout
-    p.introText
+    p.intro-text
         | For faster mobile-friendly and responsive development, Bootstrap includes dozens of utility classes for showing, hiding, aligning, and spacing content.
+    .stack
+        .stack__item.row
+            .col-3
+                .card.card_md
+                    h2 Enable flex behaviors
+                    .d-flex.p-2.bd-highlight
+                        | I&apos;m a flexbox container!
+                    .d-inline-flex.p-2.bd-highlight
+                        | I&apos;m an inline flexbox container!
+            .col-3
+                .card.card_md
+                    h2 Direction
+                    .d-flex.flex-row.bd-highlight.mb-3
+                        .p-2.bd-highlight Flex item 1
+                        .p-2.bd-highlight Flex item 2
+                        .p-2.bd-highlight Flex item 3
+                    .d-flex.flex-row-reverse.bd-highlight
+                        .p-2.bd-highlight Flex item 1
+                        .p-2.bd-highlight Flex item 2
+                        .p-2.bd-highlight Flex item 3

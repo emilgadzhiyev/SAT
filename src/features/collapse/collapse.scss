@@ -1,0 +1,45 @@
+.collapse {
+    &__content {
+        height: 0;
+        overflow: hidden;
+        padding: 0 $unit * 2;
+        background-color: white;
+        transition: height 0.52s;
+    }
+    &__hitarea {
+        background-color: $color-gray-7;
+        color: black;
+        cursor: pointer;
+        padding: 20px;
+        // justify-content: space-between;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.18s;
+        &:hover {
+            background-color: $color-gray-6;
+        }
+        &:before {
+            content: "+";
+            font-size: 14px;
+            color: black;
+            margin-right: $unit;
+        }
+        &:after {
+            content: "\271C";
+            font-size: 14px;
+            color: black;
+            margin-left: $unit;
+        }
+    }
+    &_open & {
+        &__hitarea {
+            &:before {
+                content: "-";
+                color: black;
+            }
+            &:after {
+                color: black;
+            }
+        }
+    }
+}

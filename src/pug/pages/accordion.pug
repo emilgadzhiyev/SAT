@@ -2,26 +2,97 @@ include ../layout
 
 +layout
     h1 Accordion
-    p.introText
+    p.intro-text
         | Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.
     .stack
         .stack__item.row
-            .col-4
-                p
-                    | Simple accordion:
-                p
-                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            .col-2
-                p
-                    | Simple accordion:
-                p
-                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing softwa
-
-    // For test without .stack and .stack__item
-    .row
-        .col-3
-            p
-                | col-3
-        .col-3
-            p
-                | col-3
+            .col-3
+                .card.card_md
+                    .accordion
+                        .collapse
+                            .collapse__hitarea
+                                | Section 1
+                            .collapse__content
+                                | &ecy;&tcy;&ocy; &tcy;&iecy;&kcy;&scy;&tcy;-&quot;&rcy;&ycy;&bcy;&acy;&quot;, &chcy;&acy;&scy;&tcy;&ocy; &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&iecy;&mcy;&ycy;&jcy; &vcy; &pcy;&iecy;&chcy;&acy;&tcy;&icy; &icy; &vcy;&ecy;&bcy;-&dcy;&icy;&zcy;&acy;&jcy;&ncy;&iecy;. Lorem
+                                | Ipsum &yacy;&vcy;&lcy;&yacy;&iecy;&tcy;&scy;&yacy; &scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy;&ncy;&ocy;&jcy; &quot;&rcy;&ycy;&bcy;&ocy;&jcy;&quot; &dcy;&lcy;&yacy; &tcy;&iecy;&kcy;&scy;&tcy;&ocy;&vcy; &ncy;&acy; &lcy;&acy;&tcy;&icy;&ncy;&icy;&tscy;&iecy; &scy; &ncy;&acy;&chcy;&acy;&lcy;&acy;
+                                | XVI &vcy;&iecy;&kcy;&acy;. &Vcy; &tcy;&ocy; &vcy;&rcy;&iecy;&mcy;&yacy; &ncy;&iecy;&kcy;&icy;&jcy; &bcy;&iecy;&zcy;&ycy;&mcy;&yacy;&ncy;&ncy;&ycy;&jcy; &pcy;&iecy;&chcy;&acy;&tcy;&ncy;&icy;&kcy; &scy;&ocy;&zcy;&dcy;&acy;&lcy; &bcy;&ocy;&lcy;&softcy;&shcy;&ucy;&yucy;
+                                | &kcy;&ocy;&lcy;&lcy;&iecy;&kcy;&tscy;&icy;&yucy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;&ocy;&vcy; &icy; &fcy;&ocy;&rcy;&mcy; &shcy;&rcy;&icy;&fcy;&tcy;&ocy;&vcy;, &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&yacy; Lorem Ipsum &dcy;&lcy;&yacy;
+                                | &rcy;&acy;&scy;&pcy;&iecy;&chcy;&acy;&tcy;&kcy;&icy; &ocy;&bcy;&rcy;&acy;&zcy;&tscy;&ocy;&vcy;. Lorem Ipsum &ncy;&iecy; &tcy;&ocy;&lcy;&softcy;&kcy;&ocy; &ucy;&scy;&pcy;&iecy;&shcy;&ncy;&ocy; &pcy;&iecy;&rcy;&iecy;&zhcy;&icy;&lcy; &bcy;&iecy;&zcy;
+                                | &zcy;&acy;&mcy;&iecy;&tcy;&ncy;&ycy;&khcy; &icy;&zcy;&mcy;&iecy;&ncy;&iecy;&ncy;&icy;&jcy; &pcy;&yacy;&tcy;&softcy; &vcy;&iecy;&kcy;&ocy;&vcy;, &ncy;&ocy; &icy; &pcy;&iecy;&rcy;&iecy;&shcy;&acy;&gcy;&ncy;&ucy;&lcy; &vcy; &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&ycy;&jcy; &dcy;&icy;&zcy;&acy;&jcy;&ncy;.
+                                | &IEcy;&gcy;&ocy; &pcy;&ocy;&pcy;&ucy;&lcy;&yacy;&rcy;&icy;&zcy;&acy;&tscy;&icy;&icy; &vcy; &ncy;&ocy;&vcy;&ocy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy; &pcy;&ocy;&scy;&lcy;&ucy;&zhcy;&icy;&lcy;&icy; &pcy;&ucy;&bcy;&lcy;&icy;&kcy;&acy;&tscy;&icy;&yacy; &lcy;&icy;&scy;&tcy;&ocy;&vcy; Letraset &scy;
+                                | &ocy;&bcy;&rcy;&acy;&zcy;&tscy;&acy;&mcy;&icy; Lorem Ipsum &vcy; 60-&khcy; &gcy;&ocy;&dcy;&acy;&khcy; &icy;, &vcy; &bcy;&ocy;&lcy;&iecy;&iecy; &ncy;&iecy;&dcy;&acy;&vcy;&ncy;&iecy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy;,
+                                | &pcy;&rcy;&ocy;&gcy;&rcy;&acy;&mcy;&mcy;&ycy; &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&ocy;&jcy; &vcy;&iocy;&rcy;&scy;&tcy;&kcy;&icy; &tcy;&icy;&pcy;&acy; Aldus PageMaker, &vcy; &shcy;&acy;&bcy;&lcy;&ocy;&ncy;&acy;&khcy; &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&khcy;
+                                | &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&iecy;&tcy;&scy;&yacy; Lorem Ipsum.
+                        .collapse
+                            .collapse__hitarea
+                                | Section 2
+                            .collapse__content
+                                | &ecy;&tcy;&ocy; &tcy;&iecy;&kcy;&scy;&tcy;-&quot;&rcy;&ycy;&bcy;&acy;&quot;, &chcy;&acy;&scy;&tcy;&ocy; &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&iecy;&mcy;&ycy;&jcy; &vcy; &pcy;&iecy;&chcy;&acy;&tcy;&icy; &icy; &vcy;&ecy;&bcy;-&dcy;&icy;&zcy;&acy;&jcy;&ncy;&iecy;. Lorem
+                                | Ipsum &yacy;&vcy;&lcy;&yacy;&iecy;&tcy;&scy;&yacy; &scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy;&ncy;&ocy;&jcy; &quot;&rcy;&ycy;&bcy;&ocy;&jcy;&quot; &dcy;&lcy;&yacy; &tcy;&iecy;&kcy;&scy;&tcy;&ocy;&vcy; &ncy;&acy; &lcy;&acy;&tcy;&icy;&ncy;&icy;&tscy;&iecy; &scy; &ncy;&acy;&chcy;&acy;&lcy;&acy;
+                                | XVI &vcy;&iecy;&kcy;&acy;. &Vcy; &tcy;&ocy; &vcy;&rcy;&iecy;&mcy;&yacy; &ncy;&iecy;&kcy;&icy;&jcy; &bcy;&iecy;&zcy;&ycy;&mcy;&yacy;&ncy;&ncy;&ycy;&jcy; &pcy;&iecy;&chcy;&acy;&tcy;&ncy;&icy;&kcy; &scy;&ocy;&zcy;&dcy;&acy;&lcy; &bcy;&ocy;&lcy;&softcy;&shcy;&ucy;&yucy;
+                                | &kcy;&ocy;&lcy;&lcy;&iecy;&kcy;&tscy;&icy;&yucy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;&ocy;&vcy; &icy; &fcy;&ocy;&rcy;&mcy; &shcy;&rcy;&icy;&fcy;&tcy;&ocy;&vcy;, &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&yacy; Lorem Ipsum &dcy;&lcy;&yacy;
+                                | &rcy;&acy;&scy;&pcy;&iecy;&chcy;&acy;&tcy;&kcy;&icy; &ocy;&bcy;&rcy;&acy;&zcy;&tscy;&ocy;&vcy;. Lorem Ipsum &ncy;&iecy; &tcy;&ocy;&lcy;&softcy;&kcy;&ocy; &ucy;&scy;&pcy;&iecy;&shcy;&ncy;&ocy; &pcy;&iecy;&rcy;&iecy;&zhcy;&icy;&lcy; &bcy;&iecy;&zcy;
+                                | &zcy;&acy;&mcy;&iecy;&tcy;&ncy;&ycy;&khcy; &icy;&zcy;&mcy;&iecy;&ncy;&iecy;&ncy;&icy;&jcy; &pcy;&yacy;&tcy;&softcy; &vcy;&iecy;&kcy;&ocy;&vcy;, &ncy;&ocy; &icy; &pcy;&iecy;&rcy;&iecy;&shcy;&acy;&gcy;&ncy;&ucy;&lcy; &vcy; &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&ycy;&jcy; &dcy;&icy;&zcy;&acy;&jcy;&ncy;.
+                                | &IEcy;&gcy;&ocy; &pcy;&ocy;&pcy;&ucy;&lcy;&yacy;&rcy;&icy;&zcy;&acy;&tscy;&icy;&icy; &vcy; &ncy;&ocy;&vcy;&ocy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy; &pcy;&ocy;&scy;&lcy;&ucy;&zhcy;&icy;&lcy;&icy; &pcy;&ucy;&bcy;&lcy;&icy;&kcy;&acy;&tscy;&icy;&yacy; &lcy;&icy;&scy;&tcy;&ocy;&vcy; Letraset &scy;
+                                | &ocy;&bcy;&rcy;&acy;&zcy;&tscy;&acy;&mcy;&icy; Lorem Ipsum &vcy; 60-&khcy; &gcy;&ocy;&dcy;&acy;&khcy; &icy;, &vcy; &bcy;&ocy;&lcy;&iecy;&iecy; &ncy;&iecy;&dcy;&acy;&vcy;&ncy;&iecy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy;,
+                                | &pcy;&rcy;&ocy;&gcy;&rcy;&acy;&mcy;&mcy;&ycy; &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&ocy;&jcy; &vcy;&iocy;&rcy;&scy;&tcy;&kcy;&icy; &tcy;&icy;&pcy;&acy; Aldus PageMaker, &vcy; &shcy;&acy;&bcy;&lcy;&ocy;&ncy;&acy;&khcy; &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&khcy;
+                                | &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&iecy;&tcy;&scy;&yacy; Lorem Ipsum.
+                        .collapse
+                            .collapse__hitarea
+                                | Section 3
+                            .collapse__content
+                                | &ecy;&tcy;&ocy; &tcy;&iecy;&kcy;&scy;&tcy;-&quot;&rcy;&ycy;&bcy;&acy;&quot;, &chcy;&acy;&scy;&tcy;&ocy; &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&iecy;&mcy;&ycy;&jcy; &vcy; &pcy;&iecy;&chcy;&acy;&tcy;&icy; &icy; &vcy;&ecy;&bcy;-&dcy;&icy;&zcy;&acy;&jcy;&ncy;&iecy;. Lorem
+                                | Ipsum &yacy;&vcy;&lcy;&yacy;&iecy;&tcy;&scy;&yacy; &scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy;&ncy;&ocy;&jcy; &quot;&rcy;&ycy;&bcy;&ocy;&jcy;&quot; &dcy;&lcy;&yacy; &tcy;&iecy;&kcy;&scy;&tcy;&ocy;&vcy; &ncy;&acy; &lcy;&acy;&tcy;&icy;&ncy;&icy;&tscy;&iecy; &scy; &ncy;&acy;&chcy;&acy;&lcy;&acy;
+                                | XVI &vcy;&iecy;&kcy;&acy;. &Vcy; &tcy;&ocy; &vcy;&rcy;&iecy;&mcy;&yacy; &ncy;&iecy;&kcy;&icy;&jcy; &bcy;&iecy;&zcy;&ycy;&mcy;&yacy;&ncy;&ncy;&ycy;&jcy; &pcy;&iecy;&chcy;&acy;&tcy;&ncy;&icy;&kcy; &scy;&ocy;&zcy;&dcy;&acy;&lcy; &bcy;&ocy;&lcy;&softcy;&shcy;&ucy;&yucy;
+                                | &kcy;&ocy;&lcy;&lcy;&iecy;&kcy;&tscy;&icy;&yucy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;&ocy;&vcy; &icy; &fcy;&ocy;&rcy;&mcy; &shcy;&rcy;&icy;&fcy;&tcy;&ocy;&vcy;, &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&yacy; Lorem Ipsum &dcy;&lcy;&yacy;
+                                | &rcy;&acy;&scy;&pcy;&iecy;&chcy;&acy;&tcy;&kcy;&icy; &ocy;&bcy;&rcy;&acy;&zcy;&tscy;&ocy;&vcy;. Lorem Ipsum &ncy;&iecy; &tcy;&ocy;&lcy;&softcy;&kcy;&ocy; &ucy;&scy;&pcy;&iecy;&shcy;&ncy;&ocy; &pcy;&iecy;&rcy;&iecy;&zhcy;&icy;&lcy; &bcy;&iecy;&zcy;
+                                | &zcy;&acy;&mcy;&iecy;&tcy;&ncy;&ycy;&khcy; &icy;&zcy;&mcy;&iecy;&ncy;&iecy;&ncy;&icy;&jcy; &pcy;&yacy;&tcy;&softcy; &vcy;&iecy;&kcy;&ocy;&vcy;, &ncy;&ocy; &icy; &pcy;&iecy;&rcy;&iecy;&shcy;&acy;&gcy;&ncy;&ucy;&lcy; &vcy; &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&ycy;&jcy; &dcy;&icy;&zcy;&acy;&jcy;&ncy;.
+                                | &IEcy;&gcy;&ocy; &pcy;&ocy;&pcy;&ucy;&lcy;&yacy;&rcy;&icy;&zcy;&acy;&tscy;&icy;&icy; &vcy; &ncy;&ocy;&vcy;&ocy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy; &pcy;&ocy;&scy;&lcy;&ucy;&zhcy;&icy;&lcy;&icy; &pcy;&ucy;&bcy;&lcy;&icy;&kcy;&acy;&tscy;&icy;&yacy; &lcy;&icy;&scy;&tcy;&ocy;&vcy; Letraset &scy;
+                                | &ocy;&bcy;&rcy;&acy;&zcy;&tscy;&acy;&mcy;&icy; Lorem Ipsum &vcy; 60-&khcy; &gcy;&ocy;&dcy;&acy;&khcy; &icy;, &vcy; &bcy;&ocy;&lcy;&iecy;&iecy; &ncy;&iecy;&dcy;&acy;&vcy;&ncy;&iecy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy;,
+                                | &pcy;&rcy;&ocy;&gcy;&rcy;&acy;&mcy;&mcy;&ycy; &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&ocy;&jcy; &vcy;&iocy;&rcy;&scy;&tcy;&kcy;&icy; &tcy;&icy;&pcy;&acy; Aldus PageMaker, &vcy; &shcy;&acy;&bcy;&lcy;&ocy;&ncy;&acy;&khcy; &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&khcy;
+                                | &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&iecy;&tcy;&scy;&yacy; Lorem Ipsum.
+            .col-3
+                .card.card_md
+                    .accordion
+                        .collapse
+                            .collapse__hitarea
+                                | Section 1
+                            .collapse__content
+                                | &ecy;&tcy;&ocy; &tcy;&iecy;&kcy;&scy;&tcy;-&quot;&rcy;&ycy;&bcy;&acy;&quot;, &chcy;&acy;&scy;&tcy;&ocy; &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&iecy;&mcy;&ycy;&jcy; &vcy; &pcy;&iecy;&chcy;&acy;&tcy;&icy; &icy; &vcy;&ecy;&bcy;-&dcy;&icy;&zcy;&acy;&jcy;&ncy;&iecy;. Lorem
+                                | Ipsum &yacy;&vcy;&lcy;&yacy;&iecy;&tcy;&scy;&yacy; &scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy;&ncy;&ocy;&jcy; &quot;&rcy;&ycy;&bcy;&ocy;&jcy;&quot; &dcy;&lcy;&yacy; &tcy;&iecy;&kcy;&scy;&tcy;&ocy;&vcy; &ncy;&acy; &lcy;&acy;&tcy;&icy;&ncy;&icy;&tscy;&iecy; &scy; &ncy;&acy;&chcy;&acy;&lcy;&acy;
+                                | XVI &vcy;&iecy;&kcy;&acy;. &Vcy; &tcy;&ocy; &vcy;&rcy;&iecy;&mcy;&yacy; &ncy;&iecy;&kcy;&icy;&jcy; &bcy;&iecy;&zcy;&ycy;&mcy;&yacy;&ncy;&ncy;&ycy;&jcy; &pcy;&iecy;&chcy;&acy;&tcy;&ncy;&icy;&kcy; &scy;&ocy;&zcy;&dcy;&acy;&lcy; &bcy;&ocy;&lcy;&softcy;&shcy;&ucy;&yucy;
+                                | &kcy;&ocy;&lcy;&lcy;&iecy;&kcy;&tscy;&icy;&yucy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;&ocy;&vcy; &icy; &fcy;&ocy;&rcy;&mcy; &shcy;&rcy;&icy;&fcy;&tcy;&ocy;&vcy;, &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&yacy; Lorem Ipsum &dcy;&lcy;&yacy;
+                                | &rcy;&acy;&scy;&pcy;&iecy;&chcy;&acy;&tcy;&kcy;&icy; &ocy;&bcy;&rcy;&acy;&zcy;&tscy;&ocy;&vcy;. Lorem Ipsum &ncy;&iecy; &tcy;&ocy;&lcy;&softcy;&kcy;&ocy; &ucy;&scy;&pcy;&iecy;&shcy;&ncy;&ocy; &pcy;&iecy;&rcy;&iecy;&zhcy;&icy;&lcy; &bcy;&iecy;&zcy;
+                                | &zcy;&acy;&mcy;&iecy;&tcy;&ncy;&ycy;&khcy; &icy;&zcy;&mcy;&iecy;&ncy;&iecy;&ncy;&icy;&jcy; &pcy;&yacy;&tcy;&softcy; &vcy;&iecy;&kcy;&ocy;&vcy;, &ncy;&ocy; &icy; &pcy;&iecy;&rcy;&iecy;&shcy;&acy;&gcy;&ncy;&ucy;&lcy; &vcy; &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&ycy;&jcy; &dcy;&icy;&zcy;&acy;&jcy;&ncy;.
+                                | &IEcy;&gcy;&ocy; &pcy;&ocy;&pcy;&ucy;&lcy;&yacy;&rcy;&icy;&zcy;&acy;&tscy;&icy;&icy; &vcy; &ncy;&ocy;&vcy;&ocy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy; &pcy;&ocy;&scy;&lcy;&ucy;&zhcy;&icy;&lcy;&icy; &pcy;&ucy;&bcy;&lcy;&icy;&kcy;&acy;&tscy;&icy;&yacy; &lcy;&icy;&scy;&tcy;&ocy;&vcy; Letraset &scy;
+                                | &ocy;&bcy;&rcy;&acy;&zcy;&tscy;&acy;&mcy;&icy; Lorem Ipsum &vcy; 60-&khcy; &gcy;&ocy;&dcy;&acy;&khcy; &icy;, &vcy; &bcy;&ocy;&lcy;&iecy;&iecy; &ncy;&iecy;&dcy;&acy;&vcy;&ncy;&iecy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy;,
+                                | &pcy;&rcy;&ocy;&gcy;&rcy;&acy;&mcy;&mcy;&ycy; &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&ocy;&jcy; &vcy;&iocy;&rcy;&scy;&tcy;&kcy;&icy; &tcy;&icy;&pcy;&acy; Aldus PageMaker, &vcy; &shcy;&acy;&bcy;&lcy;&ocy;&ncy;&acy;&khcy; &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&khcy;
+                                | &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&iecy;&tcy;&scy;&yacy; Lorem Ipsum.
+                        .collapse
+                            .collapse__hitarea
+                                | Section 2
+                            .collapse__content
+                                | &ecy;&tcy;&ocy; &tcy;&iecy;&kcy;&scy;&tcy;-&quot;&rcy;&ycy;&bcy;&acy;&quot;, &chcy;&acy;&scy;&tcy;&ocy; &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&iecy;&mcy;&ycy;&jcy; &vcy; &pcy;&iecy;&chcy;&acy;&tcy;&icy; &icy; &vcy;&ecy;&bcy;-&dcy;&icy;&zcy;&acy;&jcy;&ncy;&iecy;. Lorem
+                                | Ipsum &yacy;&vcy;&lcy;&yacy;&iecy;&tcy;&scy;&yacy; &scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy;&ncy;&ocy;&jcy; &quot;&rcy;&ycy;&bcy;&ocy;&jcy;&quot; &dcy;&lcy;&yacy; &tcy;&iecy;&kcy;&scy;&tcy;&ocy;&vcy; &ncy;&acy; &lcy;&acy;&tcy;&icy;&ncy;&icy;&tscy;&iecy; &scy; &ncy;&acy;&chcy;&acy;&lcy;&acy;
+                                | XVI &vcy;&iecy;&kcy;&acy;. &Vcy; &tcy;&ocy; &vcy;&rcy;&iecy;&mcy;&yacy; &ncy;&iecy;&kcy;&icy;&jcy; &bcy;&iecy;&zcy;&ycy;&mcy;&yacy;&ncy;&ncy;&ycy;&jcy; &pcy;&iecy;&chcy;&acy;&tcy;&ncy;&icy;&kcy; &scy;&ocy;&zcy;&dcy;&acy;&lcy; &bcy;&ocy;&lcy;&softcy;&shcy;&ucy;&yucy;
+                                | &kcy;&ocy;&lcy;&lcy;&iecy;&kcy;&tscy;&icy;&yucy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;&ocy;&vcy; &icy; &fcy;&ocy;&rcy;&mcy; &shcy;&rcy;&icy;&fcy;&tcy;&ocy;&vcy;, &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&yacy; Lorem Ipsum &dcy;&lcy;&yacy;
+                                | &rcy;&acy;&scy;&pcy;&iecy;&chcy;&acy;&tcy;&kcy;&icy; &ocy;&bcy;&rcy;&acy;&zcy;&tscy;&ocy;&vcy;. Lorem Ipsum &ncy;&iecy; &tcy;&ocy;&lcy;&softcy;&kcy;&ocy; &ucy;&scy;&pcy;&iecy;&shcy;&ncy;&ocy; &pcy;&iecy;&rcy;&iecy;&zhcy;&icy;&lcy; &bcy;&iecy;&zcy;
+                                | &zcy;&acy;&mcy;&iecy;&tcy;&ncy;&ycy;&khcy; &icy;&zcy;&mcy;&iecy;&ncy;&iecy;&ncy;&icy;&jcy; &pcy;&yacy;&tcy;&softcy; &vcy;&iecy;&kcy;&ocy;&vcy;, &ncy;&ocy; &icy; &pcy;&iecy;&rcy;&iecy;&shcy;&acy;&gcy;&ncy;&ucy;&lcy; &vcy; &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&ycy;&jcy; &dcy;&icy;&zcy;&acy;&jcy;&ncy;.
+                                | &IEcy;&gcy;&ocy; &pcy;&ocy;&pcy;&ucy;&lcy;&yacy;&rcy;&icy;&zcy;&acy;&tscy;&icy;&icy; &vcy; &ncy;&ocy;&vcy;&ocy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy; &pcy;&ocy;&scy;&lcy;&ucy;&zhcy;&icy;&lcy;&icy; &pcy;&ucy;&bcy;&lcy;&icy;&kcy;&acy;&tscy;&icy;&yacy; &lcy;&icy;&scy;&tcy;&ocy;&vcy; Letraset &scy;
+                                | &ocy;&bcy;&rcy;&acy;&zcy;&tscy;&acy;&mcy;&icy; Lorem Ipsum &vcy; 60-&khcy; &gcy;&ocy;&dcy;&acy;&khcy; &icy;, &vcy; &bcy;&ocy;&lcy;&iecy;&iecy; &ncy;&iecy;&dcy;&acy;&vcy;&ncy;&iecy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy;,
+                                | &pcy;&rcy;&ocy;&gcy;&rcy;&acy;&mcy;&mcy;&ycy; &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&ocy;&jcy; &vcy;&iocy;&rcy;&scy;&tcy;&kcy;&icy; &tcy;&icy;&pcy;&acy; Aldus PageMaker, &vcy; &shcy;&acy;&bcy;&lcy;&ocy;&ncy;&acy;&khcy; &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&khcy;
+                                | &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&iecy;&tcy;&scy;&yacy; Lorem Ipsum.
+                        .collapse
+                            .collapse__hitarea
+                                | Section 3
+                            .collapse__content
+                                | &ecy;&tcy;&ocy; &tcy;&iecy;&kcy;&scy;&tcy;-&quot;&rcy;&ycy;&bcy;&acy;&quot;, &chcy;&acy;&scy;&tcy;&ocy; &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&iecy;&mcy;&ycy;&jcy; &vcy; &pcy;&iecy;&chcy;&acy;&tcy;&icy; &icy; &vcy;&ecy;&bcy;-&dcy;&icy;&zcy;&acy;&jcy;&ncy;&iecy;. Lorem
+                                | Ipsum &yacy;&vcy;&lcy;&yacy;&iecy;&tcy;&scy;&yacy; &scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy;&ncy;&ocy;&jcy; &quot;&rcy;&ycy;&bcy;&ocy;&jcy;&quot; &dcy;&lcy;&yacy; &tcy;&iecy;&kcy;&scy;&tcy;&ocy;&vcy; &ncy;&acy; &lcy;&acy;&tcy;&icy;&ncy;&icy;&tscy;&iecy; &scy; &ncy;&acy;&chcy;&acy;&lcy;&acy;
+                                | XVI &vcy;&iecy;&kcy;&acy;. &Vcy; &tcy;&ocy; &vcy;&rcy;&iecy;&mcy;&yacy; &ncy;&iecy;&kcy;&icy;&jcy; &bcy;&iecy;&zcy;&ycy;&mcy;&yacy;&ncy;&ncy;&ycy;&jcy; &pcy;&iecy;&chcy;&acy;&tcy;&ncy;&icy;&kcy; &scy;&ocy;&zcy;&dcy;&acy;&lcy; &bcy;&ocy;&lcy;&softcy;&shcy;&ucy;&yucy;
+                                | &kcy;&ocy;&lcy;&lcy;&iecy;&kcy;&tscy;&icy;&yucy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;&ocy;&vcy; &icy; &fcy;&ocy;&rcy;&mcy; &shcy;&rcy;&icy;&fcy;&tcy;&ocy;&vcy;, &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&yacy; Lorem Ipsum &dcy;&lcy;&yacy;
+                                | &rcy;&acy;&scy;&pcy;&iecy;&chcy;&acy;&tcy;&kcy;&icy; &ocy;&bcy;&rcy;&acy;&zcy;&tscy;&ocy;&vcy;. Lorem Ipsum &ncy;&iecy; &tcy;&ocy;&lcy;&softcy;&kcy;&ocy; &ucy;&scy;&pcy;&iecy;&shcy;&ncy;&ocy; &pcy;&iecy;&rcy;&iecy;&zhcy;&icy;&lcy; &bcy;&iecy;&zcy;
+                                | &zcy;&acy;&mcy;&iecy;&tcy;&ncy;&ycy;&khcy; &icy;&zcy;&mcy;&iecy;&ncy;&iecy;&ncy;&icy;&jcy; &pcy;&yacy;&tcy;&softcy; &vcy;&iecy;&kcy;&ocy;&vcy;, &ncy;&ocy; &icy; &pcy;&iecy;&rcy;&iecy;&shcy;&acy;&gcy;&ncy;&ucy;&lcy; &vcy; &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&ycy;&jcy; &dcy;&icy;&zcy;&acy;&jcy;&ncy;.
+                                | &IEcy;&gcy;&ocy; &pcy;&ocy;&pcy;&ucy;&lcy;&yacy;&rcy;&icy;&zcy;&acy;&tscy;&icy;&icy; &vcy; &ncy;&ocy;&vcy;&ocy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy; &pcy;&ocy;&scy;&lcy;&ucy;&zhcy;&icy;&lcy;&icy; &pcy;&ucy;&bcy;&lcy;&icy;&kcy;&acy;&tscy;&icy;&yacy; &lcy;&icy;&scy;&tcy;&ocy;&vcy; Letraset &scy;
+                                | &ocy;&bcy;&rcy;&acy;&zcy;&tscy;&acy;&mcy;&icy; Lorem Ipsum &vcy; 60-&khcy; &gcy;&ocy;&dcy;&acy;&khcy; &icy;, &vcy; &bcy;&ocy;&lcy;&iecy;&iecy; &ncy;&iecy;&dcy;&acy;&vcy;&ncy;&iecy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy;,
+                                | &pcy;&rcy;&ocy;&gcy;&rcy;&acy;&mcy;&mcy;&ycy; &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&ocy;&jcy; &vcy;&iocy;&rcy;&scy;&tcy;&kcy;&icy; &tcy;&icy;&pcy;&acy; Aldus PageMaker, &vcy; &shcy;&acy;&bcy;&lcy;&ocy;&ncy;&acy;&khcy; &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&khcy;
+                                | &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&iecy;&tcy;&scy;&yacy; Lorem Ipsum.
