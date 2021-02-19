@@ -2,5 +2,40 @@ include ../layout
 
 +layout
     h1 Breakpoints
-    p.introText
-        | Breakpoints are the triggers in Bootstrap for how your layout responsive changes across device or viewport sizes.
+    p.intro-text
+        | Breakpoints are customizable widths that determine how your responsive layout behaves across device or viewport sizes in Bootstrap.
+    h2 Available breakpoints
+    table
+        thead
+            tr
+                td Breakpoint
+                td Class infix
+                td Dimensions
+        tbody
+            tr
+                td X-Small
+                td None
+                td less than 576px
+            tr
+                td Small
+                td sm
+                td greater or equal 1400px 576px
+            tr
+                td Medium
+                td md
+                td greater or equal 1400px 768px
+            tr
+                td Large
+                td lg
+                td greater or equal 1400px 992px
+            tr
+                td Extra large
+                td xl
+                td greater or equal 1200px
+            tr
+                td Extra extra large
+                td xxl
+                td greater or equal 1400px
+    h2 Min-width
+    
+    h2 Max-width

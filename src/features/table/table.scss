@@ -1,0 +1,22 @@
+@import "../../variables.scss";
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+thead {
+    font-weight: bold;
+}
+td {
+    border: 1px solid $color-primary;
+    padding: $unit;
+}
+th {
+    border: 1px solid $color-primary;
+    padding: $unit;
+}
+tr {
+    &:nth-child(even) {
+        background-color: $color-gray-6;
+    }
+}
