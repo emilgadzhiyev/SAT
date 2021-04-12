@@ -1,0 +1,108 @@
+include ../layout
+
++layout
+    h1 Overview
+    p.intro-text
+        | Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.
+    h2 Containers
+    p.intro-text
+        | Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Containers are used to contain, pad, and (sometimes) center the content within them. While containers can be nested, most layouts do not require a nested container.
+    p.intro-text
+        | Bootstrap comes with three different containers:
+    ul
+        li
+            code(style='color:red') .container
+            | , which sets a 
+            code(style='color:red') max-width
+            |  at each responsive breakpoint
+        li 
+            code(style='color:red') .container-fluid
+            | , which is 
+            code(style='color:red') width: 100%
+            |  at all breakpoints
+        li
+            code(style='color:red') .container-{breakpoint}
+            | , which is 
+            code(style='color:red') width: 100%
+            |  until the specified breakpoint
+    p.intro-text
+        | The table below illustrates how each container’s 
+        code(style='color:red') max-width
+        |  compares to the original 
+        code(style='color:red') .container
+        |  and 
+        code(style='color:red') .container-fluid
+        |  across each breakpoint.
+    table
+        thead
+            tr
+                td 
+                td Extra small (<576px)
+                td Small (≥576px)
+                td Medium (≥768px)
+                td Large (≥992px)
+                td Extra large (≥1200px)
+        tbody
+            tr
+                td
+                    code(style='color:red') .container
+                td 100%
+                td 540px
+                td 720px
+                td 960px
+                td 1140px
+            tr
+                td
+                    code(style='color:red') .container-sm
+                td 100%
+                td 540px
+                td 720px
+                td 960px
+                td 1140px
+            tr
+                td
+                    code(style='color:red') .container-md
+                td 100%
+                td 100%
+                td 720px
+                td 960px
+                td 1140px
+            tr
+                td
+                    code(style='color:red') .container-lg
+                td 100%
+                td 100%
+                td 100%
+                td 960px
+                td 1140px
+            tr
+                td
+                    code(style='color:red') .container-xl
+                td 100%
+                td 100%
+                td 100%
+                td 100%
+                td 1140px
+            tr
+                td
+                    code(style='color:red') .container-fluid
+                td 100%
+                td 100%
+                td 100%
+                td 100%
+                td 100%
+    <br>
+    h2 All-in-one
+    p.intro-text
+        | Our default 
+        code(style='color:red') .container 
+        | class is a responsive, fixed-width container, meaning its 
+        code(style='color:red') max-width 
+        | changes at each breakpoint.
+    pre
+        code.language-html
+            | <div class="container"><!-- Content here --></div>
+    h2 Fluid
+    h2 Responsive
+    h2 Responsive breakpoints
+    h2 Z-index
