@@ -1,8 +1,9 @@
-@import "../node_modules/@fontsource/ibm-plex-sans/index.css";
-// @import "../node_modules/normalize.css/normalize.css";
+@import '~@fontsource/ibm-plex-sans/index.css';
 @import '~bootstrap/scss/bootstrap-reboot';
+@import '~highlight.js/styles/a11y-dark.css';
 @import "./variables.scss";
 @import './utilities.scss';
+
 body {
   font-family: "IBM Plex Sans", sans-serif;
 }
