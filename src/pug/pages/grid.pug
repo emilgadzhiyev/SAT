@@ -2,5 +2,414 @@ include ../layout
 
 +layout
     h1 Grid system
-    p.introText
+    p.intro-text
         | Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, six default responsive tiers, Sass variables and mixins, and dozens of predefined classes.
+    h2 How it works
+    p.intro-text
+        | Bootstrap’s grid system uses a series of containers, rows, and columns to layout and align content. It’s built with 
+        a(href='https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox') flexbox 
+        | and is fully responsive. Below is an example and an in-depth look at how the grid comes together.
+    p.intro-text
+        b New to or unfamiliar with flexbox? 
+        a(href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background') Read this CSS Tricks flexbox guide 
+        | for background, terminology, guidelines, and code snippets.
+    .example-divs
+        .container
+            .row
+                .col-sm
+                    | One of three columns
+                .col-sm
+                    | One of three columns
+                .col-sm
+                    | One of three columns
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col-sm"&gt;
+            |           One of three columns
+            |       &lt;/div&gt;
+            |       &lt;div class="col-sm"&gt;
+            |           One of three columns
+            |       &lt;/div&gt;
+            |       &lt;div class="col-sm"&gt;
+            |           One of three columns
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    p.intro-text
+        | The above example creates three equal-width columns on small, medium, large, and extra large devices using our predefined grid classes. Those columns are centered in the page with the parent 
+        code(style='color:red') .container
+        |.
+    p.intro-text
+        | Breaking it down, here’s how it works:
+    ul.intro-text
+        li
+            | Containers provide a means to center and horizontally pad your site&rsquo;s contents. Use 
+            code(style='color:red') .container 
+            | for a responsive pixel width or 
+            code(style='color:red') .container-fluid 
+            | for 
+            code(style='color:red') width: 100% 
+            | across all viewport and device sizes.
+        li
+            | Rows are wrappers for columns. Each column has horizontal 
+            code(style='color:red') padding 
+            | (called a gutter) for controlling the space between them. This 
+            code(style='color:red') padding 
+            | is then counteracted on the rows with negative margins. This way, all the content in your columns is visually aligned down the left side.
+        li
+            | In a grid layout, content must be placed within columns and only columns may be immediate children of rows.
+        li
+            | Thanks to flexbox, grid columns without a specified 
+            code(style='color:red') width 
+            | will automatically layout as equal width columns. For example, four instances of 
+            code(style='color:red') .col-sm 
+            | will each automatically be 25% wide from the small breakpoint and up. See the 
+            a(href='#auto-layout-columns') auto-layout columns 
+            | section for more examples.
+        li
+            | Column classes indicate the number of columns you&rsquo;d like to use out of the possible 12 per row. So, if you want three equal-width columns across, you can use 
+            code(style='color:red') .col-4
+            | .
+        li
+            | Column 
+            code(style='color:red') width
+            |s are set in percentages, so they&rsquo;re always fluid and sized relative to their parent element.
+        li
+            | Columns have horizontal 
+            code(style='color:red') padding 
+            | to create the gutters between individual columns, however, you can remove the 
+            code(style='color:red') margin 
+            | from rows and 
+            code(style='color:red') padding 
+            | from columns with 
+            code(style='color:red') .no-gutters 
+            | on the 
+            code(style='color:red') .row
+            |.
+        li
+            | To make the grid responsive, there are five grid breakpoints, one for each 
+            a(href='/docs/4.6/layout/overview/#responsive-breakpoints') responsive breakpoint
+            | : all breakpoints (extra small), small, medium, large, and extra large.
+        li
+            | Grid breakpoints are based on minimum width media queries, meaning 
+            b they apply to that one breakpoint and all those above it 
+            | (e.g., 
+            code(style='color:red') .col-sm-4 
+            | applies to small, medium, large, and extra large devices, but not the first 
+            code(style='color:red') xs 
+            | breakpoint).
+        li
+            | You can use predefined grid classes (like 
+            code(style='color:red') .col-4
+            | ) or 
+            a(href='#sass-mixins') Sass mixins
+            |  for more semantic markup.
+    p.intro-text
+        | Be aware of the limitations and 
+        a(href='https://github.com/philipwalton/flexbugs') bugs around flexbox
+        | , like the 
+        a(href='https://github.com/philipwalton/flexbugs#flexbug-9') inability to use some HTML elements as flex containers
+        |.
+    h2 Grid options
+    p.intro-text
+        | While Bootstrap uses 
+        code(style='color:red') em
+        |s or 
+        code(style='color:red') rem
+        |s for defining most sizes, 
+        code(style='color:red') px
+        |s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the 
+        a(href='https://drafts.csswg.org/mediaqueries-3/#units') font size
+        |.
+    p.intro-text
+        | See how aspects of the Bootstrap grid system work across multiple devices with a handy table.
+    table
+        thead
+            tr
+                td
+                td
+                    b Extra small
+                    br
+                    small &lt;576px
+                td
+                    | Small
+                    br
+                    small &ge;576px
+                td
+                    | Medium
+                    br
+                    small &ge;768px
+                td
+                    | Large
+                    br
+                    small &ge;992px
+                td
+                    | Extra large
+                    br
+                    small &ge;1200px
+        tbody
+            tr
+                td
+                    b Max container width
+                td None (auto)
+                td 540px
+                td 720px
+                td 960px
+                td 1140px
+            tr
+                td
+                    b Class prefix
+                td
+                    code(style='color:red') .col-
+                td
+                    code(style='color:red') .col-sm-
+                td
+                    code(style='color:red') .col-md-
+                td
+                    code(style='color:red') .col-lg-
+                td
+                    code(style='color:red') .col-xl-
+            tr
+                td
+                    b # of columns
+                td(colspan='5') 12
+            tr
+                td
+                    b Gutter width
+                td(colspan='5') 30px (15px on each side of a column)
+            tr
+                td
+                    b Nestable
+                td(colspan='5') Yes
+            tr
+                td
+                    b Column ordering
+                td(colspan='5') Yes
+    h2 Auto-layout columns
+    p.intro-text
+        | Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like 
+        code(style='color:red') .col-sm-6
+        |.
+    h2 Equal-width
+    p.intro-text
+        | For example, here are two grid layouts that apply to every device and viewport, from 
+        code(style='color:red') xs 
+        | to 
+        code(style='color:red') xl
+        |. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.
+    .example-divs
+        .container
+            .row
+                .col
+                    | 1 of 2
+                .col
+                    | 2 of 2
+    .example-divs
+        .container
+            .row
+                .col
+                    | 1 of 3
+                .col
+                    | 2 of 3
+                .col
+                    | 3 of 3
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col"&gt;
+            |           1 of 2
+            |       &lt;/div&gt;
+            |       &lt;div class="col"&gt;
+            |           2 of 2
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col"&gt;
+            |           1 of 3
+            |       &lt;/div&gt;
+            |       &lt;div class="col"&gt;
+            |           2 of 3
+            |       &lt;/div&gt;
+            |       &lt;div class="col"&gt;
+            |           3 of 3
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h2 Equal-width multi-line
+    p.intro-text
+        | Create equal-width columns that span multiple lines by inserting a 
+        code(style='color:red') .w-100 
+        | where you want the columns to break to a new line. Make the breaks responsive by mixing 
+        code(style='color:red') .w-100 
+        | with some 
+        a(href='https://getbootstrap.com/docs/4.6/utilities/display/') responsive display utilities
+        |.
+    p.intro-text
+        | There was a 
+        a(href='https://github.com/philipwalton/flexbugs#flexbug-11') Safari flexbox bug 
+        | that prevented this from working without an explicit 
+        code(style='color:red') flex-basis 
+        | or 
+        code(style='color:red') border
+        |. There are workarounds for older browser versions, but they shouldn’t be necessary if your target browsers don’t fall into the buggy versions.
+    .example-divs
+        .container
+            .row
+                .col col
+                .col col
+                .w-100
+                .col col
+                .col col
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col"&gt;col&lt;/div&gt;
+            |       &lt;div class="col"&gt;col&lt;/div&gt;
+            |       &lt;div class="w-100"&gt;&lt;/div&gt;
+            |       &lt;div class="col"&gt;col&lt;/div&gt;
+            |       &lt;div class="col"&gt;col&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h2 Setting one column width
+    p.intro-text
+        | Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col"&gt;
+            |           1 of 3
+            |       &lt;/div&gt;
+            |       &lt;div class="col-6"&gt;
+            |           2 of 3 (wider)
+            |       &lt;/div&gt;
+            |       &lt;div class="col"&gt;
+            |           3 of 3
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col"&gt;
+            |           1 of 3
+            |       &lt;/div&gt;
+            |       &lt;div class="col-5"&gt;
+            |           2 of 3 (wider)
+            |       &lt;/div&gt;
+            |       &lt;div class="col"&gt;
+            |           3 of 3
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h2 Variable width content
+    p.intro-text
+        | Use 
+        code(style='color:red') col-{breakpoint}-auto 
+        | classes to size columns based on the natural width of their content.
+    .example-divs
+        .container
+            .row.justify-content-md-center
+                .col.col-lg-2
+                    | 1 of 3
+                .col-md-auto
+                    | Variable width content
+                .col.col-lg-2
+                    | 3 of 3
+    .example-divs
+        .container
+            .row
+                .col
+                    | 1 of 3
+                .col-md-auto
+                    | Variable width content
+                .col.col-lg-2
+                    | 3 of 3
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row justify-content-md-center"&gt;
+            |       &lt;div class="col col-lg-2"&gt;
+            |           1 of 3
+            |       &lt;/div&gt;
+            |       &lt;div class="col-md-auto"&gt;
+            |           Variable width content
+            |       &lt;/div&gt;
+            |       &lt;div class="col col-lg-2"&gt;
+            |           3 of 3
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col"&gt;
+            |           1 of 3
+            |       &lt;/div&gt;
+            |       &lt;div class="col-md-auto"&gt;
+            |           Variable width content
+            |       &lt;/div&gt;
+            |       &lt;div class="col col-lg-2"&gt;
+            |           3 of 3
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h2 Responsive classes
+    p.intro-text
+        | Bootstrap’s grid includes five tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
+    h2 All breakpoints
+    p.intro-text
+        | For grids that are the same from the smallest of devices to the largest, use the 
+        code(style='color:red') .col 
+        | and 
+        code(style='color:red') .col-* 
+        | classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to 
+        code(style='color:red') .col
+        |.
+    .example-divs
+        .container
+            .row
+                .col col
+                .col col
+                .col col
+                .col col
+    .example-divs
+        .container
+            .row
+                .col-4 col-8
+                .col-2 col-4
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col"&gt;col&lt;/div&gt;
+            |       &lt;div class="col"&gt;col&lt;/div&gt;
+            |       &lt;div class="col"&gt;col&lt;/div&gt;
+            |       &lt;div class="col"&gt;col&lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col-8"&gt;col-8&lt;/div&gt;
+            |       &lt;div class="col-4"&gt;col-4&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h2 Stacked to horizontal
+    h2 Mix and match
+    h2 Gutters
+    h2 Row columns
+    h2 Alignment
+    h2 Vertical alignment
+    h2 Horizontal alignment
+    h2 No gutters
+    h2 Column wrapping
+    h2 Column breaks
+    h2 Reordering
+    h2 Order classes
+    h2 Offsetting columns
+    h2 Offset classes
+    h2 Margin utilities
+    h2 Nesting
+    h2 Sass mixins
+    h2 Variables
+    h2 Mixins
+    h2 Example usage
+    h2 Customizing the grid
+    h2 Columns and gutters
+    h2 Grid tiers
