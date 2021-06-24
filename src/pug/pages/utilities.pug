@@ -4,6 +4,58 @@ include ../layout
     h1 Utilities for layout
     p.intro-text
         | For faster mobile-friendly and responsive development, Bootstrap includes dozens of utility classes for showing, hiding, aligning, and spacing content.
+    h2 Changing 
+        code(style='color:red') display
+    p.intro-text
+        | Use our display utilities for responsively toggling common values of the 
+        code(style='color:red') display 
+        | property. Mix it with our grid system, content, or components to show or hide them across specific viewports.
+    h2 Flexbox options
+    p.intro-text
+        | SAT is built with flexbox, but not every element’s 
+        code(style='color:red') display 
+        | has been changed to 
+        code(style='color:red') display: flex 
+        | as this would add many unnecessary overrides and unexpectedly change key browser behaviors. Most of our components are built with flexbox enabled.
+    p.intro-text
+        | Should you need to add 
+        code(style='color:red') display: flex 
+        | to an element, do so with 
+        code(style='color:red') .d-flex 
+        | or one of the responsive variants (e.g., 
+        code(style='color:red') .d-sm-flex
+        | ). You’ll need this class or 
+        code(style='color:red') display 
+        | value to allow the use of our extra flexbox utilities for sizing, alignment, spacing, and more.
+    h2 Margin and padding
+    p.intro-text
+        | Use the 
+        code(style='color:red') margin 
+        | and 
+        code(style='color:red') padding 
+        | spacing utilities to control how elements and components are spaced and sized. Bootstrap 4 includes a five-level scale for spacing utilities, based on a 
+        code(style='color:red') 1rem 
+        value default 
+        code(style='color:red') $spacer 
+        | variable. Choose values for all viewports (e.g., 
+        code(style='color:red') .mr-3 
+        | for 
+        code(style='color:red') margin-right: 1rem
+        | ), or pick responsive variants to target specific viewports (e.g., 
+        code(style='color:red') .mr-md-3 
+        | for 
+        code(style='color:red') margin-right: 1rem 
+        | starting at the 
+        code(style='color:red') md 
+        | breakpoint).
+    h2 Toggle visibility
+    p.intro-text
+        | When toggling 
+        code(style='color:red') display 
+        | isn’t needed, you can toggle the 
+        code(style='color:red') visibility 
+        | of an element with our visibility utilities. Invisible elements will still affect the layout of the page, but are visually hidden from visitors.
+    h2 Custom cards
     .stack
         .stack__item.row
             .col-3

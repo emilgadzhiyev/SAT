@@ -277,6 +277,22 @@ include ../layout
     h2 Setting one column width
     p.intro-text
         | Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
+    .example-divs
+        .container
+            .row
+                .col
+                    | 1 of 3
+                .col-3
+                    | 2 of 3 (wider)
+                .col
+                    | 3 of 3
+            .row
+                .col
+                    | 1 of 3
+                .col-2
+                    | 2 of 3 (wider)
+                .col
+                    | 3 of 3
     pre
         code.html
             |&lt;div class="container"&gt;
@@ -284,7 +300,7 @@ include ../layout
             |       &lt;div class="col"&gt;
             |           1 of 3
             |       &lt;/div&gt;
-            |       &lt;div class="col-6"&gt;
+            |       &lt;div class="col-3"&gt;
             |           2 of 3 (wider)
             |       &lt;/div&gt;
             |       &lt;div class="col"&gt;
@@ -295,7 +311,7 @@ include ../layout
             |       &lt;div class="col"&gt;
             |           1 of 3
             |       &lt;/div&gt;
-            |       &lt;div class="col-5"&gt;
+            |       &lt;div class="col-2"&gt;
             |           2 of 3 (wider)
             |       &lt;/div&gt;
             |       &lt;div class="col"&gt;
@@ -391,25 +407,638 @@ include ../layout
             |   &lt;/div&gt;
             |&lt;/div&gt;
     h2 Stacked to horizontal
+    p.intro-text
+        | Using a single set of 
+        code(style='color:red') .col-sm-* 
+        | classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (
+        code(style='color:red') sm
+        | ).
+    .example-divs
+        .container
+            .row
+                .col-sm-4 col-sm-4
+                .col-sm-2 col-sm-4
+            .row
+                .col-sm col-sm
+                .col-sm col-sm
+                .col-sm col-sm
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col-sm-8"&gt;col&lt;/div&gt;
+            |       &lt;div class="col-sm-4"&gt;col&lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col-sm"&gt;col-8&lt;/div&gt;
+            |       &lt;div class="col-sm"&gt;col-4&lt;/div&gt;
+            |       &lt;div class="col-sm"&gt;col-4&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
     h2 Mix and match
+    p.intro-text
+        | Don’t want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works.
+    .example-divs
+        .container
+            .row
+                .col-md-4 .col-md-8
+                .col-3.col-md-2 .col-6 .col-md-4
+            .row
+                .col-3.col-md-2 .col-6 .col-md-4
+                .col-3.col-md-2 .col-6 .col-md-4
+                .col-3.col-md-2 .col-6 .col-md-4
+            .row
+                .col-3 .col-6
+                .col-3 .col-6
     h2 Gutters
+    p.intro-text
+        | Gutters can be responsively adjusted by breakpoint-specific padding and negative margin utility classes. To change the gutters in a given row, pair a negative margin utility on the 
+        code(style='color:red') .row 
+        | and matching padding utilities on the 
+        code(style='color:red') .col
+        | s. The 
+        code(style='color:red') .container 
+        | or 
+        code(style='color:red') .container-fluid 
+        | parent may need to be adjusted too to avoid unwanted overflow, using again matching padding utility.
+        p.intro-text
+        | Here’s an example of customizing the Bootstrap grid at the large (lg) breakpoint and above. We’ve increased the 
+        code(style='color:red') .col 
+        | padding with 
+        code(style='color:red') .px-lg-5
+        | , counteracted that with 
+        code(style='color:red') .mx-lg-n5 
+        | on the parent 
+        code(style='color:red') .row 
+        | and then adjusted the 
+        code(style='color:red') .container 
+        | wrapper with 
+        code(style='color:red') .px-lg-5.
+    .example-divs
+        .container.px-lg-5
+            .row.mx-lg-n5
+                .col.py-3.px-lg-5 Custom column padding
+                .col.py-3.px-lg-5 Custom column padding
+    pre
+        code.html
+            |&lt;div class="container px-lg-5"&gt;
+            |   &lt;div class="row mx-lg-n5"&gt;
+            |       &lt;div class="col py-3 px-lg-5"&gt;Custom column&lt;/div&gt;
+            |       &lt;div class="col py-3 px-lg-5"&gt;Custom column&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
     h2 Row columns
+    p.intro-text
+        | Use the responsive 
+        code(style='color:red') .row-cols-* 
+        | classes to quickly set the number of columns that best render your content and layout. Whereas normal 
+        code(style='color:red') .col-* 
+        | classes apply to the individual columns (e.g., 
+        code(style='color:red') .col-md-4
+        | ), the row columns classes are set on the parent 
+        code(style='color:red') .row 
+        | as a shortcut.
+    p.intro-text
+        | Use these row columns classes to quickly create basic grid layouts or to control your card layouts.
+    .example-divs
+        .container
+            .row.row-cols-2
+                .col Column
+                .col Column
+                .col Column
+                .col Column
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row row-cols-2"&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    .example-divs
+        .container
+            .row.row-cols-3
+                .col Column
+                .col Column
+                .col Column
+                .col Column
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row row-cols-3"&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    .example-divs
+        .container
+            .row.row-cols-4
+                .col Column
+                .col Column
+                .col Column
+                .col Column
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row row-cols-4"&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    .example-divs
+        .container
+            .row.row-cols-4
+                .col Column
+                .col Column
+                .col-3 Column
+                .col Column
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row row-cols-4"&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |       &lt;div class="col-6"&gt;Column&lt;/div&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    .example-divs
+        .container
+            .row.row-cols-1.row-cols-sm-2.row-cols-md-4
+                .col Column
+                .col Column
+                .col Column
+                .col Column
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row row-cols-1 row-cols-sm-2 row-cols-md-4"&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |       &lt;div class="col"&gt;Column&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    p.intro-text
+        | You can also use the accompanying Sass mixin, 
+        code(style='color:red') row-cols()
+        | :
+    pre
+        code.scss
+            |.element {
+            |   // Three columns to start
+            |   @include row-cols(3);
+            |   // Five columns from medium breakpoint up
+            |   @include media-breakpoint-up(md) {
+            |       @include row-cols(5);
+            |   }
+            |}
     h2 Alignment
+    p.intro-text
+        | Use flexbox alignment utilities to vertically and horizontally align columns. 
+        b Internet Explorer 10-11 do not support vertical alignment of flex items when the flex container has a 
+        code(style='color:red') min-height 
+        b as shown below. 
+        a(href='https://github.com/philipwalton/flexbugs#flexbug-3') See Flexbugs #3 for more details.
     h2 Vertical alignment
+    .example-divs
+        .container
+            .row.align-items-start
+                .col One of three columns
+                .col One of three columns
+                .col One of three columns
+            .row.align-items-center
+                .col One of three columns
+                .col One of three columns
+                .col One of three columns
+            .row.align-items-end
+                .col One of three columns
+                .col One of three columns
+                .col One of three columns
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row align-items-start"&gt;
+            |       &lt;div class="col"&gt;One of three columns&lt;/div&gt;
+            |       &lt;div class="col"&gt;One of three columns&lt;/div&gt;
+            |       &lt;div class="col"&gt;One of three columns&lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="row align-items-center"&gt;
+            |       &lt;div class="col"&gt;One of three columns&lt;/div&gt;
+            |       &lt;div class="col"&gt;One of three columns&lt;/div&gt;
+            |       &lt;div class="col"&gt;One of three columns&lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="row align-items-end"&gt;
+            |       &lt;div class="col"&gt;One of three columns&lt;/div&gt;
+            |       &lt;div class="col"&gt;One of three columns&lt;/div&gt;
+            |       &lt;div class="col"&gt;One of three columns&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    .example-divs
+        .container
+            .row.align-items-start
+                .col.align-self-start One of three columns
+                .col.align-self-center One of three columns
+                .col.align-self-end One of three columns
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col align-self-start"&gt;One of three columns&lt;/div&gt;
+            |       &lt;div class="col align-self-center"&gt;One of three columns&lt;/div&gt;
+            |       &lt;div class="col align-self-end"&gt;One of three columns&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
     h2 Horizontal alignment
+    .example-divs
+        .container
+            .row.justify-content-start
+                .col-2 One of two columns
+                .col-2 One of two columns
+            .row.justify-content-center
+                .col-2 One of two columns
+                .col-2 One of two columns
+            .row.justify-content-end
+                .col-2 One of two columns
+                .col-2 One of two columns
+            .row.justify-content-around
+                .col-2 One of two columns
+                .col-2 One of two columns
+            .row.justify-content-between
+                .col-2 One of two columns
+                .col-2 One of two columns
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row justify-content-start"&gt;
+            |       &lt;div class="col-4"&gt;One of two columns&lt;/div&gt;
+            |       &lt;div class="col-4"&gt;One of two columns&lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="row justify-content-center"&gt;
+            |       &lt;div class="col-4"&gt;One of two columns&lt;/div&gt;
+            |       &lt;div class="col-4"&gt;One of two columns&lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="row justify-content-end"&gt;
+            |       &lt;div class="col-4"&gt;One of two columns&lt;/div&gt;
+            |       &lt;div class="col-4"&gt;One of two columns&lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="row justify-content-around"&gt;
+            |       &lt;div class="col-4"&gt;One of two columns&lt;/div&gt;
+            |       &lt;div class="col-4"&gt;One of two columns&lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="row justify-content-between"&gt;
+            |       &lt;div class="col-4"&gt;One of two columns&lt;/div&gt;
+            |       &lt;div class="col-4"&gt;One of two columns&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
     h2 No gutters
+    p.intro-text
+        | The gutters between columns in our predefined grid classes can be removed with 
+        code(style='color:red') .no-gutters
+        | . This removes the negative 
+        code(style='color:red') margin
+        | s from 
+        code(style='color:red') .row 
+        | and the horizontal 
+        code(style='color:red') padding 
+        | from all immediate children columns.
+    p.intro-text
+        | Here’s the source code for creating these styles. Note that column overrides are scoped to only the first children columns and are targeted via 
+        a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors") attribute selector
+        | . While this generates a more specific selector, column padding can still be further customized with spacing utilities.
+    p.intro-text
+        b Need an edge-to-edge design? 
+        | Drop the parent 
+        code(style='color:red') .container or 
+        code(style='color:red') .container-fluid
+        | .
     h2 Column wrapping
+    p.intro-text
+        | If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.
+    .example-divs
+        .container
+            .row
+                .col-5 .col-9
+                .col-2 .col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.
+                .col-3 .col-6<br>Subsequent columns continue along the new line.
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col-9"&gt;.col-9&lt;/div&gt;
+            |       &lt;div class="col-4"&gt;.col-4&lt;br&gt;Since 9 + 4 = 13.&lt;/div&gt;
+            |       &gt; 12, this 4-column-wide div gets wrapped onto
+            |       a new line as one contiguous unit.
+            |       &lt;div class="col-6"&gt;.col-6&lt;br&gt;Subsequent columns continue 
+            |       along the new line.&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
     h2 Column breaks
+    p.intro-text
+        | Breaking columns to a new line in flexbox requires a small hack: add an element with 
+        code(style='color:red') width: 100% 
+        | wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple 
+        code(style='color:red') .row
+        | s, but not every implementation method can account for this.
+    .example-divs
+        .conatiner
+            .row
+                .col-6.col-sm-3 .col-6 .col-sm-3
+                .col-6.col-sm-3 .col-6 .col-sm-3
+                .w-100
+                .col-6.col-sm-3 .col-6 .col-sm-3
+                .col-6.col-sm-3 .col-6 .col-sm-3
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col-6 col-sm-3"&gt;.col-6 col-sm-3&lt;/div&gt;
+            |       &lt;div class="col-6 col-sm-3"&gt;.col-6 col-sm-3&lt;/div&gt;
+            |       &lt;!-- Force next columns to break to new line --&gt;
+            |       &lt;div class="w-100"&gt;&lt;/div&gt;
+            |       &lt;div class="col-6 col-sm-3"&gt;.col-6 col-sm-3&lt;/div&gt;
+            |       &lt;div class="col-6 col-sm-3"&gt;.col-6 col-sm-3&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    p.intro-text
+        | You may also apply this break at specific breakpoints with our responsive display utilities.
+    .example-divs
+        .container
+            .row
+                .col-3.col-sm-2 .col-6 .col-sm-4
+                .col-3.col-sm-2 .col-6 .col-sm-4
+                .w-100.d-none.d-md-block
+                .col-3.col-sm-2 .col-6 .col-sm-4
+                .col-3.col-sm-2 .col-6 .col-sm-4
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col-6 col-sm-4"&gt;.col-6 col-sm-4&lt;/div&gt;
+            |       &lt;div class="col-6 col-sm-4"&gt;.col-6 col-sm-4&lt;/div&gt;
+            |       &lt;!-- Force next columns to break to new line at md breakpoint and up --&gt;
+            |       &lt;div class="w-100 d-none d-md-block"&gt;&lt;/div&gt;
+            |       &lt;div class="col-6 col-sm-4"&gt;.col-6 col-sm-4&lt;/div&gt;
+            |       &lt;div class="col-6 col-sm-4"&gt;.col-6 col-sm-4&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
     h2 Reordering
-    h2 Order classes
-    h2 Offsetting columns
-    h2 Offset classes
-    h2 Margin utilities
+    h3 Order classes
+    p.intro-text
+        | Use .order- classes for controlling the 
+        b visual order 
+        | of your content. These classes are responsive, so you can set the 
+        code(style='color:red') order 
+        | by breakpoint (e.g., 
+        code(style='color:red') .order-1.order-md-2
+        | ). Includes support for 
+        code(style='color:red') 1 
+        | through 
+        code(style='color:red') 12 
+        | across all five grid tiers.
+    .example-divs
+        .container
+            .row
+                .col First in DOM, no order applied
+                .col.order-6 Second in DOM, with a larger order
+                .col.order-1 Third in DOM, with an order of 1
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col"&gt;First in DOM, no order applied&lt;/div&gt;
+            |       &lt;div class="col order-6"&gt;Second in DOM, with a larger order&lt;/div&gt;
+            |       &lt;div class="col order-1"&gt;Third in DOM, with an order of 1&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    p.intro-text
+        | There are also responsive 
+        code(style='color:red') .order-first 
+        | and 
+        code(style='color:red') .order-last 
+        | classes that change the 
+        code(style='color:red') order 
+        | of an element by applying 
+        code(style='color:red') order: -1 
+        | and 
+        code(style='color:red') order: 13 
+        | (
+        code(style='color:red') order: $columns + 1)
+        | , respectively. These classes can also be intermixed with the numbered 
+        code(style='color:red') .order-* 
+        | classes as needed.
+    .example-divs
+        .conainer
+            .row
+                .col.order-last First in DOM, ordered last
+                .col Second in DOM, unordered
+                .col.order-first Third in DOM, ordered first
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col order-last"&gt;First in DOM, ordered last&lt;/div&gt;
+            |       &lt;div class="col"&gt;Second in DOM, unordered&lt;/div&gt;
+            |       &lt;div class="col order-first"&gt;Third in DOM, ordered first&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h3 Offsetting columns
+    p.intro-text
+        | You can offset grid columns in two ways: our responsive 
+        code(style='color:red') .offset- 
+        | grid classes and our margin utilities. Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable.
+    h4 Offset classes
+    p.intro-text
+        | Move columns to the right using 
+        code(style='color:red') .offset-md-* 
+        | classes. These classes increase the left margin of a column by 
+        code(style='color:red') * 
+        | columns. For example, 
+        code(style='color:red') .offset-md-4 
+        | moves 
+        code(style='color:red') .col-md-4 
+        | over four columns.
+    .example-divs
+        .row
+            .col-md-2 .col-md-2
+            .col-md-2.offset-md-2 .col-md-4 .offset-md-4
+        .row
+            .col-md-2.offset-md-2 .col-md-3 .offset-md-3
+            .col-md-2.offset-md-2 .col-md-3 .offset-md-3
+        .row
+            .col-md-2.offset-md-2 .col-md-6 .offset-md-3
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+            |       &lt;div class="col-md-4 offset-md-4"&gt;.col-md-4 .offset-md-4&lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col-md-3 offset-md-3"&gt;.col-md-3 .offset-md-3&lt;/div&gt;
+            |       &lt;div class="col-md-3 offset-md-3"&gt;.col-md-3 .offset-md-3&lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col-md-6 offset-md-3"&gt;col-md-6 offset-md-3&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    p.intro-text
+        | In addition to column clearing at responsive breakpoints, you may need to reset offsets. See this in action in the grid example.
+    .example-divs
+        .container
+            .row
+                .col-sm-5.col-md-6 .col-sm-5 .col-md-6
+                .col-sm-5.offset-sm-2.col-md-6.offset-md-0 .col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0
+            .row
+                .col-sm-6.col-md-5.col-lg-6 .col-sm-5 .col-md-6
+                .col-sm-5.offset-sm-2.col-md-6.offset-md-0 .col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0
+    pre
+        code.html
+            |&lt;div class="container"&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col-sm-5 col-md-6"&gt;.col-sm-5 .col-md-6&lt;/div&gt;
+            |       &lt;div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0"&gt;.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0&lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="row"&gt;
+            |       &lt;div class="col-sm-6 col-md-5 col-lg-6"&gt;.col-sm-6 .col-md-5 .col-lg-6&lt;/div&gt;
+            |       &lt;div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0"&gt;.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0&lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h4 Margin utilities
+    p.intro-text
+        | With the move to flexbox in v4, you can use margin utilities like 
+        code(style='color:red') .mr-auto 
+        | to force sibling columns away from one another.
     h2 Nesting
+    p.intro-text
+        | To nest your content with the default grid, add a new 
+        code(style='color:red') .row 
+        | and set of 
+        code(style='color:red') .col-sm-* 
+        | columns within an existing 
+        code(style='color:red') .col-sm-* 
+        | column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).
     h2 Sass mixins
-    h2 Variables
+    p.intro-text
+        | When using Bootstrap’s source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.      
+    h3 Variables
+    p.intro-text
+        | Variables and maps determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.
+    pre
+        code.scss
+            |$grid-columns:      12;
+            |$grid-gutter-width: 30px;
+            |$grid-breakpoints: (
+            |   // Extra small screen/phone
+            |   xs: 0,
+            |   // Small screen/phone
+            |   sm: 576px,
+            |   // Medium screen/tablet
+            |   md: 768px,
+            |   // Large screen/desktop
+            |   lg: 992px,
+            |   // Extra large screen/wide desktop
+            |   xl: 1200px
+            |);
+            |$container-max-widths: (
+            |   sm: 540px,
+            |   md: 720px,
+            |   lg: 960px,
+            |   xl: 1140px
+            |);
     h2 Mixins
-    h2 Example usage
+    p.intro-text
+        | Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.
+    pre
+        code.scss
+            | // Creates a wrapper for a series of columns
+            |@include make-row();
+            |// Make the element grid-ready (applying everything but the width)
+            |@include make-col-ready();
+            |@include make-col($size, $columns: $grid-columns);
+            |// Get fancy by offsetting, or changing the sort order
+            |@include make-col-offset($size, $columns: $grid-columns);
+    h3 Example usage
+    p.intro-text
+        | You can modify the variables to your own custom values, or just use the mixins with their default values. Here’s an example of using the default settings to create a two-column layout with a gap between.
+    pre
+        code.scss
+            | .example-container {
+            |    @include make-container();
+            |    // Make sure to define this width after the mixin to override
+            |    // `width: 100%` generated by `make-container()`
+            |    width: 800px;
+            |    }
+            |   .example-row {
+            |    @include make-row();
+            |    }
+            |    .example-content-main {
+            |    @include make-col-ready();
+            |    @include media-breakpoint-up(sm) {
+            |        @include make-col(6);
+            |    }
+            |    @include media-breakpoint-up(lg) {
+            |       @include make-col(8);
+            |   }
+            |   }
+            |   .example-content-secondary {
+            |   @include make-col-ready();
+            |   @include media-breakpoint-up(sm) {
+            |       @include make-col(6);
+            |   }
+            |   @include media-breakpoint-up(lg) {
+            |       @include make-col(4);
+            |   }
+            |   }
     h2 Customizing the grid
-    h2 Columns and gutters
+    p.intro-text
+        | Using our built-in grid Sass variables and maps, it’s possible to completely customize the predefined grid classes. Change the number of tiers, the media query dimensions, and the container widths—then recompile.
+    h3 Columns and gutters
+    p.intro-text
+        | The number of grid columns can be modified via Sass variables.
+        code(style='color:red') $grid-columns 
+        | is used to generate the widths (in percent) of each individual column while 
+        code(style='color:red') $grid-gutter-width 
+        | sets the width for the column gutters.
+    pre
+        code.scss
+            | $grid-columns: 12 !default;
+            | $grid-gutter-width: 30px !default;
     h2 Grid tiers
+    p.intro-text
+        | Moving beyond the columns themselves, you may also customize the number of grid tiers. If you wanted just four grid tiers, you’d update the 
+        code(style='color:red') $grid-breakpoints 
+        | and 
+        code(style='color:red') $container-max-widths 
+        | to something like this:
+    pre
+        code.scss
+            |$grid-breakpoints: (
+            |   xs: 0,
+            |   sm: 480px,
+            |   md: 768px,
+            |   lg: 1024px
+            |);
+            |$container-max-widths: (
+            |   sm: 420px,
+            |   md: 720px,
+            |   lg: 960px
+            |);
+    p.intro-text
+        | When making any changes to the Sass variables or maps, you’ll need to save your changes and recompile. Doing so will output a brand new set of predefined grid classes for column widths, offsets, and ordering. Responsive visibility utilities will also be updated to use the custom breakpoints. Make sure to set grid values in 
+        code(style='color:red') px 
+        | (not 
+        code(style='color:red') rem
+        | , 
+        code(style='color:red') em
+        | , or 
+        code(style='color:red') %
+        | ).
+
+

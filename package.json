@@ -34,7 +34,7 @@
     "@fontsource/ibm-plex-sans": "^4.1.0",
     "bootstrap": "^4.6.0",
     "css-loader": "^5.0.1",
-    "css-minimizer-webpack-plugin": "^1.2.0",
+    "css-minimizer-webpack-plugin": "^3.0.1",
     "file-loader": "^6.2.0",
     "fontsource-ibm-plex-sans": "^3.0.9",
     "highlight.js": "^10.6.0",
