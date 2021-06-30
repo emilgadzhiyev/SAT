@@ -1,6 +1,7 @@
 @import "../../variables.scss";
 
 .stack {
+  margin-bottom: $unit * 2;
   &__item {
     &:not(:last-child) {
       margin-bottom: $unit * 2;

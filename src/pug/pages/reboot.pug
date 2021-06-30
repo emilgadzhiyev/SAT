@@ -2,5 +2,526 @@ include ../layout
 
 +layout
     h1 Reboot
-    p.introText
+    p.intro-text
         | Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.
+    h2 Approach
+    p.intro-text
+        | Reboot builds upon Normalize, providing many HTML elements with somewhat opinionated styles using only element selectors. Additional styling is done only with classes. For example, we reboot some 
+        code(style='color:red')  &lt;table&gt; 
+        | styles for a simpler baseline and later provide 
+        code(style='color:red') .table
+        | , 
+        code(style='color:red') .table-bordered
+        | , and more.
+    p.intro-text
+        | Here are our guidelines and reasons for choosing what to override in Reboot:
+    ul.intro-text
+        li
+            | Update some browser default values to use 
+            code(style='color:red') rem
+            | s instead of 
+            code(style='color:red') em
+            | s for scalable component spacing.
+        li
+            | Avoid 
+            code(style='color:red') margin-top
+            | . Vertical margins can collapse, yielding unexpected results. More importantly though, a single direction of 
+            code(style='color:red') margin
+            |  is a simpler mental model.
+        li
+            | For easier scaling across device sizes, block elements should use 
+            code(style='color:red') rem
+            | s for 
+            code(style='color:red') margin
+            | s.
+        li
+            | Keep declarations of 
+            code(style='color:red') font
+            | -related properties to a minimum, using 
+            code(style='color:red') inherit
+            |  whenever possible.
+    h2 Page defaults
+    p.intro-text
+        | The 
+        code(style='color:red') &lt;html&gt; 
+        | and 
+        code(style='color:red') &lt;body&gt; 
+        | elements are updated to provide better page-wide defaults. More specifically:
+    ul.intro-text
+        li
+            | The 
+            code(style='color:red') box-sizing
+            |  is globally set on every element&mdash;including 
+            code(style='color:red') *::before
+            |  and 
+            code(style='color:red') *::after
+            | , to 
+            code(style='color:red') border-box
+            | . This ensures that the declared width of element is never exceeded due to padding or border.
+        li
+            | No base 
+            code(style='color:red') font-size
+            |  is declared on the 
+            code(style='color:red') &lt;html&gt;
+            | , but 
+            code(style='color:red') 16px
+            |  is assumed (the browser default). 
+            code(style='color:red') font-size: 1rem
+            |  is applied on the 
+            code(style='color:red') &lt;body&gt;
+            |  for easy responsive type-scaling via media queries while respecting user preferences and ensuring a more accessible approach.
+        li
+            | The 
+            code(style='color:red') &lt;body&gt;
+            |  also sets a global 
+            code(style='color:red') font-family
+            | , 
+            code(style='color:red') line-height
+            | , and 
+            code(style='color:red') text-align
+            | . This is inherited later by some form elements to prevent font inconsistencies.
+        li
+            | For safety, the 
+            code(style='color:red') &lt;body&gt;
+            |  has a declared 
+            code(style='color:red') background-color
+            | , defaulting to 
+            code(style='color:red') #fff
+            | .
+    h2 Native font stack
+    p.intro-text
+        | The default web fonts (Helvetica Neue, Helvetica, and Arial) have been dropped in Bootstrap 4 and replaced with a “native font stack” for optimum text rendering on every device and OS. Read more about 
+        a(href='https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/') native font stacks in this Smashing Magazine article
+        | .
+    pre
+        code.scss
+            |$font-family-sans-serif:
+            |   // Safari for macOS and iOS (San Francisco)
+            |   -apple-system,
+            |   // Chrome < 56 for macOS (San Francisco)
+            |   BlinkMacSystemFont,
+            |   // Windows
+            |   "Segoe UI",
+            |   // Android
+            |   Roboto,
+            |   // Basic web fallback
+            |   "Helvetica Neue", Arial,
+            |   // Linux
+            |   "Noto Sans",
+            |   "Liberation Sans",
+            |   // Sans serif fallback
+            |   sans-serif,
+            |   // Emoji fonts
+            |   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+    p.intro-text
+        | Note that because the font stack includes emoji fonts, many common symbol/dingbat unicode characters will be rendered as multi-colored pictographs. Their appearance will vary, depending on the style used in the browser/platform’s native emoji font, and they won’t be affected by any CSS 
+        code(style='color:red') color 
+        | styles.
+    p.intro-text
+        | This 
+        code(style='color:red') font-family 
+        | is applied to the 
+        code(style='color:red') &lt;body&gt; 
+        | and automatically inherited globally throughout Bootstrap. To switch the global 
+        code(style='color:red') font-family
+        | , update 
+        code(style='color:red') $font-family-base 
+        | and recompile Bootstrap.
+    h2 Headings and paragraphs
+    p.intro-text
+        | All heading elements—e.g., 
+        code(style='color:red') &lt;h1&gt;
+        | —and 
+        code(style='color:red') &lt;p&gt; 
+        | are reset to have their 
+        code(style='color:red') margin-top 
+        | removed. Headings have 
+        code(style='color:red') margin-bottom: .5rem 
+        | added and paragraphs 
+        code(style='color:red') margin-bottom: 1rem 
+        | for easy spacing.
+    table
+        thead
+            th Heading
+            th Example
+        tbody
+            td
+                code(style='color:red') &lt;h1&gt;&lt;/h1&gt;
+            td
+                h1 h1. SAT heading
+            tr
+                td
+                    code(style='color:red') &lt;h2&gt;&lt;/h2&gt;
+                td
+                    h2 h2. SAT heading
+            tr
+                td
+                    code(style='color:red') &lt;h3&gt;&lt;/h3&gt;
+                td
+                    h3 h3. SAT heading
+            tr
+                td
+                    code(style='color:red') &lt;h4&gt;&lt;/h4&gt;
+                td
+                    h4 h4. SAT heading
+            tr
+                td
+                    code(style='color:red') &lt;h5&gt;&lt;/h5&gt;
+                td
+                    h5 h5. SAT heading
+            tr
+                td
+                    code(style='color:red') &lt;h6&gt;&lt;/h6&gt;
+                td
+                    h6 h6. SAT heading
+    h2 Lists
+    p.intro-text
+        | All lists—
+        code(style='color:red') &lt;ul&gt;
+        | , 
+        code(style='color:red') &lt;ol&gt;
+        | , and 
+        code(style='color:red') &lt;dl&gt;
+        | —have their 
+        code(style='color:red') margin-top 
+        | removed and a 
+        code(style='color:red') margin-bottom: 1rem
+        | . Nested lists have no 
+        code(style='color:red') margin-bottom
+        | .
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    ul
+                        li All lists have their top margin removed
+                        li And their bottom margin normalized
+                        li
+                            | Nested lists have no bottom margin
+                        ul
+                            li This way they have a more even appearance
+                            li Particularly when followed by more list items
+                        li The left padding has also been reset
+                    ol
+                        li Here&rsquo;s an ordered list
+                        li With a few list items
+                        li It has the same overall look
+                        li As the previous unordered list
+    p.intro-text
+        | For simpler styling, clear hierarchy, and better spacing, description lists have updated 
+        code(style='color:red') margins
+        | . 
+        code(style='color:red') &lt;dd&gt;
+        | s reset 
+        code(style='color:red') margin-left 
+        | to 
+        code(style='color:red') 0 
+        | and add 
+        code(style='color:red') margin-bottom: .5rem
+        | . 
+        code(style='color:red') &lt;dt&gt;
+        | s are 
+        b bolded
+        | .
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    dl
+                        dt Description lists
+                        dd A description list is perfect for defining terms.
+                        dt Term
+                        dd Definition for the term.
+                        dd A second definition for the same term.
+                        dt Another term
+                        dd Definition for this other term.
+    h2 Preformatted text
+    p.intro-text
+        | The 
+        code(style='color:red') &lt;pre&gt; 
+        | element is reset to remove its 
+        code(style='color:red') margin-top 
+        | and use 
+        code(style='color:red') rem 
+        | units for its 
+        code(style='color:red') margin-bottom
+        | .
+    pre
+        code.css
+            | .example-element {
+            |   margin-bottom: 1rem;
+            |}
+    h2 Tables
+    p.intro-text
+        | Tables are slightly adjusted to style 
+        code(style='color:red') &lt;caption&gt;
+        | s, collapse borders, and ensure consistent 
+        code(style='color:red') text-align 
+        | throughout. Additional changes for borders, padding, and more come with the .table class.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    table
+                        caption
+                            | This is an example table, and this is its caption to describe the contents.
+                        thead
+                            tr
+                                th Table heading
+                                th Table heading
+                                th Table heading
+                                th Table heading
+                        tbody
+                            tr
+                                td Table cell
+                                td Table cell
+                                td Table cell
+                                td Table cell
+                            tr
+                                td Table cell
+                                td Table cell
+                                td Table cell
+                                td Table cell
+                            tr
+                                td Table cell
+                                td Table cell
+                                td Table cell
+                                td Table cell
+    h2 Forms
+    p.into-text
+        | Various form elements have been rebooted for simpler base styles. Here are some of the most notable changes:
+    ul.intro-text
+        li
+            code(style='color:red') &lt;fieldset&gt;
+            | s have no borders, padding, or margin so they can be easily used as wrappers for individual inputs or groups of inputs.
+        li
+            code(style='color:red') &lt;legend&gt;
+            | s, like fieldsets, have also been restyled to be displayed as a heading of sorts.
+        li
+            code(style='color:red') &lt;label&gt;
+            | s are set to 
+            code(style='color:red') display: inline-block
+            |  to allow 
+            code(style='color:red') margin
+            |  to be applied.
+        li
+            code(style='color:red') &lt;input&gt;
+            | s, 
+            code(style='color:red') &lt;select&gt;
+            | s, 
+            code(style='color:red') &lt;textarea&gt;
+            | s, and 
+            code(style='color:red') &lt;button&gt;
+            | s are mostly addressed by Normalize, but Reboot removes their 
+            code(style='color:red') margin
+            |  and sets 
+            code(style='color:red') line-height: inherit
+            | , too.
+        li
+            code(style='color:red') &lt;textarea&gt;
+            | s are modified to only be resizable vertically as horizontal resizing often &ldquo;breaks&rdquo; page layout.
+        li
+            code(style='color:red') &lt;button&gt;
+            | s and 
+            code(style='color:red') &lt;input&gt;
+            |  button elements have 
+            code(style='color:red') cursor: pointer
+            |  when 
+            code(style='color:red') :not(:disabled)
+            | .
+    p.intro-text
+        | These changes, and more, are demonstrated below.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    form
+                        fieldset
+                            legend Example legend
+                            p
+                            label(for='input') Example input
+                            input#input(type='text' placeholder='Example input')
+                            p
+                            label(for='select') Example select
+                            select#select
+                                option(value='') Choose...
+                                optgroup(label='Option group 1')
+                                option(value='') Option 1
+                                option(value='') Option 2
+                                option(value='') Option 3
+                                optgroup(label='Option group 2')
+                                option(value='') Option 4
+                                option(value='') Option 5
+                                option(value='') Option 6
+                            p
+                            label
+                                input(type='checkbox' value='')
+                                |         Check this checkbox
+                            p
+                            label
+                                input#optionsRadios1(type='radio' name='optionsRadios' value='option1' checked='')
+                                |         Option one is this and that
+                            label
+                                input#optionsRadios2(type='radio' name='optionsRadios' value='option2')
+                                |         Option two is something else that&apos;s also super long to demonstrate the wrapping of these fancy form controls.
+                            label
+                                input#optionsRadios3(type='radio' name='optionsRadios' value='option3' disabled='')
+                                |         Option three is disabled
+                            p
+                            label(for='textarea') Example textarea
+                            textarea#textarea(rows='3')
+                            p
+                            label(for='date') Example date
+                            input#date(type='date')
+                            p
+                            label(for='time') Example time
+                            input#time(type='time')
+                            p
+                            label(for='output') Example output
+                            output#output(name='result') 100
+                            p
+                            button(type='submit') Button submit
+                            input(type='submit' value='Input submit button')
+                            input(type='reset' value='Input reset button')
+                            input(type='button' value='Input button')
+                            p
+                            button(type='submit' disabled='') Button submit
+                            input(type='submit' value='Input submit button' disabled='')
+                            input(type='reset' value='Input reset button' disabled='')
+                            input(type='button' value='Input button' disabled='')
+    h3 Pointers on buttons
+    p.intro-text
+        | Reboot includes an enhancement for 
+        code(style='color:red') role="button" 
+        | to change the default cursor to 
+        code(style='color:red') pointer
+        | . Add this attribute to elements to help indicate elements are interactive. This role isn’t necessary for 
+        code(style='color:red') &lt;button&gt; 
+        | elements, which get their own 
+        code(style='color:red') cursor 
+        | change.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    span(role='button' tabindex='0') Non-button element button
+    pre
+        code.html
+            | &lt;span role="button" tabindex="0"&gt;Non-button element button&lt;/span&gt; 
+    h2 Misc elements
+    h3 Address
+    p.intro-text
+        | The 
+        code(style='color:red') &lt;address&gt; 
+        | element is updated to reset the browser default 
+        code(style='color:red') font-style 
+        | from 
+        code(style='color:red') italic 
+        | to 
+        code(style='color:red') normal
+        | . 
+        code(style='color:red') line-height 
+        | is also now inherited, and 
+        code(style='color:red') margin-bottom: 1rem 
+        | has been added. 
+        code(style='color:red') &lt;address&gt;
+        | s are for presenting contact information for the nearest ancestor (or an entire body of work). Preserve formatting by ending lines with 
+        code(style='color:red') &lt;br&gt;
+        | .
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    address
+                        strong Twitter, Inc.
+                        br
+                        |     1355 Market St, Suite 900
+                        br
+                        |     San Francisco, CA 94103
+                        br
+                        abbr(title='Phone') P:
+                        |  (123) 456-7890
+                    address
+                        strong Full Name
+                        br
+                        a(href='mailto:first.last@example.com') first.last@example.com
+    h3 Blockquote
+    p.intro-text
+        | The default 
+        code(style='color:red') 
+        | margin on blockquotes is 
+        code(style='color:red') 1em 40px
+        | , so we reset that to 0 0 1rem for something more consistent with other elements.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    blockquote.blockquote
+                        p
+                            | A well-known quote, contained in a blockquote element.
+                        footer
+                        | Someone famous in 
+                        cite(title='Source Title') Source Title
+    h3 Inline elements
+    p.intro-text
+        | The 
+        code(style='color:red') &lt;abbr&gt; 
+        | element receives basic styling to make it stand out amongst paragraph text.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    | Nulla 
+                    abbr(title='attribute') attr
+                    |  vitae elit libero, a pharetra augue.
+    h3 Summary
+    p.intro-text
+        | The default 
+        code(style='color:red') cursor 
+        | on summary is 
+        code(style='color:red') text
+        | , so we reset that to 
+        code(style='color:red') pointer 
+        | to convey that the element can be interacted with by clicking on it.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    details
+                        summary Some details
+                        p More info about the details.
+                    details(open='')
+                        summary Even more details
+                        p Here are even more details about the details.
+    h2 HTML5 [hidden] attribute
+    p.intro-text
+        | HTML5 adds 
+        a(href='https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden') a new global attribute named [hidden]
+        | , which is styled as 
+        code(style='color:red') display: none 
+        | by default. Borrowing an idea from 
+        a(href='https://purecss.io/') PureCSS
+        | , we improve upon this default by making 
+        code(style='color:red') [hidden] { display: none !important; } 
+        | to help prevent its 
+        code(style='color:red') display 
+        | from getting accidentally overridden. While 
+        code(style='color:red') [hidden] 
+        | isn’t natively supported by IE10, the explicit declaration in our CSS gets around that problem.
+    pre
+        code.html
+            | &lt;input type="text" hidden&gt;
+    h5 jQuery incompatibility
+    p.intro-text
+        code(style='color:red') [hidden] 
+        | is not compatible with jQuery’s 
+        code(style='color:red') $(...).hide() 
+        | and 
+        code(style='color:red') $(...).show() 
+        | methods. Therefore, we don’t currently especially endorse 
+        code(style='color:red') [hidden] 
+        | over other techniques for managing the display of elements.
+    p.intro-text
+        | To merely toggle the visibility of an element, meaning its 
+        code(style='color:red') display 
+        | is not modified and the element can still affect the flow of the document, use the .invisible class instead.
