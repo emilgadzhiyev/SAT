@@ -4,3 +4,97 @@ include ../layout
     h1 Tables
     p.intro-text
         | Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with SAT.
+        | Bootstrap MODIFIED!
+    h2 Examples
+    p.intro-text
+        | Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be 
+        b opt-in
+        | . Just add the base class 
+        code(style='color:red') .table 
+        | to any 
+        code(style='color:red') &lg;table&gt;
+        | , then extend with custom styles or our various included modifier classes.
+    p.intro-text
+        | Using the most basic table markup, here’s how 
+        code(style='color:red') .table
+        | -based tables look in SAT.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    table.table
+                        thead
+                            tr
+                                th(scope='col') #
+                                th(scope='col') First
+                                th(scope='col') Last
+                                th(scope='col') Handle
+                        tbody
+                            tr
+                                th(scope='row') 1
+                                td Mark
+                                td Otto
+                                td @mdo
+                            tr
+                                th(scope='row') 2
+                                td Jacob
+                                td Thornton
+                                td @fat
+                            tr
+                                th(scope='row') 3
+                                td Larry
+                                td the Bird
+                                td @twitter
+    pre
+        code.html
+            |&lt;table class="table"&gt;
+            |   &lt;thead&gt;
+            |       &lt;tr&gt;
+            |           &lt;th scope="col"&gt;#&lt;/th&gt;
+            |           &lt;th scope="col&gt;First&lt;/th&gt;
+            |           &lt;th scope="col"&gt;Last&lt;/th&gt;
+            |           &lt;th scope="col"&gt;Handle&lt;/th&gt;
+            |       &lt;/tr&gt;
+            |   &lt;/thead&gt;
+            |   &lt;tbody&gt;
+            |       &lt;tr&gt;
+            |           &lt;th scope="row"&gt;1&lt;/th&gt;
+            |           &lt;td&gt;Mark&lt;/td&gt;
+            |           &lt;td&gt;Otto&lt;/td&gt;
+            |           &lt;td&gt;@mdo&lt;/td&gt;
+            |       &lt;/tr&gt;
+            |       &lt;tr&gt;
+            |           &lt;th scope="row"&gt;2&lt;/th&gt;
+            |           &lt;td&gt;Jacob&lt;/td&gt;
+            |           &lt;td&gt;Thornton&lt;/td&gt;
+            |           &lt;td&gt;@fat&lt;/td&gt;
+            |       &lt;/tr&gt;
+            |       &lt;tr&gt;
+            |           &lt;th scope="row"&gt;3&lt;/th&gt;
+            |           &lt;td&gt;Larry&lt;/td&gt;
+            |           &lt;td&gt;the Bird&lt;/td&gt;
+            |           &lt;td&gt;@twitter&lt;/td&gt;
+            |       &lt;/tr&gt;
+            |   &lt;/tbody&gt;
+            |&lt;/table&gt;
+    h2 Table head options
+    h2 Striped rows
+    h2 Bordered table
+    h2 Borderless table
+    h2 Hoverable rows
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

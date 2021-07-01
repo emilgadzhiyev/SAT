@@ -11,3 +11,6 @@
 
 @import '~bootstrap/scss/utilities';
 @import '~bootstrap/scss/type';
+//@import '~bootstrap/scss/tables'
+// Эта поебата на 16й строке за каким-то хером не инклюжится... ПОНЯТЬ!
+@import '~bootstrap/scss/vendor/rfs';

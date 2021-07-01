@@ -2,5 +2,60 @@ include ../layout
 
 +layout
     h1 Figures
-    p.introText
-        | Documentation and examples for displaying related images and text with the figure component in Bootstrap.
+    p.intro-text
+        | Documentation and examples for displaying related images and text with the figure component in SAT.
+    p.intro-text
+        | Anytime you need to display a piece of content—like an image with an optional caption, consider using a 
+        code(style='color:red') &lt;figure&gt;
+        | .
+    p.intro-text
+        | Use the included 
+        code(style='color:red') .figure
+        | , 
+        code(style='color:red') .figure-img 
+        | and 
+        code(style='color:red') .figure-caption 
+        | classes to provide some baseline styles for the HTML5 
+        code(style='color:red') &lt;figure&gt; 
+        | and 
+        code(style='color:red') &lt;figcaption&gt; 
+        | elements. Images in figures have no explicit size, so be sure to add the 
+        code(style='color:red') .img-fluid 
+        | class to your 
+        code(style='color:red') &lt;img&gt; 
+        | to make it responsive.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    figure.figure
+                        svg.bd-placeholder-img.figure-img.img-fluid.rounded(width='400' height='300' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: 400x300' preserveaspectratio='xMidYMid slice' focusable='false')
+                            title Placeholder
+                            rect(width='100%' height='100%' fill='#6c757d')
+                            text(x='50%' y='50%' fill='#dee2e6' dy='.3em') 400x300
+                        figcaption.figure-caption A caption for the above image.
+    pre
+        code.html
+            |&lt;figure class="figure"&gt;
+            |   &lt;img src="..." class="figure-img img-fluid rounded" alt="..."&gt;
+            |   &lt;figcaption class="figure-caption&gt;A caption for the above image.&lt;/figcaption&gt;
+            |&lt;/figure&gt;
+    p.intro-text
+        | Aligning the figure’s caption is easy with our text utilities.    
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    figure.figure
+                        svg.bd-placeholder-img.figure-img.img-fluid.rounded(width='400' height='300' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: 400x300' preserveaspectratio='xMidYMid slice' focusable='false')
+                            title Placeholder
+                            rect(width='100%' height='100%' fill='#6c757d')
+                            text(x='50%' y='50%' fill='#dee2e6' dy='.3em') 400x300
+                        figcaption.figure-caption.text-right A caption for the above image.
+    pre
+        code.html
+            |&lt;figure class="figure"&gt;
+            |   &lt;img src="..." class="figure-img img-fluid rounded" alt="..."&gt;
+            |   &lt;figcaption class="figure-caption text-right"&gt;A caption for the above image.&lt;/figcaption&gt;
+            |&lt;/figure&gt;
+
