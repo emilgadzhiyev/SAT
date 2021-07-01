@@ -5,18 +5,444 @@ include ../layout
     p.intro-text
         | Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.
     h2 Global settings
+    p.intro-text
+        | Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the textual utility classes.
+    ul
+        li
+            | Use a 
+            a(href='/docs/4.6/content/reboot/#native-font-stack') native font stack
+            |  that selects the best 
+            code(style='color:red') font-family
+            |  for each OS and device.
+        li
+            | For a more inclusive and accessible type scale, we use the browser&rsquo;s default root 
+            code(style='color:red') font-size
+            |  (typically 16px) so visitors can customize their browser defaults as needed.
+        li
+            | Use the 
+            code(style='color:red') $font-family-base
+            | , 
+            code(style='color:red') $font-size-base
+            | , and 
+            code(style='color:red') $line-height-base
+            |  attributes as our typographic base applied to the 
+            code(style='color:red') &lt;body&gt;
+            | .
+        li
+            | Set the global link color via 
+            code(style='color:red') $link-color
+            |  and apply link underlines only on 
+            code(style='color:red') :hover
+            | .
+        li
+            | Use 
+            code(style='color:red') $body-bg
+            |  to set a 
+            code(style='color:red') background-color
+            |  on the 
+            code(style='color:red') &lt;body&gt;
+            |  (
+            code(style='color:red') #fff
+            |  by default).
+    p.intro-text
+        | These styles can be found within 
+        code(style='color:red') _reboot.scss
+        | , and the global variables are defined in 
+        code(style='color:red') _variables.scss
+        | . Make sure to set 
+        code(style='color:red') $font-size-base 
+        | in 
+        code(style='color:red') rem
+        | .
     h2 Headings
+    p.intro-text
+        | All HTML headings, 
+        code(style='color:red') &lt;h1&gt; 
+        | through 
+        code(style='color:red') &lt;h6&gt;
+        | , are available.
+    table
+        thead
+            tr
+            th Heading
+            th Example
+        tbody
+            tr
+                td
+                    code(style='color:red') &lt;h1&gt;&lt;/h1&gt;
+                td
+                    h1 h1. SAT heading
+            tr
+                td
+                    code(style='color:red') &lt;h2&gt;&lt;/h2&gt;
+                td
+                    h2 h2. SAT heading
+            tr
+                td
+                    code(style='color:red') &lt;h3&gt;&lt;/h3&gt;
+                td
+                    h3 h3. SAT heading
+            tr
+                td
+                    code(style='color:red') &lt;h4&gt;&lt;/h4&gt;
+                td
+                    h4 h4. SAT heading
+            tr
+                td
+                    code(style='color:red') &lt;h5&gt;&lt;/h5&gt;
+                td
+                    h5 h5. SAT heading
+            tr
+                td
+                    code(style='color:red') &lt;h6&gt;&lt;/h6&gt;
+                td
+                    h6 h6. SAT heading
+    pre
+        code.html
+            | &lt;h1&gt;h1. SAT heading&lt;/h1&gt;
+            | &lt;h2&gt;h2. SAT heading&lt;/h2&gt;
+            | &lt;h3&gt;h3. SAT heading&lt;/h3&gt;
+            | &lt;h4&gt;h4. SAT heading&lt;/h4&gt;
+            | &lt;h5&gt;h5. SAT heading&lt;/h5&gt;
+            | &lt;h6&gt;h6. SAT heading&lt;/h6&gt;
+    p.intro-text
+        code(style='color:red') .h1 
+        | through 
+        code(style='color:red') .h6 
+        | classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    p.h1 h1. SAT heading
+                    p.h2 h2. SAT heading
+                    p.h3 h3. SAT heading
+                    p.h4 h4. SAT heading
+                    p.h5 h5. SAT heading
+                    p.h6 h6. SAT heading
+    pre
+        code.html
+            | &lt;p class="h1"&gt;h1. SAT heading&lt;/p&gt;
+            | &lt;p class="h2"&gt;h2. SAT heading&lt;/p&gt;
+            | &lt;p class="h3"&gt;h3. SAT heading&lt;/p&gt;
+            | &lt;p class="h4"&gt;h4. SAT heading&lt;/p&gt;
+            | &lt;p class="h5"&gt;h5. SAT heading&lt;/p&gt;
+            | &lt;p class="h6"&gt;h6. SAT heading&lt;/p&gt;
     h3 Customizing headings
+    p.intro-text
+        | Use the included utility classes to recreate the small secondary heading text.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    h3
+                        | Fancy display heading 
+                        small.text-muted With faded secondary text
+    pre
+        code.html
+            |&lt;h3&gt;
+            |    Fancy display heading
+            |    &lt;small class="text-muted"&gt;With faded secondary text&lt;/small&gt;
+            |&lt;/h3&gt;
     h2 Display headings
+    p.intro-text
+        | Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a 
+        b display heading
+        | —a larger, slightly more opinionated heading style. Keep in mind these headings are not responsive by default, but it’s possible to enable responsive font sizes.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    table.table
+                        tbody
+                            tr
+                                td
+                                    span.display-1 Display 1
+                            tr
+                                td
+                                    span.display-2 Display 2
+                            tr
+                                td
+                                    span.display-3 Display 3
+                            tr
+                                td
+                                    span.display-4 Display 4
+    pre
+        code.html
+            | &lt;h1 class="display-1"&gt;Display 1&lt;/p&gt;
+            | &lt;h1 class="display-2"&gt;Display 2&lt;/p&gt;
+            | &lt;h1 class="display-3"&gt;Display 3&lt;/p&gt;
+            | &lt;h1 class="display-4"&gt;Display 4&lt;/p&gt;
+            | &lt;h1 class="display-5"&gt;Display 5&lt;/p&gt;
+            | &lt;h1 class="display-6"&gt;Display 6&lt;/p&gt;
     h2 Lead
+    p.intro-text
+        | Make a paragraph stand out by adding 
+        code(style='color:red') .lead
+        | .
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    p.lead
+                        | This is a lead paragraph. It stands out from regular paragraphs.
+    pre
+        code.html
+            |&lt;p class="lead"&gt;
+            |    This is a lead paragraph. It stands out from regular paragraphs.
+            |&lt;/p&gt;
     h2 Inline text elements
+    p.intro-text
+        | Styling for common inline HTML5 elements.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    p
+                        | You can use the mark tag to 
+                        mark highlight
+                        |  text.
+                    p
+                        del This line of text is meant to be treated as deleted text.
+                    p
+                        s This line of text is meant to be treated as no longer accurate.
+                    p
+                        ins This line of text is meant to be treated as an addition to the document.
+                    p
+                        u This line of text will render as underlined
+                    p
+                        small This line of text is meant to be treated as fine print.
+                    p
+                        strong This line rendered as bold text.
+                    p
+                        em This line rendered as italicized text.
+    pre
+        code.html
+            | &lt;p&gt;You can use the mark tag to &lt;mark&gt;highlight&lt;/mark&gt; text.&lt;/p&gt;
+            | &lt;p&gt;&lt;del&gt;This line of text is meant to be treated as deleted text.&lt;/del&gt;&lt;/p&gt;
+            | &lt;p&gt;&lt;s&gt;This line of text is meant to be treated as no longer accurate.&lt;/s&gt;&lt;/p&gt;
+            | &lt;p&gt;&lt;ins&gt;This line of text is meant to be treated as an addition to the document.&lt;/ins&gt;&lt;/p&gt;
+            | &lt;p&gt;&lt;u&gt;This line of text will render as underlined&lt;/u&gt;&lt;/p&gt;
+            | &lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&lt;/p&gt;
+            | &lt;p&gt;&lt;strong&gt;This line rendered as bold text.&lt;/strong&gt;&lt;/p&gt;
+            | &lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;
+    p.intro-text
+        code(style='color:red') .mark 
+        | and 
+        code(style='color:red') .small 
+        | classes are also available to apply the same styles as 
+        code(style='color:red') &lt;mark&gt; 
+        | and 
+        code(style='color:red') &lt;small&gt; 
+        | while avoiding any unwanted semantic implications that the tags would bring.
+    p.intro-text
+        | While not shown above, feel free to use 
+        code(style='color:red') &lt;b&gt; 
+        | and 
+        code(style='color:red') &lt;i&gt; 
+        | in HTML5. 
+        code(style='color:red') &lt;b&gt; 
+        | is meant to highlight words or phrases without conveying additional importance while 
+        code(style='color:red') &lt;i&gt; 
+        | is mostly for voice, technical terms, etc.
     h2 Text utilities
+    p.intro-text
+        | Change text alignment, transform, style, weight, and color with our text utilities and color utilities.
     h2 Abbreviations
+    p.intro-text
+        | Stylized implementation of HTML’s 
+        code(style='color:red') &lt;abbr&gt; 
+        | element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
+    p.intro-text
+        | Add 
+        code(style='color:red') .initialism 
+        | to an abbreviation for a slightly smaller font-size.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    p
+                        abbr(title='attribute') attr
+                    p
+                        abbr.initialism(title='HyperText Markup Language') HTML
     h2 Blockquotes
+    p.intro-text
+        | For quoting blocks of content from another source within your document. Wrap 
+        code(style='color:red') &lt;blockquote class="blockquote"&gt; 
+        | around any HTML as the quote.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    blockquote.blockquote
+                        p.mb-0 A well-known quote, contained in a blockquote element.
+    pre
+        code.html
+            | &lt;blockquote class="blockquote"&gt;
+            |   &lt;p class="mb-0"&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
+            | &lt;/blockquote&gt;
     h3 Naming a source
+    p.intro-text
+        | Add a 
+        code(style='color:red') &lt;footer class="blockquote-footer"&gt; 
+        | for identifying the source. Wrap the name of the source work in 
+        code(style='color:red') &lt;cite&gt;
+        | .
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    blockquote.blockquote
+                        p.mb-0 A well-known quote, contained in a blockquote element.
+                        footer.blockquote-footer
+                            | Someone famous in
+                            cite(title='Source Title') Source Title
+    pre
+        code.html
+            | &lt;blockquote class="blockquote"&gt;
+            |   &lt;p class="mb-0"&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
+            |   &lt;footer class="blockquote-footer"&gt;Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;&lt;/footer&gt;
+            | &lt;/blockquote&gt;
     h3 Alignment
+    p.intro-text
+        | Use text utilities as needed to change the alignment of your blockquote.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    blockquote.blockquote.text-center
+                        p.mb-0 &gt;A well-known quote, contained in a blockquote element.
+                        footer.blockquote-footer
+                            | Someone famous in 
+                            cite(title='Source Title') Source Title
+    pre
+        code.html
+            | &lt;blockquote class="blockquote text-center"&gt;
+            |   &lt;p class="mb-0"&gt;&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
+            |   &lt;footer class="blockquote-footer"&gt;Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;&lt;/footer&gt;
+            | &lt;/blockquote&gt;
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    blockquote.blockquote.text-right
+                        p.mb-0 A well-known quote, contained in a blockquote element.
+                        footer.blockquote-footer
+                            | Someone famous in 
+                            cite(title='Source Title') Source Title
+    pre
+        code.html
+            |&lt;blockquote class="blockquote text-right"&gt;
+            |   &lt;p class="mb-0"&gt;A well-known quote, contained in a blockquote element&lt;/p&gt;
+            |   &lt;footer class="blockquote-footer"&gt;Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;&lt;/footer&gt;
+            |&lt;/blockquote&gt;
     h2 Lists
     h3 Unstyled
+    p.intro-text
+        | Remove the default list-style and left margin on list items (immediate children only). 
+        b This only applies to immediate children list items
+        | , meaning you will need to add the class for any nested lists as well.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    ul.list-unstyled
+                        li This is a list.
+                        li It appears completely unstyled.
+                        li Structurally, it&apos;s still a list.
+                        li However, this style only applies to immediate child elements.
+                        li
+                        | Nested lists:
+                        ul
+                            li are unaffected by this style
+                            li will still show a bullet
+                            li and have appropriate left margin
+                        li This may still come in handy in some situations.
+    pre
+        code.html
+            |&lt;ul class="list-unstyled"&gt;
+            |   &lt;li&gt;This is a list.&lt;/li&gt;
+            |   &lt;li&gt;It appears completely unstyled.&lt;/li&gt;
+            |   &lt;li&gt;Structurally, it's still a list.&lt;/li&gt;
+            |   &lt;li&gt;However, this style only applies to immediate child elements.&lt;/li&gt;
+            |   &lt;li&gt;Nested lists:
+            |       &lt;ul&gt;
+            |           &lt;li&gt;are unaffected by this style&lt;/li&gt;
+            |           &lt;li&gt;will still show a bullet&lt;/li&gt;
+            |           &lt;li&gt;and have appropriate left margin&lt;/li&gt;
+            |       &lt;/ul&gt;
+            |   &lt;/li&gt;
+            |   &lt;li&gt;This may still come in handy in some situations.&lt;/li&gt;
+            |&lt;/ul&gt;
     h3 Inline
+    p.intro-text
+        | Remove a list’s bullets and apply some light 
+        code(style='color:red') margin 
+        | with a combination of two classes, 
+        code(style='color:red') .list-inline 
+        | and 
+        code(style='color:red') .list-inline-item
+        | .
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    ul.list-inline
+                        li.list-inline-item This is a list item.
+                        li.list-inline-item And another one.
+                        li.list-inline-item But they&apos;re displayed inline.
+    pre
+        code.html
+            |&lt;ul class="list-inline"&gt;
+            |   &lt;li class="list-inline-item"&gt;This is a list item.&lt;/li&gt;
+            |   &lt;li class="list-inline-item"&gt;And another one.&lt;/li&gt;
+            |   &lt;li class="list-inline-item"&gt;But they're displayed inline&lt;/li&gt;
+            |&lt;/ul&gt;
     h3 Description list alignment
-    h2 Responsive font sizes
+    p.intro-text
+        | Align terms and descriptions horizontally by using our grid system’s predefined classes (or semantic mixins). For longer terms, you can optionally add a 
+        code(style='color:red') .text-truncate 
+        | class to truncate the text with an ellipsis.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    dl.row
+                        dt.col-sm-3 Description lists
+                        dd.col-sm-9 A description list is perfect for defining terms.
+                        dt.col-sm-3 Term
+                        dd.col-sm-9
+                            p Definition for the term.
+                            p And some more placeholder definition text.
+                        dt.col-sm-3 Another term
+                        dd.col-sm-9 This definition is short, so no extra paragraphs or anything.
+                        dt.col-sm-3.text-truncate Truncated term is truncated
+                        dd.col-sm-9 This can be useful when space is tight. Adds an ellipsis at the end.
+                        dt.col-sm-1 Nesting
+                        dd.col-sm-5
+                            dl.row
+                                dt.col-sm-2 Nested definition list
+                                dd.col-sm-4
+                                | I heard you like definition lists. Let me put a definition list inside your definition list.
+    pre
+        code.html
+            |&lt;dl class="row"&gt;
+            |   &lt;dt class="col-sm-3"&gt;Description lists&lt;/dt&gt;
+            |   &lt;dd class="col-sm-9"&gt;A description list is perfect for defining terms&lt;/dd&gt;
+            |   &lt;dt class="col-sm-3"&gt;Term&lt;/dt&gt;
+            |   &lt;dd class="col-sm-9"&gt;
+            |       &lt;p&gt;Definition for the term.&lt;/p&gt;
+            |       &lt;p&gt;And some more placeholder definition text.&lt;/p&gt;
+            |   &lt;/dd&gt;
+            |   &lt;dt class="col-sm-3"&gt;Another term&lt;/dt&gt;
+            |   &lt;dd class="col-sm-9"&gt;This definition is short, so no extra paragraphs or anything.&lt;/dd&gt;
+            |   &lt;dt class="col-sm-3 text-truncate"&gt;Truncated term is truncated&lt;/dt&gt;
+            |   &lt;dd class="col-sm-9"&gt;This can be useful when space is tight. Adds an ellipsis at the end.&lt;/dd&gt;
+            |   &lt;dt class="col-sm-3"&gt;Nesting&lt;/dt&gt;
+            |   &lt;dd class="col-sm-9"&gt;
+            |       &lt;dl class="row"&gt;
+            |           &lt;dt class="col-sm-4"&gt;Nested definition list&lt;/dt&gt;
+            |           &lt;dd class="col-sm-8"&gt;I heard you like definition lists. Let me put a definition list inside your definition list.&lt;/dd&gt;
+            |       &lt;/dl&gt;
+            |   &lt;/dd&gt;
+            |&lt;/dl&gt;

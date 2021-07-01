@@ -1,0 +1,28 @@
+include ../layout
+
++layout
+    h1 Code
+    p.intro-text
+        | Documentation and examples for displaying inline and multiline blocks of code with Bootstrap.
+    h2 Inline code
+    p.intro-text
+        | Wrap inline snippets of code with 
+        code(style='color:red') &lt;code&gt;
+        | . Be sure to escape HTML angle brackets.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    | For example, 
+                    code(style='color:red') section 
+                    | should be wrapped as inline.
+    pre
+        code.html
+            | For example, &lt;code&gt;&lt;section&gt;&lt;/code&gt; should be wrapped as inline.
+    h2 Code blocks
+    p.intro-text
+        | Use 
+        code(style='color:red') &lt;pre&gt;
+        | s for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering. You may optionally add the 
+        code(style='color:red') .pre-scrollable 
+        | class, which will set a max-height of 340px and provide a y-axis scrollbar.

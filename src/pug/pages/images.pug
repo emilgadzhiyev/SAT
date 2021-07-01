@@ -2,5 +2,119 @@ include ../layout
 
 +layout
     h1 Images
-    p.introText
+    p.intro-text
         | Documentation and examples for opting images into responsive behavior (so they never become larger than their parent elements) and add lightweight styles to them—all via classes.
+    h2 Responsive images
+    p.intro-text
+        | Images in Bootstrap are made responsive with 
+        code(style='color:red') .img-fluid. max-width: 100%; 
+        | and 
+        code(style='color:red') height: auto; 
+        | are applied to the image so that it scales with the parent element.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    svg.bd-placeholder-img.bd-placeholder-img-lg.img-fluid(width='100%' height='250' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Responsive image' preserveaspectratio='xMidYMid slice' focusable='false')
+                        title Placeholder
+                        rect(width='100%' height='100%' fill='#6c757d')
+                        text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Responsive image
+    pre
+        code.html
+            | &lt;img src="..." class="img-fluid" alt="..."&gt;
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    h5 SVG images and Internet Explorer
+                    p
+                    | In Internet Explorer 10 and 11, SVG images with 
+                    code(style='color:red') .img-fluid
+                    |  are disproportionately sized. To fix this, add 
+                    code(style='color:red') width: 100%;
+                    |  or 
+                    code(style='color:red') .w-100
+                    |  where necessary. This fix improperly sizes other image formats, so Bootstrap doesn&rsquo;t apply it automatically.    
+    h2 Image thumbnails
+    p.intro-text
+        | In addition to our border-radius utilities, you can use 
+        code(style='color:red') .img-thumbnail 
+        | to give an image a rounded 1px border appearance.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    svg.bd-placeholder-img.img-thumbnail(width='200' height='200' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera: 200x200' preserveaspectratio='xMidYMid slice' focusable='false')
+                        title
+                        | A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera
+                        rect(width='100%' height='100%' fill='#6c757d')
+                        text(x='50%' y='50%' fill='#dee2e6' dy='.3em') 200x200
+    pre
+        code.html
+            | &lt;img src="..." class="img-thumbnail" alt="..."&gt;
+    h2 Aligning images
+    p.intro-text
+        | Align images with the helper float classes or text alignment classes. 
+        code(style='color:red') block
+        | -level images can be centered using the .mx-auto margin utility class.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    svg.bd-placeholder-img.rounded.float-left(width='200' height='200' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: 200x200' preserveaspectratio='xMidYMid slice' focusable='false')
+                        title Placeholder
+                        rect(width='100%' height='100%' fill='#6c757d')
+                        text(x='50%' y='50%' fill='#dee2e6' dy='.3em') 200x200
+                    svg.bd-placeholder-img.rounded.float-right(width='200' height='200' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: 200x200' preserveaspectratio='xMidYMid slice' focusable='false')
+                        title Placeholder
+                        rect(width='100%' height='100%' fill='#6c757d')
+                        text(x='50%' y='50%' fill='#dee2e6' dy='.3em') 200x200
+    pre
+        code.html
+            | &lt;img src="..." class="rounded float-left" alt="..."&gt;
+            | &lt;img src="..." class="rounded float-right" alt="..."&gt;
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    svg.bd-placeholder-img.rounded.mx-auto.d-block(width='200' height='200' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: 200x200' preserveaspectratio='xMidYMid slice' focusable='false')
+                        title Placeholder
+                        rect(width='100%' height='100%' fill='#6c757d')
+                        text(x='50%' y='50%' fill='#dee2e6' dy='.3em') 200x200
+    pre
+        code.html
+            | &lt;img src="..." class="rounded mx-auto d-block" alt="..."&gt;
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    .text-center
+                        svg.bd-placeholder-img.rounded(width='200' height='200' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: 200x200' preserveaspectratio='xMidYMid slice' focusable='false')
+                            title Placeholder
+                            rect(width='100%' height='100%' fill='#6c757d')
+                            text(x='50%' y='50%' fill='#dee2e6' dy='.3em') 200x200
+    pre
+        code.html
+            |&lt;div class="text-center"&gt;
+            |   &lt;img src="..." class="rounded" alt="..."&gt;
+            |&lt;/div&gt;
+    h2 Picture
+    p.intro-text
+        | If you are using the 
+        code(style='color:red') &lt;picture&gt; 
+        | element to specify multiple 
+        code(style='color:red') &lt;source&gt; elements for a specific 
+        code(style='color:red') &lt;img&gt;
+        | , make sure to add the 
+        code(style='color:red') .img-* 
+        | classes to the 
+        code(style='color:red') &lt;img&gt; 
+        | and not to the 
+        code(style='color:red') &lt;picture&gt; 
+        | tag.
+    pre
+        code.html
+            |​&lt;picture&gt;
+            |   &lt;source srcset="..." type="image/svg+xml"&gt;
+            |   &lt;img src="..." class="img-fluid img-thumbnail" alt="..."&gt;
+            |&lt;/picture&gt;
