@@ -2,5 +2,333 @@ include ../layout
 
 +layout
     h1 Buttons
-    p.introText
+    p.intro-text
         | Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+    h2 Examples
+    p.intro-text
+        | Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    button.btn.btn-primary(type='button') Primary
+                    button.btn.btn-secondary(type='button') Secondary
+                    button.btn.btn-success(type='button') Success
+                    button.btn.btn-danger(type='button') Danger
+                    button.btn.btn-warning(type='button') Warning
+                    button.btn.btn-info(type='button') Info
+                    button.btn.btn-light(type='button') Light
+                    button.btn.btn-dark(type='button') Dark
+                    button.btn.btn-link(type='button') Link
+    pre
+        code.html
+            |&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-light"&gt;Light&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-dark"&gt;Dark&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
+    h5 Conveying meaning to assistive technologies
+    p.intro-text
+        | Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the 
+        code(style='color:red') .sr-only 
+        | class.
+    h2 Disable text wrapping
+    p.intro-text
+        | If you don’t want the button text to wrap, you can add the 
+        code(style='color:red') .text-nowrap 
+        | class to the button. In Sass, you can set 
+        code(style='color:red') $btn-white-space: nowrap 
+        | to disable text wrapping for each button.
+    h2 Button tags
+    p.intro-text
+        | The 
+        code(style='color:red') .btn 
+        | classes are designed to be used with the 
+        code(style='color:red') &lt;button&gt; 
+        | element. However, you can also use these classes on 
+        code(style='color:red') &lt;a&gt; 
+        | or 
+        code(style='color:red') &lt;input&gt; 
+        | elements (though some browsers may apply a slightly different rendering).
+    p.intro-text
+        | When using button classes on 
+        code(style='color:red') &lt;a&gt; 
+        | elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a 
+        code(style='color:red') role="button" 
+        | to appropriately convey their purpose to assistive technologies such as screen readers.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    a.btn.btn-primary(href='#' role='button') Link
+                    button.btn.btn-primary(type='submit') Button
+                    input.btn.btn-primary(type='button' value='Input')
+                    input.btn.btn-primary(type='submit' value='Submit')
+                    input.btn.btn-primary(type='reset' value='Reset')
+    pre
+        code.html
+            |&lt;a class="btn btn-primary" href="#" role="button"&gt;Link&lt;/a&gt;
+            |&lt;button class="btn btn-primary" type="submit"&gt;Button&lt;/button&gt;
+            |&lt;input class="btn btn-primary" type="button" value="Input"&gt;
+            |&lt;input class="btn btn-primary" type="submit" value="Submit"&gt;
+            |&lt;input class="btn btn-primary" type="reset" value="Reset"&gt;
+    h2 Outline buttons
+    p.intro-text
+        | In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the 
+        code(style='color:red') .btn-outline-* 
+        | ones to remove all background images and colors on any button.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    button.btn.btn-outline-primary(type='button') Primary
+                    button.btn.btn-outline-secondary(type='button') Secondary
+                    button.btn.btn-outline-success(type='button') Success
+                    button.btn.btn-outline-danger(type='button') Danger
+                    button.btn.btn-outline-warning(type='button') Warning
+                    button.btn.btn-outline-info(type='button') Info
+                    button.btn.btn-outline-light(type='button') Light
+                    button.btn.btn-outline-dark(type='button') Dark
+    pre
+        code.html
+            |&lt;button type="button" class="btn btn-outline-primary"&gt;Primary&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-outline-secondary"&gt;Secondary&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-outline-success"&gt;Success&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-outline-danger"&gt;Danger&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-outline-warning"&gt;Warning&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-outline-info"&gt;Info&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-outline-light"&gt;Light&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-outline-dark"&gt;Dark&lt;/button&gt;
+    p.intro-text
+        | Some of the button styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
+    h2 Sizes
+    p.intro-text
+        | Fancy larger or smaller buttons? Add 
+        code(style='color:red') .btn-lg 
+        | or 
+        code(style='color:red') .btn-sm 
+        | for additional sizes.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    button.btn.btn-primary.btn-lg(type='button') Large button
+                    button.btn.btn-secondary.btn-lg(type='button') Large button
+    pre
+        code.html
+            |&lt;button type="button" class="btn btn-primary btn-lg"&gt;Large button&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-secondary btn-lg&gt;Large button&lt;/button&gt;
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    button.btn.btn-primary.btn-sm(type='button') Large button
+                    button.btn.btn-secondary.btn-sm(type='button') Large button
+    pre
+        code.html
+            |&lt;button type="button" class="btn btn-primary btn-sm"&gt;Small button&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-secondary btn-sm&gt;Small button&lt;/button&gt;
+    p.intro-text
+        | Create block level buttons—those that span the full width of a parent—by adding 
+        code(style='color:red') .btn-block
+        | .
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    button.btn.btn-primary.btn-lg.btn-block(type='button') Block level button
+                    button.btn.btn-secondary.btn-lg.btn-block(type='button') Block level button
+    pre
+        code.html
+            |&lt;button type="button" class="btn btn-primary btn-lg btn-block"&gt;Block level button&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-secondary btn-lg btn-block"&gt;Block level button&lt;/button&gt;
+    h2 Active state
+    p.intro-text
+        | Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. 
+        b There’s no need to add a class to 
+        code(style='color:red') &lt;button&gt;
+        b s as they use a pseudo-class
+        | . However, you can still force the same active appearance with 
+        code(style='color:red') .active 
+        | (and include the 
+        code(style='color:red') aria-pressed=“true” 
+        | attribute) should you need to replicate the state programmatically.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    a.btn.btn-primary.btn-lg.active.mr-2(href='#' role='button' aria-pressed='true') Primary link
+                    a.btn.btn-secondary.btn-lg.active(href='#' role='button' aria-pressed='true') Link
+    pre
+        code.html
+            |&lt;a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"&gt;Primary link&lt;/a&gt;
+            |&lt;a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true"&gt;Link&lt;/a&gt;
+    h2 Disabled state
+    p.intro-text
+        | Make buttons look inactive by adding the disabled boolean attribute to any 
+        code(style='color:red') &lt;button&gt; 
+        | element.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    button.btn.btn-lg.btn-primary(type='button' disabled='') Primary button
+                    button.btn.btn-secondary.btn-lg(type='button' disabled='') Button
+    pre
+        code.html
+            |&lt;button type="button" class="btn btn-lg btn-primary" disabled&gt;Primary button&lt;/button&gt;
+            |&lt;button type="button" class="btn btn-secondary btn-lg" disabled&gt;Button&lt;/button&gt;
+    p.intro-text
+        | Disabled buttons using the 
+        code(style='color:red') &lt;a&gt; 
+        | element behave a bit different:
+    ul.intro-text
+        li
+            code(style='color:red') &lt;a&gt;
+            | s don&rsquo;t support the 
+            code(style='color:red') disabled
+            |  attribute, so you must add the 
+            code(style='color:red') .disabled
+            |  class to make it visually appear disabled.
+        li
+            | Some future-friendly styles are included to disable all 
+            code(style='color:red') pointer-events
+            |  on anchor buttons. In browsers which support that property, you won&rsquo;t see the disabled cursor at all.
+        li
+            | Disabled buttons should include the 
+            code(style='color:red') aria-disabled=&quot;true&quot;
+            |  attribute to indicate the state of the element to assistive technologies.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    a.btn.btn-primary.btn-lg.disabled.mr-2(href='#' tabindex='-1' role='button' aria-disabled='true') Primary link
+                    a.btn.btn-secondary.btn-lg.disabled(href='#' tabindex='-1' role='button' aria-disabled='true') Link
+    pre
+        code.html
+            |&lt;a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true"&gt;Primary link&lt;/a&gt;
+            |&lt;a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true"&gt;Link&lt;/a&gt;
+    h5 Link functionality caveat
+    p.intro-text
+        | The 
+        code(style='color:red') .disabled class 
+        | uses 
+        code(style='color:red') pointer-events: none 
+        | to try to disable the link functionality of 
+        code(style='color:red') &lt;a&gt;
+        | s, but that CSS property is not yet standardized. In addition, even in browsers that do support 
+        code(style='color:red') pointer-events: none
+        | , keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a 
+        code(style='color:red') tabindex="-1" 
+        | attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
+    h2 Button plugin
+    P.intro-text
+        | Do more with buttons. Control button states or create groups of buttons for more components like toolbars.
+    h3 Toggle states
+    p.intro-text
+        | Add 
+        code(style='color:red') data-toggle="button" 
+        | to toggle a button’s 
+        code(style='color:red') active 
+        | state. If you’re pre-toggling a button, you must manually add the 
+        code(style='color:red') .active 
+        | class 
+        b and 
+        code(style='color:red') aria-pressed="true" 
+        | to the 
+        code(style='color:red') &lt;button&gt;
+        | .
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    button.btn.btn-primary(type='button' data-toggle='button' aria-pressed='false')
+                        | Single toggle
+    pre
+        code.html
+            |&lt;button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false"&gt;
+            |   Single toggle
+            |&lt;/button&gt;
+    h3 Checkbox and radio buttons
+    p.intro-text
+        | Bootstrap’s 
+        code(style='color:red') .button 
+        | styles can be applied to other elements, such as 
+        code(style='color:red') &lt;label&gt;
+        | s, to provide checkbox or radio style button toggling. Add 
+        code(style='color:red') data-toggle="buttons" 
+        | to a 
+        code(style='color:red') .btn-group 
+        | containing those modified buttons to enable their toggling behavior via JavaScript and add 
+        code(style='color:red') .btn-group-toggle 
+        | to style the 
+        code(style='color:red') &lt;input&gt;
+        | s within your buttons. 
+        b Note that you can create single input-powered buttons or groups of them.
+    p.intro-text
+        | The checked state for these buttons is 
+        b only updated via 
+        code(style='color:red') click 
+        b event 
+        | on the button. If you use another method to update the input—e.g., with 
+        code(style='color:red') &lt;input type="reset"&gt; 
+        | or by manually applying the input’s 
+        code(style='color:red') checked 
+        | property—you’ll need to toggle 
+        code(style='color:red') .active 
+        | on the 
+        code(style='color:red') &lt;label&gt; 
+        | manually.
+    p.intro-text
+        | Note that pre-checked buttons require you to manually add the 
+        code(style='color:red') .active 
+        | class to the input’s 
+        code(style='color:red') &lt;label&gt;
+        | .
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    .btn-group-toggle(data-toggle='buttons')
+                        label.btn.btn-secondary.active
+                            input(type='checkbox' checked='')
+                            |  Checked
+    pre
+        code.html
+            |&lt;div class="btn-group-toggle" data-toggle="buttons"&gt;
+            |   &lt;label class="btn btn-secondary active"&gt;
+            |       &lt;input type="checkbox" checked&gt; Checked
+            |   &lt;/label&gt;
+            |&lt;/div&gt;
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    .btn-group.btn-group-toggle(data-toggle='buttons')
+                        label.btn.btn-secondary.active
+                            input#option1(type='radio' name='options' checked='')
+                            |  Active
+                        label.btn.btn-secondary
+                            input#option2(type='radio' name='options')
+                            |  Radio
+                        label.btn.btn-secondary
+                            input#option3(type='radio' name='options')
+                            |  Radio
+    pre
+        code.html
+            |&lt;div class="btn-group btn-group-toggle" data-toggle="buttons"&gt;
+            |   &lt;label class="btn btn-secondary active"&gt;
+            |       &lt;input type="radio" name="options" id="option1" checked&gt; Active
+            |   &lt;/label&gt;
+            |   &lt;label class="btn btn-secondary"&gt;
+            |       &lt;input type="radio" name="options" id="option2"&gt; Radio
+            |   &lt;/label&gt;
+            |   &lt;label class="btn btn-secondary"&gt;
+            |       &lt;input type="radio" name="options" id="option3"&gt; Radio
+            |   &lt;/label&gt;
+            |&lt;/div&gt; 
+

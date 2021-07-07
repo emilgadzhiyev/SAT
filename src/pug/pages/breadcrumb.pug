@@ -2,5 +2,48 @@ include ../layout
 
 +layout
     h1 Breadcrumb
-    p.introText
+    p.intro-text
         | Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.
+    h2 Example
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    nav(aria-label='breadcrumb')
+                        ol.breadcrumb
+                            li.breadcrumb-item.active(aria-current='page') Home
+                    nav(aria-label='breadcrumb')
+                        ol.breadcrumb
+                            li.breadcrumb-item
+                                a(href='#') Home
+                            li.breadcrumb-item.active(aria-current='page') Library
+                    nav(aria-label='breadcrumb')
+                        ol.breadcrumb
+                            li.breadcrumb-item
+                                a(href='#') Home
+                            li.breadcrumb-item
+                                a(href='#') Library
+                            li.breadcrumb-item.active(aria-current='page') Data
+    pre
+        code.html
+            |&lt;nav aria-label="breadcrumb"&gt;
+            |   &lt;ol class="breadcrumb"&gt;
+            |       &lt;li class="breadcrumb-item active" aria-current="page"&gt;Home&lt;/li&gt;
+            |   &lt;/ol&gt;
+            |&lt;/nav&gt;
+            |&lt;nav aria-label="breadcrumb"&gt;
+            |   &lt;ol class="breadcrumb&gt;
+            |       &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            |       &lt;li class="breadcrumb-item active" aria-current="page"&gt;Library&lt;/li&gt;
+            |   &lt;/ol&gt;
+            |&lt;/nav&gt;
+            |&lt;nav aria-label="breadcrumb"&gt;
+            |   &lt;ol class="breadcrumb"&gt;
+            |       &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&lt;Home&lt;/a&gt;&lt;/li&gt;
+            |       &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&lt;Library</a>&lt;/li&gt;
+            |       &lt;li class="breadcrumb-item active" aria-current="page"&gt;Data&lt;/li&gt;
+            |   &lt;/ol&gt;
+            |&lt;/nav&gt;
+
+
+

@@ -2,5 +2,153 @@ include ../layout
 
 +layout
     h1 Alerts
-    p.introText
+    p.intro-text
         | Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+    h2 Examples
+    p.intro-text
+        | Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the eight 
+        b required 
+        | contextual classes (e.g., 
+        code(style='color:red') .alert-success
+        | ).
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    .alert.alert-primary(role='alert')
+                        | A simple primary alert&mdash;check it out!
+                    .alert.alert-secondary(role='alert')
+                        | A simple secondary alert&mdash;check it out!
+                    .alert.alert-success(role='alert')
+                        | A simple success alert&mdash;check it out!
+                    .alert.alert-danger(role='alert')
+                        | A simple danger alert&mdash;check it out!
+                    .alert.alert-warning(role='alert')
+                        | A simple warning alert&mdash;check it out!
+                    .alert.alert-info(role='alert')
+                        | A simple info alert&mdash;check it out!
+                    .alert.alert-light(role='alert')
+                        | A simple light alert&mdash;check it out!
+                    .alert.alert-dark(role='alert')
+                        | A simple dark alert&mdash;check it out!
+    pre
+        code.html
+            |&lt;div class="alert alert-primary" role="alert"&gt;
+            |    A simple primary alert—check it out!
+            |&lt;/div&gt;
+            |&lt;div class="alert alert-secondary" role="alert&gt;
+            |    A simple secondary alert—check it out!
+            |&lt;/div&gt;
+            |&lt;div class="alert alert-success" role="alert"&gt;
+            |    A simple success alert—check it out!
+            |&lt;/div&gt;   
+            |&lt;div class="alert alert-danger" role="alert"&gt;
+            |    A simple danger alert—check it out!
+            |&lt;/div&gt;
+            |&lt;div class="alert alert-warning" role="alert"&gt;
+            |    A simple warning alert—check it out!
+            |&lt;/div&gt;
+            |&lt;div class="alert alert-info" role="alert"&gt;
+            |    A simple info alert—check it out!
+            |&lt;/div&gt;
+            |&lt;div class="alert alert-light" role="alert"&gt;
+            |    A simple light alert—check it out!
+            |&lt;/div&gt;
+            |&lt;div class="alert alert-dark" role="alert"&gt;
+            |    A simple dark alert—check it out!
+            |&lt;/div&gt;
+    h5 Conveying meaning to assistive technologies
+    p.intro-text
+        | Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the 
+        code(style='color:red') .sr-only 
+        | class.
+    h3 Link color
+    p.intro-text
+        | Use the 
+        code(style='color:red') .alert-link 
+        | utility class to quickly provide matching colored links within any alert.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    .alert.alert-primary(role='alert')
+                        | A simple primary alert with 
+                        a.alert-link(href='#') an example link
+                        | . Give it a click if you like.
+                    .alert.alert-secondary(role='alert')
+                        | A simple secondary alert with 
+                        a.alert-link(href='#') an example link
+                        | . Give it a click if you like.
+                    .alert.alert-success(role='alert')
+                        | A simple success alert with 
+                        a.alert-link(href='#') an example link
+                        | . Give it a click if you like.
+                    .alert.alert-danger(role='alert')
+                        | A simple danger alert with 
+                        a.alert-link(href='#') an example link
+                        | . Give it a click if you like.
+                    .alert.alert-warning(role='alert')
+                        | A simple warning alert with 
+                        a.alert-link(href='#') an example link
+                        | . Give it a click if you like.
+                    .alert.alert-info(role='alert')
+                        | A simple info alert with 
+                        a.alert-link(href='#') an example link
+                        | . Give it a click if you like.
+                    .alert.alert-light(role='alert')
+                        | A simple light alert with 
+                        a.alert-link(href='#') an example link
+                        | . Give it a click if you like.
+                    .alert.alert-dark(role='alert')
+                        | A simple dark alert with 
+                        a.alert-link(href='#') an example link
+                        | . Give it a click if you like.
+    pre
+        code.html
+            |&lt;div class="alert alert-primary" role="alert"&gt;
+            |   A simple primary alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+            |&lt;/div&gt;
+            |&lt;div class="alert alert-secondary" role="alert"&gt;
+            |   A simple secondary alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+            |&lt;/div&gt;
+            |&lt;div class="alert alert-success" role="alert"&gt;
+            |   A simple success alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+            |&lt;/div&gt;
+            |&lt;div class="alert alert-danger" role="alert"&gt;
+            |   A simple danger alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+            |&lt;/div&gt;
+            |&lt;div class="alert alert-warning" role="alert"&gt;
+            |   A simple warning alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+            |&lt;/div&gt;
+            |&lt;div class="alert alert-info" role="alert"&gt;
+            |   A simple info alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+            |&lt;/div&gt;
+            |&lt;div class="alert alert-light" role="alert"&gt;
+            |   A simple light alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+            |&lt;/div&gt;
+            |&lt;div class="alert alert-dark" role="alert"&gt;
+            |   A simple dark alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+            |&lt;/div&gt;
+    h3 Additional content
+    p.intro-text
+        | Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
+    .stack
+        .stack__item.row
+            .col-6
+                .card.card_md
+                    .alert.alert-success(role='alert')
+                        h4.alert-heading Well done!
+                        p
+                            | Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+                        hr
+                        p.mb-0
+                            | Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+    pre
+        code.html
+            |&lt;div class="alert alert-success" role="alert"&gt;
+            |   &lt;h4 class="alert-heading"&gt;Well done!&lt;/h4&gt;
+            |   &lt;p&gt;Aww yeah, you successfully read this important alert message.  
+            |   This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.&lt;/p&gt;
+            |   &lt;hr&gt;
+            |   &lt;p class="mb-0"&gt;Whenever you need to, be sure to use margin utilities to keep things nice and tidy.&lt;/p&gt;
+            |&lt;/div&gt;
