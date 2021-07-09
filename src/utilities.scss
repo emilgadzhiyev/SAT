@@ -1,21 +1,33 @@
 @import 'variables';
 
+
+
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
+
+
 
 // @import '~bootstrap/scss/utilities/display';
 // @import '~bootstrap/scss/utilities/flex';
 // @import '~bootstrap/scss/utilities/spacing';
 // @import '~bootstrap/scss/utilities/sizing';
 
+
+
 @import '~bootstrap/scss/utilities';
 @import '~bootstrap/scss/type';
 
+
+
 // @import '~bootstrap/scss/tables'
 
-// Эта поебата на 18й строке за каким-то хером не инклюжится... ПОНЯТЬ!
+
+
+// Эта поебата на 28й строке за каким-то хером не инклюжится... ПОНЯТЬ!
 @import '~bootstrap/scss/vendor/rfs';
+
+
 
 @import '~bootstrap/scss/alert';
 @import '~bootstrap/scss/badge';
@@ -26,10 +38,15 @@
 @import '~bootstrap/scss/forms';
 @import '~bootstrap/scss/dropdown';
 @import '~bootstrap/scss/card';
+@import '~bootstrap/scss/list-group';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/nav';
+
 
 
 // Bootstrap Utilities
 @import '~bootstrap/scss/utilities/spacing';
+@import '~bootstrap/scss/utilities/text';
 @import '~bootstrap/scss/mixins/border-radius';
 
 

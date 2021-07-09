@@ -30,7 +30,6 @@ include ../layout
                             p.card-text
                                 | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
                             a.btn.btn-primary(href='#') Go somewhere
-
     pre
         code.html
             |&lt;div class="card" style="width: 18rem;"&gt;
@@ -41,3 +40,1704 @@ include ../layout
             |       &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
             |   &lt;/div&gt;
             |&lt;/div&gt;
+    h2 Content types
+    p.intro-text
+        | Cards support a wide variety of content, including images, text, list groups, links, and more. Below are examples of what’s supported.
+    h3 Body
+    p.intro-text
+        | The building block of a card is the 
+        code(style='color:red') .card-body
+        | . Use it whenever you need a padded section within a card.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card
+                        .card-body
+                            | This is some text within a card body.
+    pre
+        code.html
+            |&lt;div class="card"&gt;
+            |   &lt;div class="card-body"&gt;
+            |       This is some text within a card body.
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h3 Titles, text, and links
+    p.intro-text
+        | Card titles are used by adding 
+        code(style='color:red') .card-title 
+        | to a 
+        code(style='color:red') &lt;h*&gt; 
+        | tag. In the same way, links are added and placed next to each other by adding 
+        code(style='color:red') .card-link 
+        | to an 
+        code(style='color:red') &lt;a&gt; 
+        | tag.
+    p.intro-text
+        | Subtitles are used by adding a 
+        code(style='color:red') .card-subtitle 
+        | to a 
+        code(style='color:red') &lt;h*&gt; 
+        | tag. If the 
+        code(style='color:red') .card-title 
+        | and the 
+        code(style='color:red') .card-subtitle 
+        | items are placed in a 
+        code(style='color:red') .card-body 
+        | item, the card title and subtitle are aligned nicely.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card(style='width: 18rem;')
+                        .card-body
+                            h5.card-title Card title
+                            h6.card-subtitle.mb-2.text-muted Card subtitle
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                            a.card-link(href='#') Card link
+                            a.card-link(href='#') Another link
+    pre
+        code.html
+            |&lt;div class="card" style="width: 18rem;"&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |       &lt;h6 class="card-subtitle mb-2 text-muted"&gt;Card subtitle&lt;/h6&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |       &lt;a href="#" class="card-link"&gt;Card link&lt;/a&gt;
+            |       &lt;a href="#" class="card-link"&gt;Another link&lt;/a&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h3 Images
+    p.intro-text
+        code(style='color:red') .card-img-top 
+        | places an image to the top of the card. With 
+        code(style='color:red') .card-text
+        | , text can be added to the card. Text within 
+        code(style='color:red') .card-text 
+        | can also be styled with the standard HTML tags.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card(style='width: 18rem;')
+                        svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                            title Placeholder
+                            rect(width='100%' height='100%' fill='#6c757d')
+                            text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                        .card-body
+                            p.card-text
+                            | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+    pre
+        code.html
+            |&lt;div class="card" style="width: 18rem;"&gt;
+            |   &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h3 List groups
+    p.intro-text
+        | Create lists of content in a card with a flush list group.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card(style='width: 18rem;')
+                        ul.list-group.list-group-flush
+                            li.list-group-item An item
+                            li.list-group-item A second item
+                            li.list-group-item A third item
+    pre
+        code.html
+            |&lt;div class="card" style="width: 18rem;"&gt;
+            |   &lt;ul class="list-group list-group-flush"&gt;
+            |       &lt;li class="list-group-item"&gt;An item&lt;/li&gt;
+            |       &lt;li class="list-group-item"&gt;A second item&lt;/li&gt;
+            |       &lt;li class="list-group-item"&gt;A third item&lt;/li&gt;
+            |   &lt;/ul&gt;
+            |&lt;/div&gt;
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card(style='width: 18rem;')
+                        .card-header
+                            | Featured
+                        ul.list-group.list-group-flush
+                            li.list-group-item An item
+                            li.list-group-item A second item
+                            li.list-group-item A third item
+    pre
+        code.html
+            |&lt;div class="card" style="width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;
+            |       Featured
+            |   &lt;/div&gt;
+            |   &lt;ul class="list-group list-group-flush"&gt;
+            |       &lt;li class="list-group-item"&gt;An item&lt;/li&gt;
+            |       &lt;li class="list-group-item"&gt;A second item&lt;/li&gt;
+            |       &lt;li class="list-group-item"&gt;A third item&lt;/li&gt;
+            |   &lt;/ul&gt;
+            |&lt;/div&gt;
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card(style='width: 18rem;')
+                        ul.list-group.list-group-flush
+                            li.list-group-item An item
+                            li.list-group-item A second item
+                            li.list-group-item A third item
+                        .card-footer
+                            | Card footer
+    pre
+        code.html
+            |&lt;div class="card" style="width: 18rem;"&gt;
+            |   &lt;ul class="list-group list-group-flush"&gt;
+            |       &lt;li class="list-group-item"&lt;An item&lt;/li&gt;
+            |       &lt;li class="list-group-item"&lt;A second item&lt;/li&gt;
+            |       &lt;li class="list-group-item"&lt;A third item&lt;/li&gt;
+            |   &lt;/ul&gt;
+            |   &lt;div class="card-footer"&gt;
+            |       Card footer
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h3 Kitchen sink
+    p.intro-text
+        | Mix and match multiple content types to create the card you need, or throw everything in there. Shown below are image styles, blocks, text styles, and a list group—all wrapped in a fixed-width card.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card(style='width: 18rem;')
+                        svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                            title Placeholder
+                            rect(width='100%' height='100%' fill='#6c757d')
+                            text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                        .card-body
+                            h5.card-title Card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                        ul.list-group.list-group-flush
+                            li.list-group-item An item
+                            li.list-group-item A second item
+                            li.list-group-item A third item
+                        .card-body
+                            a.card-link(href='#') Card link
+                            a.card-link(href='#') Another link
+    pre
+        code.html
+            |&lt;div class="card" style="width: 18rem;"&gt;
+            |   &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |   &lt;ul class="list-group list-group-flush"&gt;
+            |       &lt;li class="list-group-item"&gt;An item&lt;/li&gt;
+            |       &lt;li class="list-group-item"&gt;A second item&lt;/li&gt;
+            |       &lt;li class="list-group-item"&gt;A third item&lt;/li&gt;
+            |   &lt;/ul&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;a href="#" class="card-link&gt;Card link&lt;/a&gt;
+            |       &lt;a href="#" class="card-link"&gt;Another link&lt;/a&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h3 Header and footer
+    p.intro-text
+        | Add an optional header and/or footer within a card.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card
+                        .card-header
+                            | Featured
+                        .card-body
+                            h5.card-title Special title treatment
+                            p.card-text With supporting text below as a natural lead-in to additional content.
+                            a.btn.btn-primary(href='#') Go somewhere
+    pre
+        code.html
+            |&lt;div class="card"&gt;
+            |   &lt;div class="card-header"&gt;
+            |       Featured
+            |   &lt;/div&gt;
+            |   &lt;div class="card-body&gt;
+            |       &lt;h5 class="card-title"&gt;Special title treatment&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |       &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    p.intro-text
+        | Card headers can be styled by adding 
+        code(style='color:red') .card-header 
+        | to 
+        code(style='color:red') &lt;h*&gt; 
+        | elements.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card
+                        h5.card-header Featured
+                        .card-body
+                            h5.card-title Special title treatment
+                            p.card-text With supporting text below as a natural lead-in to additional content.
+                            a.btn.btn-primary(href='#') Go somewhere
+    pre
+        code.html
+            |&lt;div class="card"&gt;
+            |   &lt;h5 class="card-header"&lt;Featured&lt;/h5&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&lt;Special title treatment&lt;/h5&gt;
+            |       &lt;p class="card-text"&lt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |       &lt;a href="#" class="btn btn-primary"&lt;Go somewhere&lt;/a&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card
+                        .card-header
+                            | Quote
+                        .card-body
+                            blockquote.blockquote.mb-0
+                                p A well-known quote, contained in a blockquote element.
+                                footer.blockquote-footer
+                                    | Someone famous in 
+                                    cite(title='Source Title') Source Title
+    pre
+        code.html
+            |&lt;div class="card"&gt;
+            |   &lt;div class="card-header"&gt;
+            |       Quote
+            |   &lt;/div&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;blockquote class="blockquote mb-0"&gt;
+            |           &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
+            |           &lt;footer class="blockquote-footer"&gt;Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;&lt;/footer&gt;
+            |       &lt;/blockquote&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card.text-center
+                        .card-header
+                            | Featured
+                        .card-body
+                            h5.card-title Special title treatment
+                            p.card-text With supporting text below as a natural lead-in to additional content.
+                            a.btn.btn-primary(href='#') Go somewhere
+                        .card-footer.text-muted
+                            | 2 days ago
+    pre
+        code.html
+            |&lt;div class="card text-center"&gt;
+            |   &lt;div class="card-header"&gt;
+            |       Featured
+            |   &lt;/div&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Special title treatment&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |       &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card-footer text-muted"&gt;
+            |       2 days ago
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h2 Sizing
+    p.intro-text
+        | Cards assume no specific 
+        code(style='color:red') width 
+        | to start, so they’ll be 100% wide unless otherwise stated. You can change this as needed with custom CSS, grid classes, grid Sass mixins, or utilities.
+    h3 Using grid markup
+    p.intro-text
+        | Using the grid, wrap cards in columns and rows as needed.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .row
+                        .col-sm-3
+                            .card
+                                .card-body
+                                    h5.card-title Special title treatment
+                                    p.card-text With supporting text below as a natural lead-in to additional content.
+                                    a.btn.btn-primary(href='#') Go somewhere
+                        .col-sm-3
+                            .card
+                                .card-body
+                                    h5.card-title Special title treatment
+                                    p.card-text With supporting text below as a natural lead-in to additional content.
+                                    a.btn.btn-primary(href='#') Go somewhere
+    pre
+        code.html
+            |&lt;div class="row"&gt;
+            |   &lt;div class="col-sm-6"&gt;
+            |       &lt;div class="card"&gt;
+            |           &lt;div class="card-body"&gt;
+            |               &lt;h5 class="card-title"&gt;Special title treatment&lt;/h5&gt;
+            |               &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |               &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            |           &lt;/div&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="col-sm-6"&gt;
+            |       &lt;div class="card"&gt;
+            |           &lt;div class="card-body"&gt;
+            |               &lt;h5 class="card-title"&gt;Special title treatment&lt;/h5&gt;
+            |               &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |               &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            |           &lt;/div&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h3 Using utilities
+    p.intro-text
+        | Use our handful of available sizing utilities to quickly set a card’s width.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card.w-75
+                        .card-body
+                            h5.card-title Card title
+                            p.card-text With supporting text below as a natural lead-in to additional content.
+                            a.btn.btn-primary(href='#') Button
+                    .card.w-50
+                        .card-body
+                            h5.card-title Card title
+                            p.card-text With supporting text below as a natural lead-in to additional content.
+                            a.btn.btn-primary(href='#') Button
+    pre
+        code.html
+            |&lt;div class="card w-75"&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |       &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card w-50"&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |       &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h3 Using custom CSS
+    p.intro-text
+            | Use custom CSS in your stylesheets or as inline styles to set a width.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card(style='width: 18rem;')
+                        .card-body
+                            h5.card-title Special title treatment
+                            p.card-text With supporting text below as a natural lead-in to additional content.
+                            a.btn.btn-primary(href='#') Go somewhere
+    pre
+        code.html
+            |&lt;div class="card" style="width: 18rem;"&gt;
+            |    &lt;div class="card-body"&gt;
+            |        &lt;h5 class="card-title"&gt;Special title treatment&lt;/h5&gt;
+            |        &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content&lt;/p&gt;
+            |        &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            |    &lt;/div&gt;
+            |&lt;/div&gt;
+    h2 Text alignment
+    p.intro-text
+        | You can quickly change the text alignment of any card—in its entirety or specific parts—with our text align classes.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card(style='width: 18rem;')
+                        .card-body
+                            h5.card-title Special title treatment
+                            p.card-text With supporting text below as a natural lead-in to additional content.
+                            a.btn.btn-primary(href='#') Go somewhere
+                    .card.text-center(style='width: 18rem;')
+                        .card-body
+                            h5.card-title Special title treatment
+                            p.card-text With supporting text below as a natural lead-in to additional content.
+                            a.btn.btn-primary(href='#') Go somewhere
+                    .card.text-right(style='width: 18rem;')
+                        .card-body
+                            h5.card-title Special title treatment
+                            p.card-text With supporting text below as a natural lead-in to additional content.
+                            a.btn.btn-primary(href='#') Go somewhere
+    pre
+        code.html
+            |&lt;div class="card" style="width: 18rem;"&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Special title treatment&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |       &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card text-center" style="width: 18rem;"&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Special title treatment&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |       &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card text-right" style="width: 18rem;"&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Special title treatment&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |       &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h2 Navigation
+    p.intro-text
+        | Add some navigation to a card’s header (or block) with Bootstrap’s nav components.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card.text-center
+                        .card-header
+                            ul.nav.nav-tabs.card-header-tabs
+                                li.nav-item
+                                    a.nav-link.active(href='#') Active
+                                li.nav-item
+                                    a.nav-link(href='#') Link
+                                li.nav-item
+                                    a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') Disabled
+                        .card-body
+                            h5.card-title Special title treatment
+                            p.card-text With supporting text below as a natural lead-in to additional content.
+                            a.btn.btn-primary(href='#') Go somewhere
+    pre
+        code.html
+            |&lt;div class="card text-center"&gt;
+            |   &lt;div class="card-header"&gt;
+            |       &lt;ul class="nav nav-tabs card-header-tabs"&gt;
+            |           &lt;li class="nav-item"&gt;
+            |               &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+            |           &lt;/li&gt;
+            |           &lt;li class="nav-item"&gt;
+            |               &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+            |           &lt;/li&gt;
+            |           &lt;li class="nav-item"&gt;
+            |               &lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+            |           &lt;/li&gt;
+            |       &lt;/ul&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Special title treatment&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |       &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card.text-center
+                        .card-header
+                            ul.nav.nav-pills.card-header-pills
+                                li.nav-item
+                                    a.nav-link.active(href='#') Active
+                                li.nav-item
+                                    a.nav-link(href='#') Link
+                                li.nav-item
+                                    a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') Disabled
+                        .card-body
+                            h5.card-title Special title treatment
+                            p.card-text With supporting text below as a natural lead-in to additional content.
+                            a.btn.btn-primary(href='#') Go somewhere
+    pre
+        code.html
+            |&lt;div class="card text-center"&gt;
+            |   &lt;div class="card-header"&gt;
+            |       &lt;ul class="nav nav-pills card-header-pills"&gt;
+            |           &lt;li class="nav-item"&gt;
+            |               &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+            |           &lt;/li&gt;
+            |           &lt;li class="nav-item"&gt;
+            |               &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+            |           &lt;/li&gt;
+            |           &lt;li class="nav-item"&gt;
+            |               &lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+            |           &lt;/li&gt;
+            |       &lt;/ul&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Special title treatment&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |       &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h2 Images
+    p.intro-text
+        | Cards include a few options for working with images. Choose from appending “image caps” at either end of a card, overlaying images with card content, or simply embedding the image in a card.
+    h3 Image caps
+    p.intro-text
+        | Similar to headers and footers, cards can include top and bottom “image caps”—images at the top or bottom of a card.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card.mb-3
+                        svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                            title Placeholder
+                            rect(width='100%' height='100%' fill='#6c757d')
+                            text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                        .card-body
+                            h5.card-title Card title
+                            p.card-text
+                                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                            p.card-text
+                                small.text-muted Last updated 3 mins ago
+                    .card
+                        .card-body
+                            h5.card-title Card title
+                            p.card-text
+                                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                            p.card-text
+                                small.text-muted Last updated 3 mins ago
+                        svg.bd-placeholder-img.card-img-bottom(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                            title Placeholder
+                            rect(width='100%' height='100%' fill='#6c757d')
+                            text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+    pre
+        code.html
+            |&lt;div class="card mb-3"&gt;
+            |   &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;This is a wider card with supporting text below as a natural lead-in 
+            |       to additional content. This content is a little bit longer.&lt;/p&gt;
+            |       &lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card"&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;This is a wider card with supporting text below as a natural lead-in 
+            |       to additional content. This content is a little bit longer.&lt;/p&gt;
+            |       &lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;&lt;/p&gt;
+            |   &lt;/div&gt;
+            |   &lt;img src="..." class="card-img-bottom" alt="..."&gt;
+            |&lt;/div&gt;
+    h3 Image overlays
+    p.intro-text
+        | Turn an image into a card background and overlay your card’s text. Depending on the image, you may or may not need additional styles or utilities.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card.bg-dark.text-white
+                        svg.bd-placeholder-img.bd-placeholder-img-lg.card-img(width='100%' height='270' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Card image' preserveaspectratio='xMidYMid slice' focusable='false')
+                            title Placeholder
+                            rect(width='100%' height='100%' fill='#6c757d')
+                            text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Card image
+                        .card-img-overlay
+                            h5.card-title Card title
+                            p.card-text
+                                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                            p.card-text Last updated 3 mins ago
+    pre
+        code.html
+            |&lt;div class="card bg-dark text-white"&gt;
+            |   &lt;img src="..." class="card-img" alt="..."&gt;
+            |   &lt;div class="card-img-overlay"&gt;
+            |       &lt;h5 class="card-title"&lt;Card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;This is a wider card with supporting text below as 
+            |       a natural lead-in to additional content. This content is a little bit longer.&lt;/p&gt;
+            |       &lt;p class="card-text"&gt;Last updated 3 mins ago&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    p.intro-text
+        | Note that content should not be larger than the height of the image. If content is larger than the image the content will be displayed outside the image.
+    h2 Horizontal
+    p.intro-text
+        | Using a combination of grid and utility classes, cards can be made horizontal in a mobile-friendly and responsive way. In the example below, we remove the grid gutters with 
+        code(style='color:red') .no-gutters 
+        | and use 
+        code(style='color:red') .col-md-* 
+        | classes to make the card horizontal at the md breakpoint. Further adjustments may be needed depending on your card content.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card.mb-3(style='max-width: 540px;')
+                        .row.no-gutters
+                            .col-md-2
+                                svg.bd-placeholder-img(width='100%' height='250' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image' preserveaspectratio='xMidYMid slice' focusable='false')
+                                    title Placeholder
+                                    rect(width='100%' height='100%' fill='#6c757d')
+                                    text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image
+                            .col-md-4
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                                    p.card-text
+                                        small.text-muted Last updated 3 mins ago
+    pre
+        code.html
+            |&lt;div class="card mb-3" style="max-width: 540px;"&gt;
+            |   &lt;div class="row no-gutters"&gt;
+            |       &lt;div class="col-md-4"&gt;
+            |           &lt;img src="..." alt="..."&gt;
+            |       &lt;/div&gt;
+            |       &lt;div class="col-md-8"&gt;
+            |           &lt;div class="card-body"&gt;
+            |               &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |               &lt;p class="card-text"&gt;This is a wider card with supporting text below as a natural lead-in 
+            |               to additional content. This content is a little bit longer.&lt;/p&gt;
+            |               &lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;&lt;/p&gt;
+            |           &lt;/div&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h2 Card styles
+    p.intro-text
+        | Cards include various options for customizing their backgrounds, borders, and color.
+    h3 Background and color
+    p.intro-text
+        | Use text and background utilities to change the appearance of a card.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card.text-white.bg-primary.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body
+                            h5.card-title Primary card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                    .card.text-white.bg-secondary.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body
+                            h5.card-title Secondary card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                    .card.text-white.bg-success.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body
+                            h5.card-title Success card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                    .card.text-white.bg-danger.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body
+                            h5.card-title Danger card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                    .card.text-white.bg-warning.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body
+                            h5.card-title Warning card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                    .card.text-white.bg-info.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body
+                            h5.card-title Info card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                    .card.bg-light.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body
+                            h5.card-title Light card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                    .card.text-white.bg-dark.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body
+                            h5.card-title Dark card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+    pre
+        code.html
+            |&lt;div class="card text-white bg-primary mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Primary card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card text-white bg-secondary mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title&gt;Secondary card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card text-white bg-success mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Success card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card text-white bg-danger mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Danger card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card text-white bg-warning mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Warning card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card text-white bg-info mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Info card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card bg-light mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Light card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card text-white bg-dark mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Dark card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h5 Conveying meaning to assistive technologies
+    p.intro-text
+        | Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the 
+        code(style='color:red') .sr-only 
+        | class.
+    h3 Border
+    p.intro-text
+        | Use border utilities to change just the 
+        code(style='color:red') border-color 
+        | of a card. Note that you can put 
+        code(style='color:red') .text-{color} 
+        | classes on the parent 
+        code(style='color:red') .card 
+        | or a subset of the card’s contents as shown below.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card.border-primary.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body.text-primary
+                            h5.card-title Primary card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                    .card.border-secondary.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body.text-secondary
+                            h5.card-title Secondary card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                    .card.border-success.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body.text-success
+                            h5.card-title Success card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                    .card.border-danger.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body.text-danger
+                            h5.card-title Danger card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                    .card.border-warning.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body.text-warning
+                            h5.card-title Warning card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                    .card.border-info.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body.text-info
+                            h5.card-title Info card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                    .card.border-light.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body
+                            h5.card-title Light card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                    .card.border-dark.mb-3(style='max-width: 18rem;')
+                        .card-header Header
+                        .card-body.text-dark
+                            h5.card-title Dark card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+    pre
+        code.html
+            |&lt;div class="card border-primary mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body text-primary"&gt;
+            |       &lt;h5 class="card-title"&gt;Primary card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card border-secondary mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body text-secondary"&gt;
+            |       &lt;h5 class="card-title"&gt;Secondary card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card border-success mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body text-success"&gt;
+            |       &lt;h5 class="card-title"&gt;Success card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card border-danger mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body text-danger"&gt;
+            |       &lt;h5 class="card-title"&gt;Danger card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card border-warning mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body text-warning"&gt;
+            |       &lt;h5 class="card-title"&gt;Warning card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card border-info mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body text-info"&gt;
+            |       &lt;h5 class="card-title"&gt;Info card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card border-light mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body"&gt;
+            |       &lt;h5 class="card-title"&gt;Light card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+            |&lt;div class="card border-dark mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body text-dark"&gt;
+            |       &lt;h5 class="card-title"&gt;Dark card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h3 Mixins utilities
+    p.intro-text
+        | You can also change the borders on the card header and footer as needed, and even remove their 
+        code(style='color:red') background-color 
+        | with 
+        code(style='color:red') .bg-transparent
+        | .
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card.border-success.mb-3(style='max-width: 18rem;')
+                        .card-header.bg-transparent.border-success Header
+                        .card-body.text-success
+                            h5.card-title Success card title
+                            p.card-text
+                                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                        .card-footer.bg-transparent.border-success Footer
+    pre
+        code.html
+            |&lt;div class="card border-success mb-3" style="max-width: 18rem;"&gt;
+            |   &lt;div class="card-header bg-transparent border-success"&gt;Header&lt;/div&gt;
+            |   &lt;div class="card-body text-success"&gt;
+            |       &lt;h5 class="card-title"&gt;Success card title&lt;/h5&gt;
+            |       &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card-footer bg-transparent border-success"&gt;Footer&lt;/div&gt;
+            |&lt;/div&gt;
+    h2 Card layout
+    p.intro-text
+        | In addition to styling the content within cards, Bootstrap includes a few options for laying out series of cards. For the time being, 
+        b these layout options are not yet responsive
+        | .
+    h2 Card groups
+    p.intro-text
+        | Use card groups to render cards as a single, attached element with equal width and height columns. Card groups start off stacked and use 
+        code(style='color:red') display: flex; 
+        | to become attached with uniform dimensions starting at the 
+        code(style='color:red') sm 
+        | breakpoint.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card-group
+                        .card
+                            svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                title Placeholder
+                                rect(width='100%' height='100%' fill='#6c757d')
+                                text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text
+                                    | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                                p.card-text
+                                    small.text-muted Last updated 3 mins ago
+                        .card
+                            svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                title Placeholder
+                                rect(width='100%' height='100%' fill='#6c757d')
+                                text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text This card has supporting text below as a natural lead-in to additional content.
+                                p.card-text
+                                    small.text-muted Last updated 3 mins ago
+                        .card
+                            svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                title Placeholder
+                                rect(width='100%' height='100%' fill='#6c757d')
+                                text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text
+                                    | This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                                p.card-text
+                                    small.text-muted Last updated 3 mins ago
+    pre
+        code.html
+            |&lt;div class="card-group"&gt;
+            |   &lt;div class="card"&gt;
+            |       &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |           &lt;p class="card-text&gt;This is a wider card with supporting text below as 
+            |           a natural lead-in to additional content. This content is a little bit longer.&lt;/p&gt;
+            |           &lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;&lt;/p&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card"&gt;
+            |       &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |           &lt;p class="card-text"&gt;This card has supporting text below as a natural 
+            |           lead-in to additional content.&lt;/p&gt;
+            |           &lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;&lt;/p&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card"&gt;
+            |       &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |           &lt;p class="card-text"&gt;This is a wider card with supporting text below 
+            |           as a natural lead-in to additional content. This card has even longer content than the 
+            |           first to show that equal height action.&lt;/p&gt;
+            |           &lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;&lt;/p&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    p.intro-text
+        | When using card groups with footers, their content will automatically line up.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card-group
+                        .card
+                            svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                title Placeholder
+                                rect(width='100%' height='100%' fill='#6c757d')
+                                text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text
+                                    | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                            .card-footer
+                                small.text-muted Last updated 3 mins ago
+                        .card
+                            svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                title Placeholder
+                                rect(width='100%' height='100%' fill='#6c757d')
+                                text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text This card has supporting text below as a natural lead-in to additional content.
+                            .card-footer
+                                small.text-muted Last updated 3 mins ago
+                        .card
+                            svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                title Placeholder
+                                rect(width='100%' height='100%' fill='#6c757d')
+                                text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text
+                                    | This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                            .card-footer
+                                small.text-muted Last updated 3 mins ago
+    pre
+        code.html
+            |&lt;div class="card-group"&gt;
+            |   &lt;div class="card"&gt;
+            |       &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |           &lt;p class="card-text"&gt;This is a wider card with supporting text 
+            |           below as a natural lead-in to additional content. This content is a little bit longer.&lt;/p&gt;
+            |       &lt;/div&gt;
+            |       &lt;div class="card-footer"&gt;
+            |           &lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card"&gt;
+            |       &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |           &lt;p class="card-text"&gt;This card has supporting text below as 
+            |           a natural lead-in to additional content.&lt;/p&gt;
+            |       &lt;/div&gt;
+            |       &lt;div class="card-footer"&gt;
+            |           &lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card"&gt;
+            |       &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |           &lt;p class="card-text"&gt;This is a wider card with supporting text 
+            |           below as a natural lead-in to additional content. This card has even 
+            |           longer content than the first to show that equal height action.&lt;/p&gt;
+            |       &lt;/div&gt;
+            |       &lt;div class="card-footer"&gt;
+            |           &lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h3 Card decks
+    p.intro-text
+        | Need a set of equal width and height cards that aren’t attached to one another? Use card decks.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card-deck
+                        .card
+                            svg.bd-placeholder-img.card-img-top(width='100%' height='200' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                title Placeholder
+                                rect(width='100%' height='100%' fill='#6c757d')
+                                text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text
+                                    | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                                p.card-text
+                                    small.text-muted Last updated 3 mins ago
+                        .card
+                            svg.bd-placeholder-img.card-img-top(width='100%' height='200' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                title Placeholder
+                                rect(width='100%' height='100%' fill='#6c757d')
+                                text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text This card has supporting text below as a natural lead-in to additional content.
+                                p.card-text
+                                    small.text-muted Last updated 3 mins ago
+                        .card
+                            svg.bd-placeholder-img.card-img-top(width='100%' height='200' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                title Placeholder
+                                rect(width='100%' height='100%' fill='#6c757d')
+                                text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text
+                                    | This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                                p.card-text
+                                    small.text-muted Last updated 3 mins ago
+    pre
+        code.html
+            |&lt;div class="card-deck"&gt;
+            |   &lt;div class="card"&gt;
+            |       &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |           &lt;p class="card-text"&gt;This is a longer card with supporting text below 
+            |           as a natural lead-in to additional content. This content is a little bit longer.&lt;/p&gt;
+            |           &lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;&lt;/p&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card"&gt;
+            |       &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |           &lt;p class="card-text"&gt;This card has supporting text below 
+            |           as a natural lead-in to additional content.&lt;/p&gt;
+            |           &lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;&lt;/p&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card"&gt;
+            |   &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |           &lt;p class="card-text"&gt;This is a wider card with supporting text below as 
+            |           a natural lead-in to additional content. This card has even longer content than the 
+            |           first to show that equal height action.&lt;/p&gt;
+            |           &lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;&lt;/p&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    p.intro-text
+        | Just like with card groups, card footers in decks will automatically line up.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card-deck
+                        .card
+                            svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                title Placeholder
+                                rect(width='100%' height='100%' fill='#6c757d')
+                                text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text
+                                    | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                            .card-footer
+                                small.text-muted Last updated 3 mins ago
+                        .card
+                            svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                title Placeholder
+                                rect(width='100%' height='100%' fill='#6c757d')
+                                text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text This card has supporting text below as a natural lead-in to additional content.
+                            .card-footer
+                                small.text-muted Last updated 3 mins ago
+                        .card
+                            svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                title Placeholder
+                                rect(width='100%' height='100%' fill='#6c757d')
+                                text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text
+                                    | This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                            .card-footer
+                                small.text-muted Last updated 3 mins ago
+    pre
+        code.html
+            |&lt;div class="card-deck"&gt;
+            |   &lt;div class="card"&gt;
+            |       &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |           &lt;p class="card-text"&gt;This is a wider card with supporting text below 
+            |           as a natural lead-in to additional content. This content is a little bit longer.&lt;/p&gt;
+            |       &lt;/div&gt;
+            |       &lt;div class="card-footer"&gt;
+            |           &lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card"&gt;
+            |       &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |           &lt;p class="card-text"&gt;This card has supporting text below 
+            |           as a natural lead-in to additional content.&lt;/p&gt;
+            |       &lt;/div&gt;
+            |       &lt;div class="card-footer"&gt;
+            |           &lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card"&gt;
+            |       &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |           &lt;p class="card-text"&gt;This is a wider card with supporting text 
+            |           below as a natural lead-in to additional content. This card has even 
+            |           longer content than the first to show that equal height action.&lt;/p&gt;
+            |       &lt;/div&gt;
+            |       &lt;div class="card-footer"&gt;
+            |           &lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h3 Grid cards
+    p.intro-text
+        | Use the Bootstrap grid system and its 
+        code(style='color:red') .row-cols 
+        | classes to control how many grid columns (wrapped around your cards) you show per row. For example, here’s 
+        code(style='color:red') .row-cols-1 
+        | laying out the cards on one column, and 
+        code(style='color:red') .row-cols-md-2 
+        | splitting four cards to equal width across multiple rows, from the medium breakpoint up.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .row.row-cols-1.row-cols-md-2
+                        .col.mb-4
+                            .card
+                                svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                    title Placeholder
+                                    rect(width='100%' height='100%' fill='#6c757d')
+                                    text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        .col.mb-4
+                            .card
+                                svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                    title Placeholder
+                                    rect(width='100%' height='100%' fill='#6c757d')
+                                    text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        .col.mb-4
+                            .card
+                                svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                    title Placeholder
+                                    rect(width='100%' height='100%' fill='#6c757d')
+                                    text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a longer card with supporting text below as a natural lead-in to additional content.
+                        .col.mb-4
+                            .card
+                                svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                    title Placeholder
+                                    rect(width='100%' height='100%' fill='#6c757d')
+                                    text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+    pre
+        code.html
+            |&lt;div class="row row-cols-1 row-cols-md-2"&gt;
+            |   &lt;div class="col mb-4"&gt;
+            |       &lt;div class="card"&gt;
+            |           &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |           &lt;div class="card-body"&gt;
+            |               &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |               &lt;p class="card-text"&gt;This is a longer card with supporting 
+            |               text below as a natural lead-in to additional content. This content is a little bit longer.&lt;/p&gt;
+            |           &lt;/div&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="col mb-4"&gt;
+            |       &lt;div class="card"&gt;
+            |           &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |           &lt;div class="card-body"&gt;
+            |               &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |               &lt;p class="card-text"&gt;This is a longer card with supporting 
+            |               text below as a natural lead-in to additional content. This content is a little bit longer.&lt;/p&gt;
+            |           &lt;/div&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="col mb-4"&gt;
+            |       &lt;div class="card"&gt;
+            |           &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |           &lt;div class="card-body"&gt;
+            |               &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |               &lt;p class="card-text"&gt;This is a longer card with supporting text below 
+            |               as a natural lead-in to additional content.&lt;/p&gt;
+            |           &lt;/div&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="col mb-4"&gt;
+            |       &lt;div class="card"&gt;
+            |           &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |           &lt;div class="card-body"&gt;
+            |               &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |               &lt;p class="card-text"&gt;This is a longer card with supporting text below 
+            |               as a natural lead-in to additional content. This content is a little bit longer.&lt;/p&gt;
+            |           &lt;/div&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    p.intro-text
+        | Change it to 
+        code(style='color:red') .row-cols-3 
+        | and you’ll see the fourth card wrap.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .row.row-cols-1.row-cols-md-3
+                        .col.mb-4
+                            .card
+                                svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                    title Placeholder
+                                    rect(width='100%' height='100%' fill='#6c757d')
+                                    text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        .col.mb-4
+                            .card
+                                svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                    title Placeholder
+                                    rect(width='100%' height='100%' fill='#6c757d')
+                                    text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        .col.mb-4
+                            .card
+                                svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                    title Placeholder
+                                    rect(width='100%' height='100%' fill='#6c757d')
+                                    text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a longer card with supporting text below as a natural lead-in to additional content.
+                        .col.mb-4
+                            .card
+                                svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                    title Placeholder
+                                    rect(width='100%' height='100%' fill='#6c757d')
+                                    text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+    pre
+        code.html
+            |&lt;div class="row row-cols-1 row-cols-md-3"&gt;
+            |   &lt;div class="col mb-4"&gt;
+            |       &lt;div class="card"&gt;
+            |           &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |           &lt;div class="card-body"&gt;
+            |               &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |               &lt;p class="card-text"&gt;This is a longer card with supporting text below as 
+            |               a natural lead-in to additional content. This content is a little bit longer.&lt;/p&gt;
+            |           &lt;/div&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="col mb-4"&gt;
+            |       &lt;div class="card"&gt;
+            |           &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |           &lt;div class="card-body"&gt;
+            |               &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |               &lt;p class="card-text"&gt;This is a longer card with supporting text below 
+            |               as a natural lead-in to additional content. This content is a little bit longer.&lt;/p&gt;
+            |           &lt;/div&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="col mb-4"&gt;
+            |       &lt;div class="card"&gt;
+            |           &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |           &lt;div class="card-body"&gt;
+            |               &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |               &lt;p class="card-text"&gt;This is a longer card with supporting text below as 
+            |               a natural lead-in to additional content.&lt;/p&gt;
+            |           &lt;/div&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="col mb-4"&gt;
+            |       &lt;div class="card"&gt;
+            |           &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |           &lt;div class="card-body"&gt;
+            |               &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |               &lt;p class="card-text"&gt;This is a longer card with supporting text below 
+            |               as a natural lead-in to additional content. This content is a little bit longer.&lt;/p&gt;
+            |           &lt;/div&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    p.intro-text
+        | When you need equal height, add 
+        code(style='color:red') .h-100 
+        | to the cards. If you want equal heights by default, you can set 
+        code(style='color:red') $card-height: 100% 
+        | in Sass.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .row.row-cols-1.row-cols-md-3
+                        .col.mb-4
+                            .card.h-100
+                                svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                    title Placeholder
+                                    rect(width='100%' height='100%' fill='#6c757d')
+                                    text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        .col.mb-4
+                            .card.h-100
+                                svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                    title Placeholder
+                                    rect(width='100%' height='100%' fill='#6c757d')
+                                    text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text This is a short card.
+                        .col.mb-4
+                            .card.h-100
+                                svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                    title Placeholder
+                                    rect(width='100%' height='100%' fill='#6c757d')
+                                    text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a longer card with supporting text below as a natural lead-in to additional content.
+                        .col.mb-4
+                            .card.h-100
+                                svg.bd-placeholder-img.card-img-top(width='100%' height='180' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                    title Placeholder
+                                    rect(width='100%' height='100%' fill='#6c757d')
+                                    text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+    pre
+        code.html
+            |&lt;div class="row row-cols-1 row-cols-md-3"&gt;
+            |   &lt;div class="col mb-4"&gt;
+            |       &lt;div class="card h-100"&gt;
+            |           &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |           &lt;div class="card-body"&gt;
+            |               &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |               &lt;p class="card-text"&gt;This is a longer card with supporting 
+            |               text below as a natural lead-in to additional content. This content is a little bit longer.&lt;/p&gt;
+            |           &lt;/div&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="col mb-4"&gt;
+            |       &lt;div class="card h-100"&gt;
+            |           &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |           &lt;div class="card-body"&gt;
+            |               &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |               &lt;p class="card-text"&gt;This is a short card.&lt;/p&gt;
+            |           &lt;/div&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="col mb-4"&gt;
+            |       &lt;div class="card h-100"&gt;
+            |           &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |           &lt;div class="card-body"&gt;
+            |               &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |               &lt;p class="card-text"&gt;This is a longer card with supporting text
+            |               below as a natural lead-in to additional content.&lt;/p&gt;
+            |           &lt;/div&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="col mb-4"&gt;
+            |       &lt;div class="card h-100"&gt;
+            |           &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |           &lt;div class="card-body"&gt;
+            |               &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |               &lt;p class="card-text"&gt;This is a longer card with supporting text 
+            |               below as a natural lead-in to additional content. This content is a little bit longer.&lt;/p&gt;
+            |           &lt;/div&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    h3 Card columns
+    p.intro-text
+        | Cards can be organized into 
+        a(href='https://masonry.desandro.com/') Masonry
+        | -like columns with just CSS by wrapping them in 
+        code(style='color:red') .card-columns
+        | . Cards are built with CSS 
+        code(style='color:red') column 
+        | properties instead of flexbox for easier alignment. Cards are ordered from top to bottom and left to right.
+    p.intro-text
+        b Heads up! 
+        | Your mileage with card columns may vary. To prevent cards breaking across columns, we must set them to 
+        code(style='color:red') display: inline-block 
+        | as 
+        code(style='color:red') column-break-inside: avoid 
+        | isn’t a bulletproof solution yet.
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    .card-columns
+                        .card
+                            svg.bd-placeholder-img.card-img-top(width='100%' height='160' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                title Placeholder
+                                rect(width='100%' height='100%' fill='#6c757d')
+                                text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                            .card-body
+                                h5.card-title Card title that wraps to a new line
+                                p.card-text
+                                    | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        .card.p-3
+                            blockquote.blockquote.mb-0.card-body
+                                p A well-known quote, contained in a blockquote element.
+                                footer.blockquote-footer
+                                    small.text-muted
+                                        | Someone famous in 
+                                        cite(title='Source Title') Source Title
+                        .card
+                            svg.bd-placeholder-img.card-img-top(width='100%' height='160' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Image cap' preserveaspectratio='xMidYMid slice' focusable='false')
+                                title Placeholder
+                                rect(width='100%' height='100%' fill='#6c757d')
+                                text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Image cap
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text This card has supporting text below as a natural lead-in to additional content.
+                                p.card-text
+                                    small.text-muted Last updated 3 mins ago
+                        .card.bg-primary.text-white.text-center.p-3
+                            blockquote.blockquote.mb-0
+                                p A well-known quote, contained in a blockquote element.
+                                footer.blockquote-footer.text-white
+                                    small
+                                        | Someone famous in 
+                                        cite(title='Source Title') Source Title
+                        .card.text-center
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text This card has a regular title and short paragraphy of text below it.
+                                p.card-text
+                                    small.text-muted Last updated 3 mins ago
+                        .card
+                            svg.bd-placeholder-img.card-img(width='100%' height='260' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Card image' preserveaspectratio='xMidYMid slice' focusable='false')
+                                title Placeholder
+                                rect(width='100%' height='100%' fill='#6c757d')
+                                text(x='50%' y='50%' fill='#dee2e6' dy='.3em') Card image
+                        .card.p-3.text-right
+                            blockquote.blockquote.mb-0
+                                p A well-known quote, contained in a blockquote element.
+                                footer.blockquote-footer
+                                    small.text-muted
+                                        | Someone famous in 
+                                        cite(title='Source Title') Source Title
+                        .card
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text
+                                    | This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.
+                                p.card-text
+                                    small.text-muted Last updated 3 mins ago
+    pre
+        code.html
+            |&lt;div class="card-columns"&gt;
+            |   &lt;div class="card"&gt;
+            |       &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title that wraps to a new line&lt;/h5&gt;
+            |           &lt;p class="card-text"&gt;This is a longer card with supporting text 
+            |           below as a natural lead-in to additional content. This content is a little bit longer.&lt;/p&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card p-3"&gt;
+            |       &lt;blockquote class="blockquote mb-0 card-body"&gt;
+            |           &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
+            |           &lt;footer class="blockquote-footer"&gt;
+            |               &lt;small class="text-muted"&gt;
+            |                   Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
+            |               &lt;/small&gt;
+            |           &lt;/footer&gt;
+            |       &lt;/blockquote&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card"&gt;
+            |       &lt;img src="..." class="card-img-top" alt="..."&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |           &lt;p class="card-text"&gt;This card has supporting text below as a natural
+            |           lead-in to additional content.&lt;/p&gt;
+            |           &lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;&lt;/p&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card bg-primary text-white text-center p-3"&gt;
+            |       &lt;blockquote class="blockquote mb-0"&gt;
+            |           &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
+            |           &lt;footer class="blockquote-footer text-white"&gt;
+            |               &lt;small&gt;
+            |                   Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
+            |               &lt;/small&gt;
+            |           &lt;/footer&gt;
+            |       &lt;/blockquote&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card text-center"&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |           &lt;p class="card-text"&gt;This card has a regular title and short paragraphy of text below it.&lt;/p&gt;
+            |           &lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;&lt;/p&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card"&gt;
+            |       &lt;img src="..." class="card-img" alt="..."&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card p-3 text-right"&gt;
+            |       &lt;blockquote class="blockquote mb-0"&gt;
+            |           &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
+            |           &lt;footer class="blockquote-footer"&gt;
+            |               &lt;small class="text-muted"&gt;
+            |                   Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
+            |               &lt;/small&gt;
+            |           &lt;/footer&gt;
+            |       &lt;/blockquote&gt;
+            |   &lt;/div&gt;
+            |   &lt;div class="card"&gt;
+            |       &lt;div class="card-body"&gt;
+            |           &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            |           &lt;p class="card-text"&gt;This is another card with title and supporting text 
+            |           below. This card has some additional content to make it slightly taller overall.&lt;/p&gt;
+            |           &lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;&lt;/p&gt;
+            |       &lt;/div&gt;
+            |   &lt;/div&gt;
+            |&lt;/div&gt;
+    p.intro-text
+        | Card columns can also be extended and customized with some additional code. Shown below is an extension of the 
+        code(style='color:red') .card-columns 
+        | class using the same CSS we use—CSS columns— to generate a set of responsive tiers for changing the number of columns.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
