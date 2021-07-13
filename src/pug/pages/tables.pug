@@ -14,6 +14,7 @@ include ../layout
         | to any 
         code(style='color:red') &lt;table&gt;
         | , then extend with custom styles or our various included modifier classes.
+    h3 Simple table
     p.intro-text
         | Using the most basic table markup, here’s how 
         code(style='color:red') .table
@@ -21,74 +22,666 @@ include ../layout
     .stack
         .stack__item.row
             .col-6
-                .card.card_md
+                .sat-card.sat-card_md
                     table.table
                         thead
                             tr
-                                th(scope='col') #
-                                th(scope='col') First
-                                th(scope='col') Last
-                                th(scope='col') Handle
+                                th Thead
+                                th Thead
+                                th Thead
+                                th Thead
                         tbody
                             tr
-                                th(scope='row') 1
-                                td Mark
-                                td Otto
-                                td @mdo
+                                td Tbody
+                                td Tbody
+                                td Tbody
+                                td Tbody
                             tr
-                                th(scope='row') 2
-                                td Jacob
-                                td Thornton
-                                td @fat
+                                td Tbody
+                                td Tbody
+                                td Tbody
+                                td Tbody
                             tr
-                                th(scope='row') 3
-                                td Larry
-                                td the Bird
-                                td @twitter
+                                td Tbody
+                                td Tbody
+                                td Tbody
+                                td Tbody
+                        tfoot
+                            tr
+                                td Tfoot
+                                td Tfoot
+                                td Tfoot
+                                td Tfoot
     pre
         code.html
             |&lt;table class="table"&gt;
             |   &lt;thead&gt;
             |       &lt;tr&gt;
-            |           &lt;th scope="col"&gt;#&lt;/th&gt;
-            |           &lt;th scope="col"&gt;First&lt;/th&gt;
-            |           &lt;th scope="col"&gt;Last&lt;/th&gt;
-            |           &lt;th scope="col"&gt;Handle&lt;/th&gt;
+            |           &lt;th&gt;Thead&lt;/th&gt;
+            |           &lt;th&gt;Thead&lt;/th&gt;
+            |           &lt;th&gt;Thead&lt;/th&gt;
+            |           &lt;th&gt;Thead&lt;/th&gt;
             |       &lt;/tr&gt;
             |   &lt;/thead&gt;
-            |   &lt;tbody&gt;
+            |   &lt;Tbody&gt;
             |       &lt;tr&gt;
-            |           &lt;th scope="row"&gt;1&lt;/th&gt;
-            |           &lt;td&gt;Mark&lt;/td&gt;
-            |           &lt;td&gt;Otto&lt;/td&gt;
-            |           &lt;td&gt;@mdo&lt;/td&gt;
+            |           &lt;td&gt;Tbody&lt;/th&gt;
+            |           &lt;td&gt;Tbody&lt;/td&gt;
+            |           &lt;td&gt;Tbody&lt;/td&gt;
+            |           &lt;td&gt;Tbody&lt;/td&gt;
             |       &lt;/tr&gt;
             |       &lt;tr&gt;
-            |           &lt;th scope="row"&gt;2&lt;/th&gt;
-            |           &lt;td&gt;Jacob&lt;/td&gt;
-            |           &lt;td&gt;Thornton&lt;/td&gt;
-            |           &lt;td&gt;@fat&lt;/td&gt;
+            |           &lt;td&gt;Tbody&lt;/th&gt;
+            |           &lt;td&gt;Tbody&lt;/td&gt;
+            |           &lt;td&gt;Tbody&lt;/td&gt;
+            |           &lt;td&gt;Tbody&lt;/td&gt;
             |       &lt;/tr&gt;
             |       &lt;tr&gt;
-            |           &lt;th scope="row"&gt;3&lt;/th&gt;
-            |           &lt;td&gt;Larry&lt;/td&gt;
-            |           &lt;td&gt;the Bird&lt;/td&gt;
-            |           &lt;td&gt;@twitter&lt;/td&gt;
+            |           &lt;td&gt;Tbody&lt;/th&gt;
+            |           &lt;td&gt;Tbody&lt;/td&gt;
+            |           &lt;td&gt;Tbody&lt;/td&gt;
+            |           &lt;td&gt;Tbody&lt;/td&gt;
             |       &lt;/tr&gt;
-            |   &lt;/tbody&gt;
+            |   &lt;/Tbody&gt;
+            |   &lt;tfoot&gt;
+            |       &lt;tr&gt;
+            |           &lt;td&gt;Thead&lt;/th&gt;
+            |           &lt;td&gt;Thead&lt;/th&gt;
+            |           &lt;td&gt;Thead&lt;/th&gt;
+            |           &lt;td&gt;Thead&lt;/th&gt;
+            |       &lt;/tr&gt;
+            |   &lt;/tfoot&gt;
             |&lt;/table&gt;
-    h2 Table head options
-    h2 Striped rows
-    h2 Bordered table
-    h2 Borderless table
-    h2 Hoverable rows
+    h3 Sticky Thead
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    div(style='height: 300px; overflow-y: scroll;')
+                        table.table(style='position: relative;')
+                            thead(style='position: sticky; top: 0;')
+                                tr
+                                    th Thead
+                                    th Thead
+                                    th Thead
+                                    th Thead
+                                    th Thead
+                                    th Thead
+                                    th Thead
+                            tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                            tfoot
+                                tr
+                                    td Tfoot
+                                    td Tfoot
+                                    td Tfoot
+                                    td Tfoot
+                                    td Tfoot
+                                    td Tfoot
+                                    td Tfoot
+    h3 Sticky Tfoot
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    div(style='height: 300px; overflow-y: scroll;')
+                        table.table(style='position: relative; height: 100px; overflow-y: scroll;')
+                            thead
+                                tr
+                                    th Thead
+                                    th Thead
+                                    th Thead
+                                    th Thead
+                                    th Thead
+                                    th Thead
+                                    th Thead
+                            tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                            tfoot(style='position: sticky; bottom: 0;')
+                                tr
+                                    td Tfoot
+                                    td Tfoot
+                                    td Tfoot
+                                    td Tfoot
+                                    td Tfoot
+                                    td Tfoot
+                                    td Tfoot
+    h3 Sticky Thead and Tfoot
+    .stack
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    div(style='height: 300px; overflow-y: scroll;')
+                        table.table(style='position: relative; height: 100px; overflow-y: scroll;')
+                            thead(style='position: sticky; left:0; top: 0;')
+                                tr
+                                    th Thead
+                                    th Thead
+                                    th Thead
+                                    th Thead
+                                    th Thead
+                                    th Thead
+                                    th Thead
+                            tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                tr
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                                    td Tbody
+                            tfoot(style='position: sticky; :0;bottom: 0;')
+                                tr
+                                    td Tfoot
+                                    td Tfoot
+                                    td Tfoot
+                                    td Tfoot
+                                    td Tfoot
+                                    td Tfoot
+                                    td Tfoot
+    h3 Sticky Thead, Tfoot and Column
+    .stack.intro-text
+        .stack__item.row
+            .col-6
+                .sat-card.sat-card_md
+                    div(style='height: 300px; overflow-y: scroll;')
+                        table#last_table.table(style='position: relative; height: 100px; overflow-y: scroll;')
+                            thead(style='position: sticky; left:0; top: 0;')
+                                tr
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                            tbody
+                                tr
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                tr
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                tr
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                tr
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                tr
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                tr
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                tr
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                            tfoot(style='position: sticky; :0;bottom: 0;')
+                                tr
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
+                                    td TBODY
 
-
-
-
-
-
-
+                                
 
 
 

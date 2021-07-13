@@ -3,20 +3,52 @@
 table {
     border-collapse: collapse;
     width: 100%;
+    border: 2px solid $color-primary;
 }
+
 thead {
     font-weight: bold;
+    background-color: $color-primary;
+    color: white;
 }
+
+tfoot {
+    font-weight: bold;
+    background-color: $color-primary;
+    color: white;
+}
+
+
 td {
-    border: 1px solid $color-primary;
+    // border: 1px solid $color-primary;
     padding: $unit;
+    border: 1px solid white;
 }
+
 th {
-    border: 1px solid $color-primary;
+    // border: 1px solid $color-primary;
     padding: $unit;
+    border: 1px solid white;
 }
+
 tr {
     &:nth-child(even) {
         background-color: $color-gray-6;
     }
+}
+
+table#last_table tr td:nth-child(1) {
+    position: sticky;
+    left: 0;
+    background-color: $color-primary;
+    color: white;
+    z-index: 0;
+}
+
+table#last_table thead {
+    z-index: 2;
+}
+
+table#last_table tfoot {
+    z-index: 2;
 }
